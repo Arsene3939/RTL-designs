@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -6.895
+TNS   : -339.664
+
+Type  : Slow 1200mV 85C Model Setup 'seven_seg_display:u0|FD[10]'
+Slack : -1.604
+TNS   : -12.647
+
+Type  : Slow 1200mV 85C Model Setup 'FD[25]'
+Slack : 0.092
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.136
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[25]'
+Slack : 0.258
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'seven_seg_display:u0|FD[10]'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -150.213
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[25]'
+Slack : -1.487
+TNS   : -23.792
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'seven_seg_display:u0|FD[10]'
+Slack : -1.487
+TNS   : -22.305
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -6.281
+TNS   : -306.993
+
+Type  : Slow 1200mV 0C Model Setup 'seven_seg_display:u0|FD[10]'
+Slack : -1.399
+TNS   : -10.931
+
+Type  : Slow 1200mV 0C Model Setup 'FD[25]'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FD[25]'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'seven_seg_display:u0|FD[10]'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -150.213
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[25]'
+Slack : -1.487
+TNS   : -23.792
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'seven_seg_display:u0|FD[10]'
+Slack : -1.487
+TNS   : -22.305
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -2.309
+TNS   : -89.868
+
+Type  : Fast 1200mV 0C Model Setup 'seven_seg_display:u0|FD[10]'
+Slack : -0.114
+TNS   : -0.641
+
+Type  : Fast 1200mV 0C Model Setup 'FD[25]'
+Slack : 0.556
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.178
+TNS   : -0.225
+
+Type  : Fast 1200mV 0C Model Hold 'FD[25]'
+Slack : 0.128
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'seven_seg_display:u0|FD[10]'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -107.612
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[25]'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'seven_seg_display:u0|FD[10]'
+Slack : -1.000
+TNS   : -15.000
+
+------------------------------------------------------------

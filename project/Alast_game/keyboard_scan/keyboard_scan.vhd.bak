@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity keyboard_scan is 
+port(
+	   clk_50M:in std_logic;
+     nrst:in std_logic;
+     dat_bus: inout std_logic;
+     HU, TE:out std_logic_vector(7 downto 0);        --æº¼åº¦æ´æ¸, æº«åº¦æ´æ¸
+     error: out std_logic
+     );
+end keyboard_scan;
+
+architecture beh of keyboard_scan is
+	signal FD: std_logic_vector(50 downto 0);
+begin
+end beh;

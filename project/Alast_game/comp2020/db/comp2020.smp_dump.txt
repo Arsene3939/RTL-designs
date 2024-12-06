@@ -1,0 +1,67 @@
+
+State Machine - |comp2020|SD178:u0|sd178State
+Name sd178State.sd178_play2 sd178State.sd178_play1 sd178State.sd178_set_ch sd178State.sd178_delay2 sd178State.sd178_delay1 sd178State.sd178_d5 sd178State.sd178_d4 sd178State.sd178_d3 sd178State.sd178_d2 sd178State.sd178_d1 sd178State.sd178_send sd178State.event_check sd178State.sd178_init 
+sd178State.sd178_init 0 0 0 0 0 0 0 0 0 0 0 0 0 
+sd178State.event_check 0 0 0 0 0 0 0 0 0 0 0 1 1 
+sd178State.sd178_send 0 0 0 0 0 0 0 0 0 0 1 0 1 
+sd178State.sd178_d1 0 0 0 0 0 0 0 0 0 1 0 0 1 
+sd178State.sd178_d2 0 0 0 0 0 0 0 0 1 0 0 0 1 
+sd178State.sd178_d3 0 0 0 0 0 0 0 1 0 0 0 0 1 
+sd178State.sd178_d4 0 0 0 0 0 0 1 0 0 0 0 0 1 
+sd178State.sd178_d5 0 0 0 0 0 1 0 0 0 0 0 0 1 
+sd178State.sd178_delay1 0 0 0 0 1 0 0 0 0 0 0 0 1 
+sd178State.sd178_delay2 0 0 0 1 0 0 0 0 0 0 0 0 1 
+sd178State.sd178_set_ch 0 0 1 0 0 0 0 0 0 0 0 0 1 
+sd178State.sd178_play1 0 1 0 0 0 0 0 0 0 0 0 0 1 
+sd178State.sd178_play2 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |comp2020|SD178:u0|i2c_master:u0|state
+Name state.stop state.mstr_ack state.slv_ack2 state.rd state.wr state.slv_ack1 state.command state.start state.ready 
+state.ready 0 0 0 0 0 0 0 0 0 
+state.start 0 0 0 0 0 0 0 1 1 
+state.command 0 0 0 0 0 0 1 0 1 
+state.slv_ack1 0 0 0 0 0 1 0 0 1 
+state.wr 0 0 0 0 1 0 0 0 1 
+state.rd 0 0 0 1 0 0 0 0 1 
+state.slv_ack2 0 0 1 0 0 0 0 0 1 
+state.mstr_ack 0 1 0 0 0 0 0 0 1 
+state.stop 1 0 0 0 0 0 0 0 1 
+
+State Machine - |comp2020|fourDigits_SevenSegmentDisplay:u3|scanstate
+Name scanstate.s3 scanstate.s2 scanstate.s1 scanstate.s0 
+scanstate.s0 0 0 0 0 
+scanstate.s1 0 0 1 1 
+scanstate.s2 0 1 0 1 
+scanstate.s3 1 0 0 1 
+
+State Machine - |comp2020|TSL2561:u1|IICState
+Name IICState.s11 IICState.s10 IICState.s9 IICState.s8 IICState.s7 IICState.s6 IICState.s5 IICState.s4 IICState.s3 IICState.s2 IICState.s1 IICState.s0 IICState.POWER_ON_5 IICState.POWER_ON_4 IICState.POWER_ON_3 IICState.POWER_ON_2 IICState.POWER_ON_1 
+IICState.POWER_ON_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+IICState.POWER_ON_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+IICState.POWER_ON_3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+IICState.POWER_ON_4 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+IICState.POWER_ON_5 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+IICState.s0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+IICState.s1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+IICState.s2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+IICState.s3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+IICState.s4 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+IICState.s5 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+IICState.s6 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+IICState.s7 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+IICState.s8 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+IICState.s9 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+IICState.s10 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+IICState.s11 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |comp2020|TSL2561:u1|i2c_master:u0|state
+Name state.stop state.mstr_ack state.slv_ack2 state.rd state.wr state.slv_ack1 state.command state.start state.ready 
+state.ready 0 0 0 0 0 0 0 0 0 
+state.start 0 0 0 0 0 0 0 1 1 
+state.command 0 0 0 0 0 0 1 0 1 
+state.slv_ack1 0 0 0 0 0 1 0 0 1 
+state.wr 0 0 0 0 1 0 0 0 1 
+state.rd 0 0 0 1 0 0 0 0 1 
+state.slv_ack2 0 0 1 0 0 0 0 0 1 
+state.mstr_ack 0 1 0 0 0 0 0 0 1 
+state.stop 1 0 0 0 0 0 0 0 1 

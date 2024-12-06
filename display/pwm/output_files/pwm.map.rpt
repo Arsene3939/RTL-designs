@@ -1,0 +1,825 @@
+Analysis & Synthesis report for pwm
+Sun Mar 29 16:07:19 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Mar 29 16:07:19 2020           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; pwm                                             ;
+; Top-level Entity Name              ; pwm                                             ;
+; Family                             ; Cyclone III                                     ;
+; Total logic elements               ; 1,796                                           ;
+;     Total combinational functions  ; 1,796                                           ;
+;     Dedicated logic registers      ; 578                                             ;
+; Total registers                    ; 578                                             ;
+; Total pins                         ; 18                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16Q240C8       ;                    ;
+; Top-level entity name                                                      ; pwm                ; pwm                ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                   ; Library ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------+---------+
+; pwm.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/Users/willy7086/Desktop/Quartus/pwm/pwm.vhd ;         ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 1,796  ;
+;                                             ;        ;
+; Total combinational functions               ; 1796   ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 179    ;
+;     -- 3 input functions                    ; 522    ;
+;     -- <=2 input functions                  ; 1095   ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 278    ;
+;     -- arithmetic mode                      ; 1518   ;
+;                                             ;        ;
+; Total registers                             ; 578    ;
+;     -- Dedicated logic registers            ; 578    ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 18     ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out node                        ; FD[16] ;
+; Maximum fan-out                             ; 514    ;
+; Total fan-out                               ; 5611   ;
+; Average fan-out                             ; 2.33   ;
++---------------------------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |pwm                       ; 1796 (1796)       ; 578 (578)    ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |pwm                ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; \maint:v[15][13]                        ; Merged with \maint:v[15][0]            ;
+; \maint:v[15][29]                        ; Merged with \maint:v[15][0]            ;
+; \maint:v[15][2]                         ; Merged with \maint:v[15][0]            ;
+; \maint:v[15][6]                         ; Merged with \maint:v[15][0]            ;
+; \maint:v[15][14]                        ; Merged with \maint:v[15][0]            ;
+; \maint:v[15][30]                        ; Merged with \maint:v[15][0]            ;
+; \maint:v[15][31]                        ; Merged with \maint:v[15][3]            ;
+; \maint:v[15][15]                        ; Merged with \maint:v[15][3]            ;
+; \maint:v[15][7]                         ; Merged with \maint:v[15][3]            ;
+; \maint:v[15][17]                        ; Merged with \maint:v[15][3]            ;
+; \maint:v[15][19]                        ; Merged with \maint:v[15][3]            ;
+; \maint:v[15][9]                         ; Merged with \maint:v[15][3]            ;
+; \maint:v[15][8]                         ; Merged with \maint:v[15][4]            ;
+; \maint:v[15][20]                        ; Merged with \maint:v[15][4]            ;
+; \maint:v[15][24]                        ; Merged with \maint:v[15][4]            ;
+; \maint:v[15][12]                        ; Merged with \maint:v[15][4]            ;
+; \maint:v[15][28]                        ; Merged with \maint:v[15][4]            ;
+; \maint:v[15][21]                        ; Merged with \maint:v[15][5]            ;
+; \maint:v[15][23]                        ; Merged with \maint:v[15][5]            ;
+; \maint:v[15][11]                        ; Merged with \maint:v[15][5]            ;
+; \maint:v[15][25]                        ; Merged with \maint:v[15][5]            ;
+; \maint:v[15][27]                        ; Merged with \maint:v[15][5]            ;
+; \maint:v[15][22]                        ; Merged with \maint:v[15][10]           ;
+; \maint:v[15][18]                        ; Merged with \maint:v[15][10]           ;
+; \maint:v[15][26]                        ; Merged with \maint:v[15][10]           ;
+; \maint:v[15][16]                        ; Merged with \maint:v[15][10]           ;
+; \maint:v[14][4]                         ; Merged with \maint:v[14][0]            ;
+; \maint:v[14][8]                         ; Merged with \maint:v[14][0]            ;
+; \maint:v[14][12]                        ; Merged with \maint:v[14][0]            ;
+; \maint:v[14][16]                        ; Merged with \maint:v[14][0]            ;
+; \maint:v[14][20]                        ; Merged with \maint:v[14][0]            ;
+; \maint:v[14][24]                        ; Merged with \maint:v[14][0]            ;
+; \maint:v[14][14]                        ; Merged with \maint:v[14][2]            ;
+; \maint:v[14][6]                         ; Merged with \maint:v[14][2]            ;
+; \maint:v[14][22]                        ; Merged with \maint:v[14][2]            ;
+; \maint:v[14][10]                        ; Merged with \maint:v[14][2]            ;
+; \maint:v[14][18]                        ; Merged with \maint:v[14][2]            ;
+; \maint:v[14][26]                        ; Merged with \maint:v[14][2]            ;
+; \maint:v[14][28]                        ; Merged with \maint:v[14][3]            ;
+; \maint:v[14][31]                        ; Merged with \maint:v[14][3]            ;
+; \maint:v[14][5]                         ; Merged with \maint:v[14][3]            ;
+; \maint:v[14][7]                         ; Merged with \maint:v[14][3]            ;
+; \maint:v[14][9]                         ; Merged with \maint:v[14][3]            ;
+; \maint:v[14][13]                        ; Merged with \maint:v[14][11]           ;
+; \maint:v[14][15]                        ; Merged with \maint:v[14][11]           ;
+; \maint:v[14][17]                        ; Merged with \maint:v[14][11]           ;
+; \maint:v[14][19]                        ; Merged with \maint:v[14][11]           ;
+; \maint:v[14][21]                        ; Merged with \maint:v[14][11]           ;
+; \maint:v[14][23]                        ; Merged with \maint:v[14][11]           ;
+; \maint:v[14][27]                        ; Merged with \maint:v[14][25]           ;
+; \maint:v[14][29]                        ; Merged with \maint:v[14][25]           ;
+; \maint:v[14][30]                        ; Merged with \maint:v[14][25]           ;
+; \maint:v[13][4]                         ; Merged with \maint:v[13][0]            ;
+; \maint:v[13][8]                         ; Merged with \maint:v[13][0]            ;
+; \maint:v[13][12]                        ; Merged with \maint:v[13][0]            ;
+; \maint:v[13][16]                        ; Merged with \maint:v[13][0]            ;
+; \maint:v[13][20]                        ; Merged with \maint:v[13][0]            ;
+; \maint:v[13][24]                        ; Merged with \maint:v[13][0]            ;
+; \maint:v[13][28]                        ; Merged with \maint:v[13][0]            ;
+; \maint:v[13][30]                        ; Merged with \maint:v[13][2]            ;
+; \maint:v[13][14]                        ; Merged with \maint:v[13][2]            ;
+; \maint:v[13][6]                         ; Merged with \maint:v[13][2]            ;
+; \maint:v[13][22]                        ; Merged with \maint:v[13][2]            ;
+; \maint:v[13][10]                        ; Merged with \maint:v[13][2]            ;
+; \maint:v[13][18]                        ; Merged with \maint:v[13][2]            ;
+; \maint:v[13][26]                        ; Merged with \maint:v[13][2]            ;
+; \maint:v[13][5]                         ; Merged with \maint:v[13][3]            ;
+; \maint:v[13][7]                         ; Merged with \maint:v[13][3]            ;
+; \maint:v[13][9]                         ; Merged with \maint:v[13][3]            ;
+; \maint:v[13][11]                        ; Merged with \maint:v[13][3]            ;
+; \maint:v[13][13]                        ; Merged with \maint:v[13][3]            ;
+; \maint:v[13][15]                        ; Merged with \maint:v[13][3]            ;
+; \maint:v[13][17]                        ; Merged with \maint:v[13][3]            ;
+; \maint:v[13][19]                        ; Merged with \maint:v[13][3]            ;
+; \maint:v[13][21]                        ; Merged with \maint:v[13][3]            ;
+; \maint:v[13][23]                        ; Merged with \maint:v[13][3]            ;
+; \maint:v[13][25]                        ; Merged with \maint:v[13][3]            ;
+; \maint:v[13][27]                        ; Merged with \maint:v[13][3]            ;
+; \maint:v[13][31]                        ; Merged with \maint:v[13][29]           ;
+; \maint:v[12][4]                         ; Merged with \maint:v[12][0]            ;
+; \maint:v[12][8]                         ; Merged with \maint:v[12][0]            ;
+; \maint:v[12][12]                        ; Merged with \maint:v[12][0]            ;
+; \maint:v[12][16]                        ; Merged with \maint:v[12][0]            ;
+; \maint:v[12][20]                        ; Merged with \maint:v[12][0]            ;
+; \maint:v[12][24]                        ; Merged with \maint:v[12][0]            ;
+; \maint:v[12][28]                        ; Merged with \maint:v[12][0]            ;
+; \maint:v[12][31]                        ; Merged with \maint:v[12][0]            ;
+; \maint:v[12][14]                        ; Merged with \maint:v[12][2]            ;
+; \maint:v[12][6]                         ; Merged with \maint:v[12][2]            ;
+; \maint:v[12][22]                        ; Merged with \maint:v[12][2]            ;
+; \maint:v[12][10]                        ; Merged with \maint:v[12][2]            ;
+; \maint:v[12][18]                        ; Merged with \maint:v[12][2]            ;
+; \maint:v[12][26]                        ; Merged with \maint:v[12][2]            ;
+; \maint:v[12][5]                         ; Merged with \maint:v[12][3]            ;
+; \maint:v[12][7]                         ; Merged with \maint:v[12][3]            ;
+; \maint:v[12][9]                         ; Merged with \maint:v[12][3]            ;
+; \maint:v[12][11]                        ; Merged with \maint:v[12][3]            ;
+; \maint:v[12][13]                        ; Merged with \maint:v[12][3]            ;
+; \maint:v[12][15]                        ; Merged with \maint:v[12][3]            ;
+; \maint:v[12][17]                        ; Merged with \maint:v[12][3]            ;
+; \maint:v[12][19]                        ; Merged with \maint:v[12][3]            ;
+; \maint:v[12][21]                        ; Merged with \maint:v[12][3]            ;
+; \maint:v[12][23]                        ; Merged with \maint:v[12][3]            ;
+; \maint:v[12][25]                        ; Merged with \maint:v[12][3]            ;
+; \maint:v[12][27]                        ; Merged with \maint:v[12][3]            ;
+; \maint:v[12][30]                        ; Merged with \maint:v[12][29]           ;
+; \maint:v[11][4]                         ; Merged with \maint:v[11][0]            ;
+; \maint:v[11][8]                         ; Merged with \maint:v[11][0]            ;
+; \maint:v[11][12]                        ; Merged with \maint:v[11][0]            ;
+; \maint:v[11][16]                        ; Merged with \maint:v[11][0]            ;
+; \maint:v[11][20]                        ; Merged with \maint:v[11][0]            ;
+; \maint:v[11][24]                        ; Merged with \maint:v[11][0]            ;
+; \maint:v[11][28]                        ; Merged with \maint:v[11][0]            ;
+; \maint:v[11][30]                        ; Merged with \maint:v[11][2]            ;
+; \maint:v[11][14]                        ; Merged with \maint:v[11][2]            ;
+; \maint:v[11][6]                         ; Merged with \maint:v[11][2]            ;
+; \maint:v[11][22]                        ; Merged with \maint:v[11][2]            ;
+; \maint:v[11][10]                        ; Merged with \maint:v[11][2]            ;
+; \maint:v[11][18]                        ; Merged with \maint:v[11][2]            ;
+; \maint:v[11][26]                        ; Merged with \maint:v[11][2]            ;
+; \maint:v[11][5]                         ; Merged with \maint:v[11][3]            ;
+; \maint:v[11][7]                         ; Merged with \maint:v[11][3]            ;
+; \maint:v[11][9]                         ; Merged with \maint:v[11][3]            ;
+; \maint:v[11][11]                        ; Merged with \maint:v[11][3]            ;
+; \maint:v[11][13]                        ; Merged with \maint:v[11][3]            ;
+; \maint:v[11][15]                        ; Merged with \maint:v[11][3]            ;
+; \maint:v[11][17]                        ; Merged with \maint:v[11][3]            ;
+; \maint:v[11][19]                        ; Merged with \maint:v[11][3]            ;
+; \maint:v[11][21]                        ; Merged with \maint:v[11][3]            ;
+; \maint:v[11][23]                        ; Merged with \maint:v[11][3]            ;
+; \maint:v[11][25]                        ; Merged with \maint:v[11][3]            ;
+; \maint:v[11][27]                        ; Merged with \maint:v[11][3]            ;
+; \maint:v[11][29]                        ; Merged with \maint:v[11][3]            ;
+; \maint:v[11][31]                        ; Merged with \maint:v[11][3]            ;
+; \maint:v[10][4]                         ; Merged with \maint:v[10][0]            ;
+; \maint:v[10][8]                         ; Merged with \maint:v[10][0]            ;
+; \maint:v[10][12]                        ; Merged with \maint:v[10][0]            ;
+; \maint:v[10][16]                        ; Merged with \maint:v[10][0]            ;
+; \maint:v[10][20]                        ; Merged with \maint:v[10][0]            ;
+; \maint:v[10][24]                        ; Merged with \maint:v[10][0]            ;
+; \maint:v[10][28]                        ; Merged with \maint:v[10][0]            ;
+; \maint:v[10][30]                        ; Merged with \maint:v[10][2]            ;
+; \maint:v[10][14]                        ; Merged with \maint:v[10][2]            ;
+; \maint:v[10][6]                         ; Merged with \maint:v[10][2]            ;
+; \maint:v[10][22]                        ; Merged with \maint:v[10][2]            ;
+; \maint:v[10][10]                        ; Merged with \maint:v[10][2]            ;
+; \maint:v[10][18]                        ; Merged with \maint:v[10][2]            ;
+; \maint:v[10][26]                        ; Merged with \maint:v[10][2]            ;
+; \maint:v[10][5]                         ; Merged with \maint:v[10][3]            ;
+; \maint:v[10][7]                         ; Merged with \maint:v[10][3]            ;
+; \maint:v[10][9]                         ; Merged with \maint:v[10][3]            ;
+; \maint:v[10][11]                        ; Merged with \maint:v[10][3]            ;
+; \maint:v[10][13]                        ; Merged with \maint:v[10][3]            ;
+; \maint:v[10][15]                        ; Merged with \maint:v[10][3]            ;
+; \maint:v[10][17]                        ; Merged with \maint:v[10][3]            ;
+; \maint:v[10][19]                        ; Merged with \maint:v[10][3]            ;
+; \maint:v[10][21]                        ; Merged with \maint:v[10][3]            ;
+; \maint:v[10][23]                        ; Merged with \maint:v[10][3]            ;
+; \maint:v[10][25]                        ; Merged with \maint:v[10][3]            ;
+; \maint:v[10][27]                        ; Merged with \maint:v[10][3]            ;
+; \maint:v[10][29]                        ; Merged with \maint:v[10][3]            ;
+; \maint:v[10][31]                        ; Merged with \maint:v[10][3]            ;
+; \maint:v[9][4]                          ; Merged with \maint:v[9][0]             ;
+; \maint:v[9][8]                          ; Merged with \maint:v[9][0]             ;
+; \maint:v[9][12]                         ; Merged with \maint:v[9][0]             ;
+; \maint:v[9][16]                         ; Merged with \maint:v[9][0]             ;
+; \maint:v[9][20]                         ; Merged with \maint:v[9][0]             ;
+; \maint:v[9][24]                         ; Merged with \maint:v[9][0]             ;
+; \maint:v[9][28]                         ; Merged with \maint:v[9][0]             ;
+; \maint:v[9][30]                         ; Merged with \maint:v[9][2]             ;
+; \maint:v[9][14]                         ; Merged with \maint:v[9][2]             ;
+; \maint:v[9][6]                          ; Merged with \maint:v[9][2]             ;
+; \maint:v[9][22]                         ; Merged with \maint:v[9][2]             ;
+; \maint:v[9][10]                         ; Merged with \maint:v[9][2]             ;
+; \maint:v[9][18]                         ; Merged with \maint:v[9][2]             ;
+; \maint:v[9][26]                         ; Merged with \maint:v[9][2]             ;
+; \maint:v[9][5]                          ; Merged with \maint:v[9][3]             ;
+; \maint:v[9][7]                          ; Merged with \maint:v[9][3]             ;
+; \maint:v[9][9]                          ; Merged with \maint:v[9][3]             ;
+; \maint:v[9][11]                         ; Merged with \maint:v[9][3]             ;
+; \maint:v[9][13]                         ; Merged with \maint:v[9][3]             ;
+; \maint:v[9][15]                         ; Merged with \maint:v[9][3]             ;
+; \maint:v[9][17]                         ; Merged with \maint:v[9][3]             ;
+; \maint:v[9][19]                         ; Merged with \maint:v[9][3]             ;
+; \maint:v[9][21]                         ; Merged with \maint:v[9][3]             ;
+; \maint:v[9][23]                         ; Merged with \maint:v[9][3]             ;
+; \maint:v[9][25]                         ; Merged with \maint:v[9][3]             ;
+; \maint:v[9][27]                         ; Merged with \maint:v[9][3]             ;
+; \maint:v[9][29]                         ; Merged with \maint:v[9][3]             ;
+; \maint:v[9][31]                         ; Merged with \maint:v[9][3]             ;
+; \maint:v[8][4]                          ; Merged with \maint:v[8][0]             ;
+; \maint:v[8][8]                          ; Merged with \maint:v[8][0]             ;
+; \maint:v[8][12]                         ; Merged with \maint:v[8][0]             ;
+; \maint:v[8][16]                         ; Merged with \maint:v[8][0]             ;
+; \maint:v[8][20]                         ; Merged with \maint:v[8][0]             ;
+; \maint:v[8][24]                         ; Merged with \maint:v[8][0]             ;
+; \maint:v[8][28]                         ; Merged with \maint:v[8][0]             ;
+; \maint:v[8][14]                         ; Merged with \maint:v[8][2]             ;
+; \maint:v[8][6]                          ; Merged with \maint:v[8][2]             ;
+; \maint:v[8][22]                         ; Merged with \maint:v[8][2]             ;
+; \maint:v[8][10]                         ; Merged with \maint:v[8][2]             ;
+; \maint:v[8][18]                         ; Merged with \maint:v[8][2]             ;
+; \maint:v[8][26]                         ; Merged with \maint:v[8][2]             ;
+; \maint:v[8][5]                          ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][7]                          ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][9]                          ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][11]                         ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][13]                         ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][15]                         ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][17]                         ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][19]                         ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][21]                         ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][23]                         ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][25]                         ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][27]                         ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][29]                         ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][31]                         ; Merged with \maint:v[8][3]             ;
+; \maint:v[8][30]                         ; Merged with \maint:v[8][3]             ;
+; \maint:v[7][4]                          ; Merged with \maint:v[7][0]             ;
+; \maint:v[7][8]                          ; Merged with \maint:v[7][0]             ;
+; \maint:v[7][12]                         ; Merged with \maint:v[7][0]             ;
+; \maint:v[7][16]                         ; Merged with \maint:v[7][0]             ;
+; \maint:v[7][20]                         ; Merged with \maint:v[7][0]             ;
+; \maint:v[7][24]                         ; Merged with \maint:v[7][0]             ;
+; \maint:v[7][28]                         ; Merged with \maint:v[7][0]             ;
+; \maint:v[7][30]                         ; Merged with \maint:v[7][2]             ;
+; \maint:v[7][14]                         ; Merged with \maint:v[7][2]             ;
+; \maint:v[7][6]                          ; Merged with \maint:v[7][2]             ;
+; \maint:v[7][22]                         ; Merged with \maint:v[7][2]             ;
+; \maint:v[7][10]                         ; Merged with \maint:v[7][2]             ;
+; \maint:v[7][18]                         ; Merged with \maint:v[7][2]             ;
+; \maint:v[7][26]                         ; Merged with \maint:v[7][2]             ;
+; \maint:v[7][5]                          ; Merged with \maint:v[7][3]             ;
+; \maint:v[7][7]                          ; Merged with \maint:v[7][3]             ;
+; \maint:v[7][9]                          ; Merged with \maint:v[7][3]             ;
+; \maint:v[7][11]                         ; Merged with \maint:v[7][3]             ;
+; \maint:v[7][13]                         ; Merged with \maint:v[7][3]             ;
+; \maint:v[7][15]                         ; Merged with \maint:v[7][3]             ;
+; \maint:v[7][17]                         ; Merged with \maint:v[7][3]             ;
+; \maint:v[7][19]                         ; Merged with \maint:v[7][3]             ;
+; \maint:v[7][21]                         ; Merged with \maint:v[7][3]             ;
+; \maint:v[7][23]                         ; Merged with \maint:v[7][3]             ;
+; \maint:v[7][25]                         ; Merged with \maint:v[7][3]             ;
+; \maint:v[7][27]                         ; Merged with \maint:v[7][3]             ;
+; \maint:v[7][29]                         ; Merged with \maint:v[7][3]             ;
+; \maint:v[7][31]                         ; Merged with \maint:v[7][3]             ;
+; \maint:v[6][4]                          ; Merged with \maint:v[6][0]             ;
+; \maint:v[6][8]                          ; Merged with \maint:v[6][0]             ;
+; \maint:v[6][12]                         ; Merged with \maint:v[6][0]             ;
+; \maint:v[6][16]                         ; Merged with \maint:v[6][0]             ;
+; \maint:v[6][20]                         ; Merged with \maint:v[6][0]             ;
+; \maint:v[6][24]                         ; Merged with \maint:v[6][0]             ;
+; \maint:v[6][28]                         ; Merged with \maint:v[6][0]             ;
+; \maint:v[6][30]                         ; Merged with \maint:v[6][2]             ;
+; \maint:v[6][14]                         ; Merged with \maint:v[6][2]             ;
+; \maint:v[6][6]                          ; Merged with \maint:v[6][2]             ;
+; \maint:v[6][22]                         ; Merged with \maint:v[6][2]             ;
+; \maint:v[6][10]                         ; Merged with \maint:v[6][2]             ;
+; \maint:v[6][18]                         ; Merged with \maint:v[6][2]             ;
+; \maint:v[6][26]                         ; Merged with \maint:v[6][2]             ;
+; \maint:v[6][5]                          ; Merged with \maint:v[6][3]             ;
+; \maint:v[6][7]                          ; Merged with \maint:v[6][3]             ;
+; \maint:v[6][9]                          ; Merged with \maint:v[6][3]             ;
+; \maint:v[6][11]                         ; Merged with \maint:v[6][3]             ;
+; \maint:v[6][13]                         ; Merged with \maint:v[6][3]             ;
+; \maint:v[6][15]                         ; Merged with \maint:v[6][3]             ;
+; \maint:v[6][17]                         ; Merged with \maint:v[6][3]             ;
+; \maint:v[6][19]                         ; Merged with \maint:v[6][3]             ;
+; \maint:v[6][21]                         ; Merged with \maint:v[6][3]             ;
+; \maint:v[6][23]                         ; Merged with \maint:v[6][3]             ;
+; \maint:v[6][25]                         ; Merged with \maint:v[6][3]             ;
+; \maint:v[6][27]                         ; Merged with \maint:v[6][3]             ;
+; \maint:v[6][29]                         ; Merged with \maint:v[6][3]             ;
+; \maint:v[6][31]                         ; Merged with \maint:v[6][3]             ;
+; \maint:v[5][4]                          ; Merged with \maint:v[5][0]             ;
+; \maint:v[5][8]                          ; Merged with \maint:v[5][0]             ;
+; \maint:v[5][12]                         ; Merged with \maint:v[5][0]             ;
+; \maint:v[5][16]                         ; Merged with \maint:v[5][0]             ;
+; \maint:v[5][20]                         ; Merged with \maint:v[5][0]             ;
+; \maint:v[5][24]                         ; Merged with \maint:v[5][0]             ;
+; \maint:v[5][28]                         ; Merged with \maint:v[5][0]             ;
+; \maint:v[5][30]                         ; Merged with \maint:v[5][2]             ;
+; \maint:v[5][14]                         ; Merged with \maint:v[5][2]             ;
+; \maint:v[5][6]                          ; Merged with \maint:v[5][2]             ;
+; \maint:v[5][22]                         ; Merged with \maint:v[5][2]             ;
+; \maint:v[5][10]                         ; Merged with \maint:v[5][2]             ;
+; \maint:v[5][18]                         ; Merged with \maint:v[5][2]             ;
+; \maint:v[5][26]                         ; Merged with \maint:v[5][2]             ;
+; \maint:v[5][5]                          ; Merged with \maint:v[5][3]             ;
+; \maint:v[5][7]                          ; Merged with \maint:v[5][3]             ;
+; \maint:v[5][9]                          ; Merged with \maint:v[5][3]             ;
+; \maint:v[5][11]                         ; Merged with \maint:v[5][3]             ;
+; \maint:v[5][13]                         ; Merged with \maint:v[5][3]             ;
+; \maint:v[5][15]                         ; Merged with \maint:v[5][3]             ;
+; \maint:v[5][17]                         ; Merged with \maint:v[5][3]             ;
+; \maint:v[5][19]                         ; Merged with \maint:v[5][3]             ;
+; \maint:v[5][21]                         ; Merged with \maint:v[5][3]             ;
+; \maint:v[5][23]                         ; Merged with \maint:v[5][3]             ;
+; \maint:v[5][25]                         ; Merged with \maint:v[5][3]             ;
+; \maint:v[5][27]                         ; Merged with \maint:v[5][3]             ;
+; \maint:v[5][29]                         ; Merged with \maint:v[5][3]             ;
+; \maint:v[5][31]                         ; Merged with \maint:v[5][3]             ;
+; \maint:v[4][4]                          ; Merged with \maint:v[4][0]             ;
+; \maint:v[4][8]                          ; Merged with \maint:v[4][0]             ;
+; \maint:v[4][12]                         ; Merged with \maint:v[4][0]             ;
+; \maint:v[4][16]                         ; Merged with \maint:v[4][0]             ;
+; \maint:v[4][20]                         ; Merged with \maint:v[4][0]             ;
+; \maint:v[4][24]                         ; Merged with \maint:v[4][0]             ;
+; \maint:v[4][28]                         ; Merged with \maint:v[4][0]             ;
+; \maint:v[4][30]                         ; Merged with \maint:v[4][2]             ;
+; \maint:v[4][14]                         ; Merged with \maint:v[4][2]             ;
+; \maint:v[4][6]                          ; Merged with \maint:v[4][2]             ;
+; \maint:v[4][22]                         ; Merged with \maint:v[4][2]             ;
+; \maint:v[4][10]                         ; Merged with \maint:v[4][2]             ;
+; \maint:v[4][18]                         ; Merged with \maint:v[4][2]             ;
+; \maint:v[4][26]                         ; Merged with \maint:v[4][2]             ;
+; \maint:v[4][5]                          ; Merged with \maint:v[4][3]             ;
+; \maint:v[4][7]                          ; Merged with \maint:v[4][3]             ;
+; \maint:v[4][9]                          ; Merged with \maint:v[4][3]             ;
+; \maint:v[4][11]                         ; Merged with \maint:v[4][3]             ;
+; \maint:v[4][13]                         ; Merged with \maint:v[4][3]             ;
+; \maint:v[4][15]                         ; Merged with \maint:v[4][3]             ;
+; \maint:v[4][17]                         ; Merged with \maint:v[4][3]             ;
+; \maint:v[4][19]                         ; Merged with \maint:v[4][3]             ;
+; \maint:v[4][21]                         ; Merged with \maint:v[4][3]             ;
+; \maint:v[4][23]                         ; Merged with \maint:v[4][3]             ;
+; \maint:v[4][25]                         ; Merged with \maint:v[4][3]             ;
+; \maint:v[4][27]                         ; Merged with \maint:v[4][3]             ;
+; \maint:v[4][29]                         ; Merged with \maint:v[4][3]             ;
+; \maint:v[4][31]                         ; Merged with \maint:v[4][3]             ;
+; \maint:v[3][4]                          ; Merged with \maint:v[3][0]             ;
+; \maint:v[3][8]                          ; Merged with \maint:v[3][0]             ;
+; \maint:v[3][12]                         ; Merged with \maint:v[3][0]             ;
+; \maint:v[3][16]                         ; Merged with \maint:v[3][0]             ;
+; \maint:v[3][20]                         ; Merged with \maint:v[3][0]             ;
+; \maint:v[3][24]                         ; Merged with \maint:v[3][0]             ;
+; \maint:v[3][28]                         ; Merged with \maint:v[3][0]             ;
+; \maint:v[3][30]                         ; Merged with \maint:v[3][2]             ;
+; \maint:v[3][14]                         ; Merged with \maint:v[3][2]             ;
+; \maint:v[3][6]                          ; Merged with \maint:v[3][2]             ;
+; \maint:v[3][22]                         ; Merged with \maint:v[3][2]             ;
+; \maint:v[3][10]                         ; Merged with \maint:v[3][2]             ;
+; \maint:v[3][18]                         ; Merged with \maint:v[3][2]             ;
+; \maint:v[3][26]                         ; Merged with \maint:v[3][2]             ;
+; \maint:v[3][5]                          ; Merged with \maint:v[3][3]             ;
+; \maint:v[3][7]                          ; Merged with \maint:v[3][3]             ;
+; \maint:v[3][9]                          ; Merged with \maint:v[3][3]             ;
+; \maint:v[3][11]                         ; Merged with \maint:v[3][3]             ;
+; \maint:v[3][13]                         ; Merged with \maint:v[3][3]             ;
+; \maint:v[3][15]                         ; Merged with \maint:v[3][3]             ;
+; \maint:v[3][17]                         ; Merged with \maint:v[3][3]             ;
+; \maint:v[3][19]                         ; Merged with \maint:v[3][3]             ;
+; \maint:v[3][21]                         ; Merged with \maint:v[3][3]             ;
+; \maint:v[3][23]                         ; Merged with \maint:v[3][3]             ;
+; \maint:v[3][25]                         ; Merged with \maint:v[3][3]             ;
+; \maint:v[3][27]                         ; Merged with \maint:v[3][3]             ;
+; \maint:v[3][29]                         ; Merged with \maint:v[3][3]             ;
+; \maint:v[3][31]                         ; Merged with \maint:v[3][3]             ;
+; \maint:v[2][4]                          ; Merged with \maint:v[2][0]             ;
+; \maint:v[2][8]                          ; Merged with \maint:v[2][0]             ;
+; \maint:v[2][12]                         ; Merged with \maint:v[2][0]             ;
+; \maint:v[2][16]                         ; Merged with \maint:v[2][0]             ;
+; \maint:v[2][20]                         ; Merged with \maint:v[2][0]             ;
+; \maint:v[2][24]                         ; Merged with \maint:v[2][0]             ;
+; \maint:v[2][28]                         ; Merged with \maint:v[2][0]             ;
+; \maint:v[2][30]                         ; Merged with \maint:v[2][2]             ;
+; \maint:v[2][14]                         ; Merged with \maint:v[2][2]             ;
+; \maint:v[2][6]                          ; Merged with \maint:v[2][2]             ;
+; \maint:v[2][22]                         ; Merged with \maint:v[2][2]             ;
+; \maint:v[2][10]                         ; Merged with \maint:v[2][2]             ;
+; \maint:v[2][18]                         ; Merged with \maint:v[2][2]             ;
+; \maint:v[2][26]                         ; Merged with \maint:v[2][2]             ;
+; \maint:v[2][5]                          ; Merged with \maint:v[2][3]             ;
+; \maint:v[2][7]                          ; Merged with \maint:v[2][3]             ;
+; \maint:v[2][9]                          ; Merged with \maint:v[2][3]             ;
+; \maint:v[2][11]                         ; Merged with \maint:v[2][3]             ;
+; \maint:v[2][13]                         ; Merged with \maint:v[2][3]             ;
+; \maint:v[2][15]                         ; Merged with \maint:v[2][3]             ;
+; \maint:v[2][17]                         ; Merged with \maint:v[2][3]             ;
+; \maint:v[2][19]                         ; Merged with \maint:v[2][3]             ;
+; \maint:v[2][21]                         ; Merged with \maint:v[2][3]             ;
+; \maint:v[2][23]                         ; Merged with \maint:v[2][3]             ;
+; \maint:v[2][25]                         ; Merged with \maint:v[2][3]             ;
+; \maint:v[2][27]                         ; Merged with \maint:v[2][3]             ;
+; \maint:v[2][29]                         ; Merged with \maint:v[2][3]             ;
+; \maint:v[2][31]                         ; Merged with \maint:v[2][3]             ;
+; \maint:v[1][4]                          ; Merged with \maint:v[1][0]             ;
+; \maint:v[1][8]                          ; Merged with \maint:v[1][0]             ;
+; \maint:v[1][12]                         ; Merged with \maint:v[1][0]             ;
+; \maint:v[1][16]                         ; Merged with \maint:v[1][0]             ;
+; \maint:v[1][20]                         ; Merged with \maint:v[1][0]             ;
+; \maint:v[1][24]                         ; Merged with \maint:v[1][0]             ;
+; \maint:v[1][28]                         ; Merged with \maint:v[1][0]             ;
+; \maint:v[1][30]                         ; Merged with \maint:v[1][2]             ;
+; \maint:v[1][14]                         ; Merged with \maint:v[1][2]             ;
+; \maint:v[1][6]                          ; Merged with \maint:v[1][2]             ;
+; \maint:v[1][22]                         ; Merged with \maint:v[1][2]             ;
+; \maint:v[1][10]                         ; Merged with \maint:v[1][2]             ;
+; \maint:v[1][18]                         ; Merged with \maint:v[1][2]             ;
+; \maint:v[1][26]                         ; Merged with \maint:v[1][2]             ;
+; \maint:v[1][5]                          ; Merged with \maint:v[1][3]             ;
+; \maint:v[1][7]                          ; Merged with \maint:v[1][3]             ;
+; \maint:v[1][9]                          ; Merged with \maint:v[1][3]             ;
+; \maint:v[1][11]                         ; Merged with \maint:v[1][3]             ;
+; \maint:v[1][13]                         ; Merged with \maint:v[1][3]             ;
+; \maint:v[1][15]                         ; Merged with \maint:v[1][3]             ;
+; \maint:v[1][17]                         ; Merged with \maint:v[1][3]             ;
+; \maint:v[1][19]                         ; Merged with \maint:v[1][3]             ;
+; \maint:v[1][21]                         ; Merged with \maint:v[1][3]             ;
+; \maint:v[1][23]                         ; Merged with \maint:v[1][3]             ;
+; \maint:v[1][25]                         ; Merged with \maint:v[1][3]             ;
+; \maint:v[1][27]                         ; Merged with \maint:v[1][3]             ;
+; \maint:v[1][29]                         ; Merged with \maint:v[1][3]             ;
+; \maint:v[1][31]                         ; Merged with \maint:v[1][3]             ;
+; \maint:v[0][4]                          ; Merged with \maint:v[0][0]             ;
+; \maint:v[0][8]                          ; Merged with \maint:v[0][0]             ;
+; \maint:v[0][12]                         ; Merged with \maint:v[0][0]             ;
+; \maint:v[0][16]                         ; Merged with \maint:v[0][0]             ;
+; \maint:v[0][20]                         ; Merged with \maint:v[0][0]             ;
+; \maint:v[0][24]                         ; Merged with \maint:v[0][0]             ;
+; \maint:v[0][31]                         ; Merged with \maint:v[0][0]             ;
+; \maint:v[0][28]                         ; Merged with \maint:v[0][0]             ;
+; \maint:v[0][14]                         ; Merged with \maint:v[0][2]             ;
+; \maint:v[0][6]                          ; Merged with \maint:v[0][2]             ;
+; \maint:v[0][22]                         ; Merged with \maint:v[0][2]             ;
+; \maint:v[0][10]                         ; Merged with \maint:v[0][2]             ;
+; \maint:v[0][18]                         ; Merged with \maint:v[0][2]             ;
+; \maint:v[0][26]                         ; Merged with \maint:v[0][2]             ;
+; \maint:v[0][5]                          ; Merged with \maint:v[0][3]             ;
+; \maint:v[0][7]                          ; Merged with \maint:v[0][3]             ;
+; \maint:v[0][9]                          ; Merged with \maint:v[0][3]             ;
+; \maint:v[0][11]                         ; Merged with \maint:v[0][3]             ;
+; \maint:v[0][13]                         ; Merged with \maint:v[0][3]             ;
+; \maint:v[0][15]                         ; Merged with \maint:v[0][3]             ;
+; \maint:v[0][17]                         ; Merged with \maint:v[0][3]             ;
+; \maint:v[0][19]                         ; Merged with \maint:v[0][3]             ;
+; \maint:v[0][21]                         ; Merged with \maint:v[0][3]             ;
+; \maint:v[0][23]                         ; Merged with \maint:v[0][3]             ;
+; \maint:v[0][25]                         ; Merged with \maint:v[0][3]             ;
+; \maint:v[0][27]                         ; Merged with \maint:v[0][3]             ;
+; \maint:v[0][29]                         ; Merged with \maint:v[0][3]             ;
+; \maint:v[0][30]                         ; Merged with \maint:v[0][3]             ;
+; \maint:v[15][5]                         ; Merged with \maint:v[15][0]            ;
+; \maint:v[15][4]                         ; Merged with \maint:v[15][0]            ;
+; \maint:v[15][10]                        ; Merged with \maint:v[15][0]            ;
+; \maint:v[15][3]                         ; Merged with \maint:v[15][0]            ;
+; \maint:v[14][11]                        ; Merged with \maint:v[14][0]            ;
+; \maint:v[14][2]                         ; Merged with \maint:v[14][0]            ;
+; \maint:v[14][3]                         ; Merged with \maint:v[14][0]            ;
+; \maint:v[14][25]                        ; Merged with \maint:v[14][0]            ;
+; \maint:v[13][29]                        ; Merged with \maint:v[13][0]            ;
+; \maint:v[13][3]                         ; Merged with \maint:v[13][0]            ;
+; \maint:v[13][2]                         ; Merged with \maint:v[13][0]            ;
+; \maint:v[12][3]                         ; Merged with \maint:v[12][0]            ;
+; \maint:v[12][2]                         ; Merged with \maint:v[12][0]            ;
+; \maint:v[12][29]                        ; Merged with \maint:v[12][0]            ;
+; \maint:v[11][2]                         ; Merged with \maint:v[11][0]            ;
+; \maint:v[11][3]                         ; Merged with \maint:v[11][0]            ;
+; \maint:v[10][2]                         ; Merged with \maint:v[10][0]            ;
+; \maint:v[10][3]                         ; Merged with \maint:v[10][0]            ;
+; \maint:v[9][2]                          ; Merged with \maint:v[9][0]             ;
+; \maint:v[9][3]                          ; Merged with \maint:v[9][0]             ;
+; \maint:v[8][2]                          ; Merged with \maint:v[8][0]             ;
+; \maint:v[8][3]                          ; Merged with \maint:v[8][0]             ;
+; \maint:v[7][2]                          ; Merged with \maint:v[7][0]             ;
+; \maint:v[7][3]                          ; Merged with \maint:v[7][0]             ;
+; \maint:v[6][2]                          ; Merged with \maint:v[6][0]             ;
+; \maint:v[6][3]                          ; Merged with \maint:v[6][0]             ;
+; \maint:v[5][2]                          ; Merged with \maint:v[5][0]             ;
+; \maint:v[5][3]                          ; Merged with \maint:v[5][0]             ;
+; \maint:v[4][2]                          ; Merged with \maint:v[4][0]             ;
+; \maint:v[4][3]                          ; Merged with \maint:v[4][0]             ;
+; \maint:v[3][2]                          ; Merged with \maint:v[3][0]             ;
+; \maint:v[3][3]                          ; Merged with \maint:v[3][0]             ;
+; \maint:v[2][2]                          ; Merged with \maint:v[2][0]             ;
+; \maint:v[2][3]                          ; Merged with \maint:v[2][0]             ;
+; \maint:v[1][2]                          ; Merged with \maint:v[1][0]             ;
+; \maint:v[1][3]                          ; Merged with \maint:v[1][0]             ;
+; \maint:v[0][3]                          ; Merged with \maint:v[0][0]             ;
+; \maint:v[0][2]                          ; Merged with \maint:v[0][0]             ;
+; \maint:v[15][0]                         ; Stuck at GND due to stuck port data_in ;
+; \maint:v[14][0]                         ; Stuck at GND due to stuck port data_in ;
+; \maint:v[13][0]                         ; Stuck at GND due to stuck port data_in ;
+; \maint:v[12][0]                         ; Stuck at GND due to stuck port data_in ;
+; \maint:v[11][0]                         ; Stuck at GND due to stuck port data_in ;
+; \maint:v[10][0]                         ; Stuck at GND due to stuck port data_in ;
+; \maint:v[9][0]                          ; Stuck at GND due to stuck port data_in ;
+; \maint:v[8][0]                          ; Stuck at GND due to stuck port data_in ;
+; \maint:v[7][0]                          ; Stuck at GND due to stuck port data_in ;
+; \maint:v[6][0]                          ; Stuck at GND due to stuck port data_in ;
+; \maint:v[5][0]                          ; Stuck at GND due to stuck port data_in ;
+; \maint:v[4][0]                          ; Stuck at GND due to stuck port data_in ;
+; \maint:v[3][0]                          ; Stuck at GND due to stuck port data_in ;
+; \maint:v[2][0]                          ; Stuck at GND due to stuck port data_in ;
+; \maint:v[1][0]                          ; Stuck at GND due to stuck port data_in ;
+; \maint:v[0][0]                          ; Stuck at GND due to stuck port data_in ;
+; LEDstate[5][0]                          ; Merged with LEDstate[11][0]            ;
+; LEDstate[13][0]                         ; Merged with LEDstate[11][0]            ;
+; LEDstate[0][0]                          ; Merged with LEDstate[11][0]            ;
+; LEDstate[7][0]                          ; Merged with LEDstate[11][0]            ;
+; LEDstate[10][0]                         ; Merged with LEDstate[11][0]            ;
+; LEDstate[2][0]                          ; Merged with LEDstate[11][0]            ;
+; LEDstate[1][0]                          ; Merged with LEDstate[11][0]            ;
+; LEDstate[3][0]                          ; Merged with LEDstate[11][0]            ;
+; LEDstate[8][0]                          ; Merged with LEDstate[11][0]            ;
+; LEDstate[6][0]                          ; Merged with LEDstate[11][0]            ;
+; LEDstate[9][0]                          ; Merged with LEDstate[11][0]            ;
+; LEDstate[4][0]                          ; Merged with LEDstate[11][0]            ;
+; LEDstate[12][0]                         ; Merged with LEDstate[11][0]            ;
+; LEDstate[14][0]                         ; Merged with LEDstate[11][0]            ;
+; LEDstate[15][0]                         ; Merged with LEDstate[11][0]            ;
+; FD[17..24]                              ; Lost fanout                            ;
+; Total Number of Removed Registers = 519 ;                                        ;
++-----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 578   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 17    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; LEDstate[1][4]                          ; 3       ;
+; LEDstate[2][5]                          ; 3       ;
+; LEDstate[3][5]                          ; 3       ;
+; LEDstate[3][4]                          ; 3       ;
+; LEDstate[4][6]                          ; 3       ;
+; LEDstate[5][6]                          ; 3       ;
+; LEDstate[5][4]                          ; 3       ;
+; LEDstate[6][6]                          ; 3       ;
+; LEDstate[6][5]                          ; 3       ;
+; LEDstate[7][6]                          ; 3       ;
+; LEDstate[7][5]                          ; 3       ;
+; LEDstate[7][4]                          ; 3       ;
+; LEDstate[8][7]                          ; 3       ;
+; LEDstate[9][7]                          ; 3       ;
+; LEDstate[9][4]                          ; 3       ;
+; LEDstate[10][7]                         ; 3       ;
+; LEDstate[10][5]                         ; 3       ;
+; LEDstate[11][7]                         ; 3       ;
+; LEDstate[11][5]                         ; 3       ;
+; LEDstate[11][4]                         ; 3       ;
+; LEDstate[12][7]                         ; 3       ;
+; LEDstate[12][6]                         ; 3       ;
+; LEDstate[13][7]                         ; 3       ;
+; LEDstate[13][6]                         ; 3       ;
+; LEDstate[13][4]                         ; 3       ;
+; LEDstate[14][7]                         ; 3       ;
+; LEDstate[14][6]                         ; 3       ;
+; LEDstate[14][5]                         ; 3       ;
+; LEDstate[15][7]                         ; 3       ;
+; LEDstate[15][6]                         ; 3       ;
+; LEDstate[15][5]                         ; 3       ;
+; LEDstate[15][4]                         ; 3       ;
+; Total number of inverted registers = 32 ;         ;
++-----------------------------------------+---------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Mar 29 16:07:15 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwm -c pwm
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (12019): Can't analyze file -- file ../../Users/willy7086/Desktop/Quartus/pwm.vhd is missing
+Warning (12125): Using design file pwm.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: pwm-ledVector
+    Info (12023): Found entity 1: pwm
+Info (12127): Elaborating entity "pwm" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at pwm.vhd(16): signal "rstP99" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1862 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 1844 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4640 megabytes
+    Info: Processing ended: Sun Mar 29 16:07:19 2020
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+

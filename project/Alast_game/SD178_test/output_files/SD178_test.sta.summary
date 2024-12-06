@@ -1,0 +1,413 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -14.393
+TNS   : -1607.508
+
+Type  : Slow 1200mV 85C Model Setup 'FD[22]'
+Slack : -3.823
+TNS   : -34.019
+
+Type  : Slow 1200mV 85C Model Setup 'clock_generator:u2|clk_100Hz'
+Slack : -3.433
+TNS   : -87.841
+
+Type  : Slow 1200mV 85C Model Setup 'uart:u3|countE1'
+Slack : -3.411
+TNS   : -20.403
+
+Type  : Slow 1200mV 85C Model Setup 'uart:u3|uck1'
+Slack : -1.939
+TNS   : -18.646
+
+Type  : Slow 1200mV 85C Model Setup 'clock_generator:u2|clk_1MHz'
+Slack : -1.670
+TNS   : -16.670
+
+Type  : Slow 1200mV 85C Model Setup 'uart:u3|uck2'
+Slack : -0.770
+TNS   : -2.771
+
+Type  : Slow 1200mV 85C Model Setup 'clock_generator:u2|clk_1KHz'
+Slack : -0.417
+TNS   : -1.041
+
+Type  : Slow 1200mV 85C Model Setup 'keypad:u1|tmpTouch'
+Slack : 0.254
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_generator:u2|clk_1KHz'
+Slack : -0.494
+TNS   : -0.494
+
+Type  : Slow 1200mV 85C Model Hold 'uart:u3|uck1'
+Slack : -0.284
+TNS   : -2.082
+
+Type  : Slow 1200mV 85C Model Hold 'keypad:u1|tmpTouch'
+Slack : -0.216
+TNS   : -0.399
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.158
+TNS   : -0.317
+
+Type  : Slow 1200mV 85C Model Hold 'clock_generator:u2|clk_1MHz'
+Slack : 0.077
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'uart:u3|uck2'
+Slack : 0.084
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_generator:u2|clk_100Hz'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'uart:u3|countE1'
+Slack : 0.468
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[22]'
+Slack : 0.894
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'uart:u3|FD[24]'
+Slack : -3.501
+TNS   : -3.501
+
+Type  : Slow 1200mV 85C Model Recovery 'uart:u3|uck2'
+Slack : -1.365
+TNS   : -5.460
+
+Type  : Slow 1200mV 85C Model Recovery 'uart:u3|uck1'
+Slack : 0.033
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'uart:u3|uck1'
+Slack : 0.028
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'uart:u3|uck2'
+Slack : 1.564
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'uart:u3|FD[24]'
+Slack : 3.608
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[22]'
+Slack : -3.201
+TNS   : -21.045
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'uart:u3|countE1'
+Slack : -3.201
+TNS   : -15.551
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -346.497
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_generator:u2|clk_100Hz'
+Slack : -1.487
+TNS   : -63.941
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'uart:u3|uck1'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_generator:u2|clk_1MHz'
+Slack : -1.487
+TNS   : -14.870
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'uart:u3|uck2'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_generator:u2|clk_1KHz'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keypad:u1|tmpTouch'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'uart:u3|FD[24]'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -13.125
+TNS   : -1471.817
+
+Type  : Slow 1200mV 0C Model Setup 'FD[22]'
+Slack : -3.422
+TNS   : -30.059
+
+Type  : Slow 1200mV 0C Model Setup 'clock_generator:u2|clk_100Hz'
+Slack : -3.193
+TNS   : -80.418
+
+Type  : Slow 1200mV 0C Model Setup 'uart:u3|countE1'
+Slack : -3.159
+TNS   : -19.409
+
+Type  : Slow 1200mV 0C Model Setup 'uart:u3|uck1'
+Slack : -1.731
+TNS   : -16.477
+
+Type  : Slow 1200mV 0C Model Setup 'clock_generator:u2|clk_1MHz'
+Slack : -1.451
+TNS   : -14.507
+
+Type  : Slow 1200mV 0C Model Setup 'uart:u3|uck2'
+Slack : -0.615
+TNS   : -2.084
+
+Type  : Slow 1200mV 0C Model Setup 'clock_generator:u2|clk_1KHz'
+Slack : -0.303
+TNS   : -0.666
+
+Type  : Slow 1200mV 0C Model Setup 'keypad:u1|tmpTouch'
+Slack : 0.305
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_generator:u2|clk_1KHz'
+Slack : -0.377
+TNS   : -0.377
+
+Type  : Slow 1200mV 0C Model Hold 'keypad:u1|tmpTouch'
+Slack : -0.297
+TNS   : -0.642
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.200
+TNS   : -0.367
+
+Type  : Slow 1200mV 0C Model Hold 'uart:u3|uck1'
+Slack : -0.176
+TNS   : -1.266
+
+Type  : Slow 1200mV 0C Model Hold 'uart:u3|uck2'
+Slack : 0.034
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_generator:u2|clk_1MHz'
+Slack : 0.231
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_generator:u2|clk_100Hz'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'uart:u3|countE1'
+Slack : 0.421
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FD[22]'
+Slack : 0.836
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'uart:u3|FD[24]'
+Slack : -3.079
+TNS   : -3.079
+
+Type  : Slow 1200mV 0C Model Recovery 'uart:u3|uck2'
+Slack : -1.132
+TNS   : -4.528
+
+Type  : Slow 1200mV 0C Model Recovery 'uart:u3|uck1'
+Slack : 0.122
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'uart:u3|uck1'
+Slack : 0.014
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'uart:u3|uck2'
+Slack : 1.443
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'uart:u3|FD[24]'
+Slack : 3.302
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[22]'
+Slack : -3.201
+TNS   : -22.293
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'uart:u3|countE1'
+Slack : -3.201
+TNS   : -15.551
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -346.497
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_generator:u2|clk_100Hz'
+Slack : -1.487
+TNS   : -63.941
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'uart:u3|uck1'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_generator:u2|clk_1MHz'
+Slack : -1.487
+TNS   : -14.870
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'uart:u3|uck2'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_generator:u2|clk_1KHz'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keypad:u1|tmpTouch'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'uart:u3|FD[24]'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -5.597
+TNS   : -569.015
+
+Type  : Fast 1200mV 0C Model Setup 'uart:u3|countE1'
+Slack : -1.019
+TNS   : -5.740
+
+Type  : Fast 1200mV 0C Model Setup 'clock_generator:u2|clk_100Hz'
+Slack : -0.928
+TNS   : -14.191
+
+Type  : Fast 1200mV 0C Model Setup 'FD[22]'
+Slack : -0.881
+TNS   : -6.782
+
+Type  : Fast 1200mV 0C Model Setup 'uart:u3|uck1'
+Slack : -0.239
+TNS   : -1.765
+
+Type  : Fast 1200mV 0C Model Setup 'clock_generator:u2|clk_1MHz'
+Slack : -0.123
+TNS   : -1.131
+
+Type  : Fast 1200mV 0C Model Setup 'uart:u3|uck2'
+Slack : 0.232
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clock_generator:u2|clk_1KHz'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'keypad:u1|tmpTouch'
+Slack : 0.637
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_generator:u2|clk_1KHz'
+Slack : -0.286
+TNS   : -0.286
+
+Type  : Fast 1200mV 0C Model Hold 'uart:u3|uck1'
+Slack : -0.274
+TNS   : -2.152
+
+Type  : Fast 1200mV 0C Model Hold 'clock_generator:u2|clk_1MHz'
+Slack : -0.208
+TNS   : -0.208
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.203
+TNS   : -2.063
+
+Type  : Fast 1200mV 0C Model Hold 'keypad:u1|tmpTouch'
+Slack : -0.124
+TNS   : -0.304
+
+Type  : Fast 1200mV 0C Model Hold 'uart:u3|uck2'
+Slack : -0.079
+TNS   : -0.242
+
+Type  : Fast 1200mV 0C Model Hold 'uart:u3|countE1'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_generator:u2|clk_100Hz'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FD[22]'
+Slack : 0.371
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'uart:u3|FD[24]'
+Slack : -1.037
+TNS   : -1.037
+
+Type  : Fast 1200mV 0C Model Recovery 'uart:u3|uck2'
+Slack : -0.053
+TNS   : -0.212
+
+Type  : Fast 1200mV 0C Model Recovery 'uart:u3|uck1'
+Slack : 0.218
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'uart:u3|uck1'
+Slack : -0.051
+TNS   : -0.204
+
+Type  : Fast 1200mV 0C Model Removal 'uart:u3|uck2'
+Slack : 0.662
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'uart:u3|FD[24]'
+Slack : 1.609
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -247.195
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_generator:u2|clk_100Hz'
+Slack : -1.000
+TNS   : -43.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[22]'
+Slack : -1.000
+TNS   : -13.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'uart:u3|uck1'
+Slack : -1.000
+TNS   : -12.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_generator:u2|clk_1MHz'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'uart:u3|countE1'
+Slack : -1.000
+TNS   : -7.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'uart:u3|uck2'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_generator:u2|clk_1KHz'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keypad:u1|tmpTouch'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'uart:u3|FD[24]'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="image">
+		<CBX_INST_ENTRY INSTANCE_NAME="|image|uart:u7|lpm_mult:Mult1" CBX_FILE_NAME="mult_fft.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|image|LCD_DRV:u3|raminfr:u2|altsyncram:RAM_rtl_0" CBX_FILE_NAME="altsyncram_fh41.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|image|altsyncram:Serial_available_rtl_0" CBX_FILE_NAME="altsyncram_6sg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|image|lcdControl:u2|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_afh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|image|lcdControl:u2|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_efh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|image|uart:u7|lpm_mult:Mult0" CBX_FILE_NAME="mult_fft.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

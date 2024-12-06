@@ -1,0 +1,137 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'FD[5]'
+Slack : -4.808
+TNS   : -96.744
+
+Type  : Slow 1200mV 85C Model Setup 'FD[2]'
+Slack : -1.702
+TNS   : -11.764
+
+Type  : Slow 1200mV 85C Model Setup 'gckP31'
+Slack : -1.609
+TNS   : -8.885
+
+Type  : Slow 1200mV 85C Model Hold 'gckP31'
+Slack : -1.190
+TNS   : -4.378
+
+Type  : Slow 1200mV 85C Model Hold 'FD[5]'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[2]'
+Slack : 0.436
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[2]'
+Slack : -1.616
+TNS   : -16.160
+
+Type  : Slow 1200mV 85C Model Removal 'FD[2]'
+Slack : 1.757
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gckP31'
+Slack : -3.000
+TNS   : -16.383
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[5]'
+Slack : -1.487
+TNS   : -44.610
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[2]'
+Slack : -1.487
+TNS   : -14.870
+
+Type  : Slow 1200mV 0C Model Setup 'FD[5]'
+Slack : -4.460
+TNS   : -88.532
+
+Type  : Slow 1200mV 0C Model Setup 'FD[2]'
+Slack : -1.500
+TNS   : -10.036
+
+Type  : Slow 1200mV 0C Model Setup 'gckP31'
+Slack : -1.326
+TNS   : -7.151
+
+Type  : Slow 1200mV 0C Model Hold 'gckP31'
+Slack : -1.058
+TNS   : -3.910
+
+Type  : Slow 1200mV 0C Model Hold 'FD[2]'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FD[5]'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[2]'
+Slack : -1.464
+TNS   : -14.640
+
+Type  : Slow 1200mV 0C Model Removal 'FD[2]'
+Slack : 1.596
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gckP31'
+Slack : -3.000
+TNS   : -16.383
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[5]'
+Slack : -1.487
+TNS   : -44.610
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[2]'
+Slack : -1.487
+TNS   : -14.870
+
+Type  : Fast 1200mV 0C Model Setup 'FD[5]'
+Slack : -1.421
+TNS   : -24.105
+
+Type  : Fast 1200mV 0C Model Setup 'FD[2]'
+Slack : -0.159
+TNS   : -0.636
+
+Type  : Fast 1200mV 0C Model Setup 'gckP31'
+Slack : -0.117
+TNS   : -0.246
+
+Type  : Fast 1200mV 0C Model Hold 'gckP31'
+Slack : -0.689
+TNS   : -3.086
+
+Type  : Fast 1200mV 0C Model Hold 'FD[2]'
+Slack : 0.167
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FD[5]'
+Slack : 0.168
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[2]'
+Slack : -0.134
+TNS   : -1.340
+
+Type  : Fast 1200mV 0C Model Removal 'FD[2]'
+Slack : 0.671
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gckP31'
+Slack : -3.000
+TNS   : -12.339
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[5]'
+Slack : -1.000
+TNS   : -30.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[2]'
+Slack : -1.000
+TNS   : -10.000
+
+------------------------------------------------------------

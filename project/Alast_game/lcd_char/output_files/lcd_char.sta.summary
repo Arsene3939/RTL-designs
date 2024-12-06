@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'fin'
+Slack : -22.606
+TNS   : -1385.638
+
+Type  : Slow 1200mV 85C Model Setup 'LCD_DRV:u3|up_mdu5:u0|fout'
+Slack : -6.012
+TNS   : -377.163
+
+Type  : Slow 1200mV 85C Model Hold 'fin'
+Slack : -0.189
+TNS   : -0.189
+
+Type  : Slow 1200mV 85C Model Hold 'LCD_DRV:u3|up_mdu5:u0|fout'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fin'
+Slack : -3.201
+TNS   : -474.366
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCD_DRV:u3|up_mdu5:u0|fout'
+Slack : -1.487
+TNS   : -130.856
+
+Type  : Slow 1200mV 0C Model Setup 'fin'
+Slack : -20.815
+TNS   : -1283.944
+
+Type  : Slow 1200mV 0C Model Setup 'LCD_DRV:u3|up_mdu5:u0|fout'
+Slack : -5.553
+TNS   : -349.929
+
+Type  : Slow 1200mV 0C Model Hold 'fin'
+Slack : -0.168
+TNS   : -0.168
+
+Type  : Slow 1200mV 0C Model Hold 'LCD_DRV:u3|up_mdu5:u0|fout'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fin'
+Slack : -3.201
+TNS   : -474.366
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCD_DRV:u3|up_mdu5:u0|fout'
+Slack : -1.487
+TNS   : -130.856
+
+Type  : Fast 1200mV 0C Model Setup 'fin'
+Slack : -8.940
+TNS   : -473.838
+
+Type  : Fast 1200mV 0C Model Setup 'LCD_DRV:u3|up_mdu5:u0|fout'
+Slack : -1.918
+TNS   : -111.243
+
+Type  : Fast 1200mV 0C Model Hold 'fin'
+Slack : -0.232
+TNS   : -0.232
+
+Type  : Fast 1200mV 0C Model Hold 'LCD_DRV:u3|up_mdu5:u0|fout'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fin'
+Slack : -3.000
+TNS   : -255.521
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCD_DRV:u3|up_mdu5:u0|fout'
+Slack : -1.000
+TNS   : -88.000
+
+------------------------------------------------------------

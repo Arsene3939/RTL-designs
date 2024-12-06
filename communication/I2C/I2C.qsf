@@ -1,0 +1,125 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 19:41:18  April 24, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		I2C_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C16Q240C8
+set_global_assignment -name TOP_LEVEL_ENTITY I2C
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:41:18  APRIL 24, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 240
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_31 -to clk
+set_location_assignment PIN_99 -to rst
+set_location_assignment PIN_184 -to Do
+set_location_assignment PIN_183 -to bz
+set_location_assignment PIN_167 -to digit[3]
+set_location_assignment PIN_166 -to digit[2]
+set_location_assignment PIN_164 -to digit[1]
+set_location_assignment PIN_161 -to digit[0]
+set_location_assignment PIN_181 -to ssd[6]
+set_location_assignment PIN_177 -to ssd[5]
+set_location_assignment PIN_176 -to ssd[4]
+set_location_assignment PIN_175 -to ssd[3]
+set_location_assignment PIN_174 -to ssd[2]
+set_location_assignment PIN_173 -to ssd[1]
+set_location_assignment PIN_171 -to ssd[0]
+set_location_assignment PIN_87 -to LED[15]
+set_location_assignment PIN_93 -to LED[14]
+set_location_assignment PIN_95 -to LED[13]
+set_location_assignment PIN_94 -to LED[12]
+set_location_assignment PIN_100 -to LED[11]
+set_location_assignment PIN_101 -to LED[10]
+set_location_assignment PIN_102 -to LED[9]
+set_location_assignment PIN_103 -to LED[8]
+set_location_assignment PIN_106 -to LED[7]
+set_location_assignment PIN_107 -to LED[6]
+set_location_assignment PIN_108 -to LED[5]
+set_location_assignment PIN_110 -to LED[4]
+set_location_assignment PIN_111 -to LED[3]
+set_location_assignment PIN_112 -to LED[2]
+set_location_assignment PIN_113 -to LED[1]
+set_location_assignment PIN_114 -to LED[0]
+set_location_assignment PIN_131 -to S[7]
+set_location_assignment PIN_128 -to S[6]
+set_location_assignment PIN_127 -to S[5]
+set_location_assignment PIN_126 -to S[4]
+set_location_assignment PIN_120 -to S[3]
+set_location_assignment PIN_119 -to S[2]
+set_location_assignment PIN_118 -to S[1]
+set_location_assignment PIN_117 -to S[0]
+set_location_assignment PIN_132 -to KeyC[3]
+set_location_assignment PIN_133 -to KeyC[2]
+set_location_assignment PIN_134 -to KeyC[1]
+set_location_assignment PIN_135 -to KeyC[0]
+set_location_assignment PIN_137 -to KeyR[3]
+set_location_assignment PIN_139 -to KeyR[2]
+set_location_assignment PIN_142 -to KeyR[1]
+set_location_assignment PIN_143 -to KeyR[0]
+set_location_assignment PIN_219 -to DBo[7]
+set_location_assignment PIN_218 -to DBo[6]
+set_location_assignment PIN_217 -to DBo[5]
+set_location_assignment PIN_216 -to DBo[4]
+set_location_assignment PIN_214 -to DBo[3]
+set_location_assignment PIN_207 -to DBo[2]
+set_location_assignment PIN_203 -to DBo[1]
+set_location_assignment PIN_202 -to DBo[0]
+set_location_assignment PIN_201 -to EA
+set_location_assignment PIN_199 -to RS
+set_location_assignment PIN_200 -to RW
+set_global_assignment -name VHDL_FILE I2C.vhd
+set_location_assignment PIN_220 -to io[3]
+set_location_assignment PIN_222 -to io[2]
+set_location_assignment PIN_230 -to io[1]
+set_location_assignment PIN_232 -to io[0]
+set_location_assignment PIN_194 -to jo
+set_location_assignment PIN_189 -to SCL
+set_location_assignment PIN_187 -to SDA
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_location_assignment PIN_188 -to SCLA
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

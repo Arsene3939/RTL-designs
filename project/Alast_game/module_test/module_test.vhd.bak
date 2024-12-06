@@ -1,0 +1,46 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+USE IEEE.std_logic_signed.all;
+entity module_test is
+	port(
+		rst,clk:in std_logic;
+		ssd:buffer std_logic_vector(6 downto 0);
+		digit:buffer std_logic_vector(3 downto 0);
+	);
+end entity module_test;
+architecture main of module_test is
+	signal FD:std_logic_vector(50 downto 0);
+	shared variable num:integer range 0 to 9999:=4321;
+	type arr is array(0 to 15) of std_logic_vector(3 downto 0);
+	constant to_vector:arr:=(X"0",X"1",X"2",X"3",X"4",X"5",X"6",X"7",X"8",X"9",X"A",X"B",X"C",X"D",X"E",X"F");
+begin
+	fre:process(rst,clk)
+	begin
+		if rst='0' then
+			FD<=(others=>'0');
+		elsif rising_edge(clk)then
+			FD<=FD+1;
+		end if;
+	end process fre;
+	component seven_seg_display is
+		port(
+			rst,ck0:in std_logic;
+			digit:buffer std_logic_vector(3 downto 0);
+			ssd:buffer std_logic_vector(6 downto 0);
+			N1,N2,N3,N4:in std_logic_vector(3 downto 0)
+		);
+	end component;
+	U0:seven_seg_display
+		port map(
+			rst=>rst,
+			ck0=>clk,
+			digit=>digit,
+			ssd=>ssd,
+			N1=>to_vector(num/1000),
+			N2=>to_vector((num/100) mod 10),
+			N3=>to_vector((num/10)  mod 10),
+			N4=>to_vector(num       mod 10)
+		);
+end main;
+
+	

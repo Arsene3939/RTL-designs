@@ -1,0 +1,25 @@
+library IEEE;
+USE IEEE.std_logic_unsigned.all;
+USE IEEE.std_logic_1164.all;
+entity buzzer is
+	port(clk,rst:in std_logic;
+			bz:buffer std_logic);
+end;
+architecture song of buzzer is
+	signal FD:std_logic_vector(24 downto 0);
+begin
+	Freq_Div:process(clk)			
+	begin
+		if rst='0' then				
+			FD<=(others=>'0');			
+		elsif rising_edge(clk) then	
+			FD<=FD+1;					
+		end if;
+	end process Freq_Div;
+	tone:process(FD(16))
+	begin
+		if rising_edge(FD(16))then
+			bz<=not bz;
+		end if;
+	end process tone;
+end song;

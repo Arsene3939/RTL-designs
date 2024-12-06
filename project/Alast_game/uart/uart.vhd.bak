@@ -1,0 +1,27 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+USE IEEE.std_logic_signed.all;
+entity uart is
+	port(
+		rst,clk:in std_logic;
+		TX:buffer std_logic;
+		RX:ni std_logic;
+		LED:buffer std_logic_vector(5 downto 0)
+	);
+end entity uart;
+architecture main of uart is
+	signal FD:std_logic_vector(50 downto 0);
+begin
+	fre:process(rst,clk)
+	begin
+		if rst='0' then
+			FD<=(others=>'0');
+		elsif rising_edge(clk)then
+			FD<=FD+1;
+		end if;
+	end process fre;
+	baud:process(clk)
+	begin
+end main;
+
+	

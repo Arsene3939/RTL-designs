@@ -1,0 +1,1433 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'LCMP_RESET'
+Slack : -49.774
+TNS   : -1004.221
+
+Type  : Slow 1200mV 85C Model Setup 'TX_W'
+Slack : -10.499
+TNS   : -79.067
+
+Type  : Slow 1200mV 85C Model Setup 'FD[0]'
+Slack : -9.562
+TNS   : -1256.425
+
+Type  : Slow 1200mV 85C Model Setup 'FD[17]'
+Slack : -7.928
+TNS   : -576.073
+
+Type  : Slow 1200mV 85C Model Setup 'loadck'
+Slack : -7.209
+TNS   : -21.625
+
+Type  : Slow 1200mV 85C Model Setup 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : -5.939
+TNS   : -40.396
+
+Type  : Slow 1200mV 85C Model Setup 'FD[5]'
+Slack : -5.405
+TNS   : -376.383
+
+Type  : Slow 1200mV 85C Model Setup 'RGB16x16_EP3C16Q240C8:RGB16x16|DM13A_RESET'
+Slack : -5.007
+TNS   : -18.271
+
+Type  : Slow 1200mV 85C Model Setup 'LCM_RESET'
+Slack : -4.945
+TNS   : -15.502
+
+Type  : Slow 1200mV 85C Model Setup 'SResetP99'
+Slack : -4.808
+TNS   : -13.982
+
+Type  : Slow 1200mV 85C Model Setup 'FD[7]'
+Slack : -4.487
+TNS   : -52.893
+
+Type  : Slow 1200mV 85C Model Setup 'S_RESET_T'
+Slack : -4.007
+TNS   : -4.007
+
+Type  : Slow 1200mV 85C Model Setup 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : -3.811
+TNS   : -304.600
+
+Type  : Slow 1200mV 85C Model Setup 'RS232_T1:U1|Tx_f'
+Slack : -3.474
+TNS   : -57.583
+
+Type  : Slow 1200mV 85C Model Setup 'timer0:U5|FD[5]'
+Slack : -3.439
+TNS   : -47.934
+
+Type  : Slow 1200mV 85C Model Setup 'FD[4]'
+Slack : -3.272
+TNS   : -103.966
+
+Type  : Slow 1200mV 85C Model Setup 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : -3.062
+TNS   : -25.351
+
+Type  : Slow 1200mV 85C Model Setup 'GCKP31'
+Slack : -2.947
+TNS   : -131.331
+
+Type  : Slow 1200mV 85C Model Setup 'FD[2]'
+Slack : -2.801
+TNS   : -31.464
+
+Type  : Slow 1200mV 85C Model Setup 'WS2812BCLK'
+Slack : -2.792
+TNS   : -30.741
+
+Type  : Slow 1200mV 85C Model Setup 'timer0:U5|S_1'
+Slack : -2.566
+TNS   : -39.433
+
+Type  : Slow 1200mV 85C Model Setup 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : -0.720
+TNS   : -0.720
+
+Type  : Slow 1200mV 85C Model Setup 'timer0:U5|FD[17]'
+Slack : -0.394
+TNS   : -2.968
+
+Type  : Slow 1200mV 85C Model Setup 'FD[19]'
+Slack : -0.379
+TNS   : -3.954
+
+Type  : Slow 1200mV 85C Model Setup 'FD[30]'
+Slack : -0.303
+TNS   : -0.303
+
+Type  : Slow 1200mV 85C Model Setup 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : -0.303
+TNS   : -0.303
+
+Type  : Slow 1200mV 85C Model Setup 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : -0.231
+TNS   : -0.231
+
+Type  : Slow 1200mV 85C Model Hold 'GCKP31'
+Slack : -2.490
+TNS   : -50.947
+
+Type  : Slow 1200mV 85C Model Hold 'FD[0]'
+Slack : -1.519
+TNS   : -24.211
+
+Type  : Slow 1200mV 85C Model Hold 'FD[17]'
+Slack : -0.855
+TNS   : -15.602
+
+Type  : Slow 1200mV 85C Model Hold 'LCMP_RESET'
+Slack : -0.574
+TNS   : -1.236
+
+Type  : Slow 1200mV 85C Model Hold 'timer0:U5|FD[5]'
+Slack : -0.414
+TNS   : -0.414
+
+Type  : Slow 1200mV 85C Model Hold 'SResetP99'
+Slack : -0.357
+TNS   : -1.026
+
+Type  : Slow 1200mV 85C Model Hold 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : -0.265
+TNS   : -1.538
+
+Type  : Slow 1200mV 85C Model Hold 'FD[7]'
+Slack : -0.235
+TNS   : -0.413
+
+Type  : Slow 1200mV 85C Model Hold 'RS232_T1:U1|Tx_f'
+Slack : -0.099
+TNS   : -0.472
+
+Type  : Slow 1200mV 85C Model Hold 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : -0.060
+TNS   : -0.060
+
+Type  : Slow 1200mV 85C Model Hold 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : 0.221
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'WS2812BCLK'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[19]'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[4]'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[5]'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'timer0:U5|FD[17]'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : 0.436
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : 0.479
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[30]'
+Slack : 0.480
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : 0.481
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'timer0:U5|S_1'
+Slack : 0.548
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TX_W'
+Slack : 0.739
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[2]'
+Slack : 0.744
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'loadck'
+Slack : 1.762
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'LCM_RESET'
+Slack : 1.778
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'S_RESET_T'
+Slack : 3.616
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'RGB16x16_EP3C16Q240C8:RGB16x16|DM13A_RESET'
+Slack : 3.704
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[0]'
+Slack : -7.568
+TNS   : -935.849
+
+Type  : Slow 1200mV 85C Model Recovery 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : -5.202
+TNS   : -15.606
+
+Type  : Slow 1200mV 85C Model Recovery 'TX_W'
+Slack : -3.791
+TNS   : -3.791
+
+Type  : Slow 1200mV 85C Model Recovery 'GCKP31'
+Slack : -2.971
+TNS   : -77.433
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[30]'
+Slack : -2.585
+TNS   : -7.755
+
+Type  : Slow 1200mV 85C Model Recovery 'loadck'
+Slack : -2.504
+TNS   : -2.504
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[5]'
+Slack : -2.074
+TNS   : -64.282
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[17]'
+Slack : -1.856
+TNS   : -3.470
+
+Type  : Slow 1200mV 85C Model Recovery 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : -1.661
+TNS   : -40.692
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[4]'
+Slack : -1.472
+TNS   : -5.042
+
+Type  : Slow 1200mV 85C Model Recovery 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : -1.420
+TNS   : -15.176
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[2]'
+Slack : -1.190
+TNS   : -14.890
+
+Type  : Slow 1200mV 85C Model Recovery 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : -0.994
+TNS   : -1.988
+
+Type  : Slow 1200mV 85C Model Recovery 'WS2812BCLK'
+Slack : -0.374
+TNS   : -4.114
+
+Type  : Slow 1200mV 85C Model Recovery 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : 0.019
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'RS232_T1:U1|Tx_f'
+Slack : 0.121
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : 0.157
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[7]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'timer0:U5|FD[17]'
+Slack : 0.218
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'FD[17]'
+Slack : -1.060
+TNS   : -36.301
+
+Type  : Slow 1200mV 85C Model Removal 'FD[0]'
+Slack : -0.727
+TNS   : -6.064
+
+Type  : Slow 1200mV 85C Model Removal 'FD[7]'
+Slack : -0.568
+TNS   : -4.196
+
+Type  : Slow 1200mV 85C Model Removal 'timer0:U5|FD[17]'
+Slack : -0.271
+TNS   : -1.626
+
+Type  : Slow 1200mV 85C Model Removal 'GCKP31'
+Slack : -0.089
+TNS   : -3.308
+
+Type  : Slow 1200mV 85C Model Removal 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : -0.077
+TNS   : -0.487
+
+Type  : Slow 1200mV 85C Model Removal 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : 0.014
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'RS232_T1:U1|Tx_f'
+Slack : 0.071
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'WS2812BCLK'
+Slack : 0.344
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'TX_W'
+Slack : 0.700
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'FD[2]'
+Slack : 0.903
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'FD[4]'
+Slack : 1.305
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : 1.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : 1.463
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : 1.556
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'FD[5]'
+Slack : 1.605
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'loadck'
+Slack : 1.727
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'FD[30]'
+Slack : 2.973
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : 3.931
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GCKP31'
+Slack : -3.000
+TNS   : -124.934
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SResetP99'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[0]'
+Slack : -1.487
+TNS   : -275.095
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[17]'
+Slack : -1.487
+TNS   : -142.752
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[5]'
+Slack : -1.487
+TNS   : -141.265
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : -1.487
+TNS   : -133.830
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[4]'
+Slack : -1.487
+TNS   : -50.558
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[7]'
+Slack : -1.487
+TNS   : -32.714
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'timer0:U5|FD[5]'
+Slack : -1.487
+TNS   : -29.740
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[19]'
+Slack : -1.487
+TNS   : -26.766
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RS232_T1:U1|Tx_f'
+Slack : -1.487
+TNS   : -26.766
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[2]'
+Slack : -1.487
+TNS   : -25.279
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'timer0:U5|S_1'
+Slack : -1.487
+TNS   : -25.279
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : -1.487
+TNS   : -22.305
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'WS2812BCLK'
+Slack : -1.487
+TNS   : -20.818
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'timer0:U5|FD[17]'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : -1.487
+TNS   : -16.357
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TX_W'
+Slack : -1.487
+TNS   : -13.383
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'loadck'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[30]'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCMP_RESET'
+Slack : 0.317
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCM_RESET'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RGB16x16_EP3C16Q240C8:RGB16x16|DM13A_RESET'
+Slack : 0.397
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'S_RESET_T'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'LCMP_RESET'
+Slack : -45.810
+TNS   : -941.972
+
+Type  : Slow 1200mV 0C Model Setup 'TX_W'
+Slack : -9.677
+TNS   : -72.765
+
+Type  : Slow 1200mV 0C Model Setup 'FD[0]'
+Slack : -8.983
+TNS   : -1164.182
+
+Type  : Slow 1200mV 0C Model Setup 'FD[17]'
+Slack : -7.289
+TNS   : -533.267
+
+Type  : Slow 1200mV 0C Model Setup 'loadck'
+Slack : -6.666
+TNS   : -19.995
+
+Type  : Slow 1200mV 0C Model Setup 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : -5.364
+TNS   : -36.591
+
+Type  : Slow 1200mV 0C Model Setup 'FD[5]'
+Slack : -5.076
+TNS   : -351.095
+
+Type  : Slow 1200mV 0C Model Setup 'RGB16x16_EP3C16Q240C8:RGB16x16|DM13A_RESET'
+Slack : -4.562
+TNS   : -16.530
+
+Type  : Slow 1200mV 0C Model Setup 'LCM_RESET'
+Slack : -4.498
+TNS   : -13.553
+
+Type  : Slow 1200mV 0C Model Setup 'SResetP99'
+Slack : -4.403
+TNS   : -12.809
+
+Type  : Slow 1200mV 0C Model Setup 'FD[7]'
+Slack : -4.162
+TNS   : -49.049
+
+Type  : Slow 1200mV 0C Model Setup 'S_RESET_T'
+Slack : -3.577
+TNS   : -3.577
+
+Type  : Slow 1200mV 0C Model Setup 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : -3.482
+TNS   : -276.375
+
+Type  : Slow 1200mV 0C Model Setup 'RS232_T1:U1|Tx_f'
+Slack : -3.227
+TNS   : -53.160
+
+Type  : Slow 1200mV 0C Model Setup 'timer0:U5|FD[5]'
+Slack : -3.208
+TNS   : -42.705
+
+Type  : Slow 1200mV 0C Model Setup 'FD[4]'
+Slack : -3.085
+TNS   : -96.431
+
+Type  : Slow 1200mV 0C Model Setup 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : -2.814
+TNS   : -22.342
+
+Type  : Slow 1200mV 0C Model Setup 'FD[2]'
+Slack : -2.604
+TNS   : -28.020
+
+Type  : Slow 1200mV 0C Model Setup 'WS2812BCLK'
+Slack : -2.514
+TNS   : -27.751
+
+Type  : Slow 1200mV 0C Model Setup 'GCKP31'
+Slack : -2.499
+TNS   : -110.589
+
+Type  : Slow 1200mV 0C Model Setup 'timer0:U5|S_1'
+Slack : -2.335
+TNS   : -35.728
+
+Type  : Slow 1200mV 0C Model Setup 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : -0.611
+TNS   : -0.611
+
+Type  : Slow 1200mV 0C Model Setup 'timer0:U5|FD[17]'
+Slack : -0.242
+TNS   : -1.712
+
+Type  : Slow 1200mV 0C Model Setup 'FD[19]'
+Slack : -0.241
+TNS   : -2.152
+
+Type  : Slow 1200mV 0C Model Setup 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : -0.172
+TNS   : -0.172
+
+Type  : Slow 1200mV 0C Model Setup 'FD[30]'
+Slack : -0.171
+TNS   : -0.171
+
+Type  : Slow 1200mV 0C Model Setup 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : -0.107
+TNS   : -0.107
+
+Type  : Slow 1200mV 0C Model Hold 'GCKP31'
+Slack : -2.309
+TNS   : -47.731
+
+Type  : Slow 1200mV 0C Model Hold 'FD[0]'
+Slack : -1.371
+TNS   : -18.100
+
+Type  : Slow 1200mV 0C Model Hold 'FD[17]'
+Slack : -0.834
+TNS   : -13.241
+
+Type  : Slow 1200mV 0C Model Hold 'LCMP_RESET'
+Slack : -0.509
+TNS   : -1.008
+
+Type  : Slow 1200mV 0C Model Hold 'timer0:U5|FD[5]'
+Slack : -0.335
+TNS   : -0.335
+
+Type  : Slow 1200mV 0C Model Hold 'SResetP99'
+Slack : -0.308
+TNS   : -0.877
+
+Type  : Slow 1200mV 0C Model Hold 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : -0.237
+TNS   : -1.021
+
+Type  : Slow 1200mV 0C Model Hold 'FD[7]'
+Slack : -0.213
+TNS   : -0.402
+
+Type  : Slow 1200mV 0C Model Hold 'RS232_T1:U1|Tx_f'
+Slack : -0.117
+TNS   : -0.117
+
+Type  : Slow 1200mV 0C Model Hold 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : -0.031
+TNS   : -0.031
+
+Type  : Slow 1200mV 0C Model Hold 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : 0.153
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FD[19]'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FD[5]'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'WS2812BCLK'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'timer0:U5|FD[17]'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FD[4]'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : 0.423
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : 0.424
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FD[30]'
+Slack : 0.427
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'timer0:U5|S_1'
+Slack : 0.512
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FD[2]'
+Slack : 0.688
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TX_W'
+Slack : 0.736
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'LCM_RESET'
+Slack : 1.552
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'loadck'
+Slack : 1.628
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'S_RESET_T'
+Slack : 3.320
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'RGB16x16_EP3C16Q240C8:RGB16x16|DM13A_RESET'
+Slack : 3.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[0]'
+Slack : -6.885
+TNS   : -849.439
+
+Type  : Slow 1200mV 0C Model Recovery 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : -4.729
+TNS   : -14.187
+
+Type  : Slow 1200mV 0C Model Recovery 'TX_W'
+Slack : -3.393
+TNS   : -3.393
+
+Type  : Slow 1200mV 0C Model Recovery 'GCKP31'
+Slack : -2.697
+TNS   : -69.666
+
+Type  : Slow 1200mV 0C Model Recovery 'loadck'
+Slack : -2.220
+TNS   : -2.220
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[30]'
+Slack : -2.219
+TNS   : -6.657
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[5]'
+Slack : -1.880
+TNS   : -57.717
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[17]'
+Slack : -1.532
+TNS   : -2.675
+
+Type  : Slow 1200mV 0C Model Recovery 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : -1.488
+TNS   : -35.527
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[4]'
+Slack : -1.289
+TNS   : -4.266
+
+Type  : Slow 1200mV 0C Model Recovery 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : -1.214
+TNS   : -12.672
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[2]'
+Slack : -1.029
+TNS   : -11.923
+
+Type  : Slow 1200mV 0C Model Recovery 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : -0.815
+TNS   : -1.630
+
+Type  : Slow 1200mV 0C Model Recovery 'WS2812BCLK'
+Slack : -0.337
+TNS   : -3.707
+
+Type  : Slow 1200mV 0C Model Recovery 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : 0.098
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'timer0:U5|FD[17]'
+Slack : 0.247
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : 0.252
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'RS232_T1:U1|Tx_f'
+Slack : 0.254
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[7]'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'FD[17]'
+Slack : -0.975
+TNS   : -34.561
+
+Type  : Slow 1200mV 0C Model Removal 'FD[0]'
+Slack : -0.658
+TNS   : -3.717
+
+Type  : Slow 1200mV 0C Model Removal 'FD[7]'
+Slack : -0.426
+TNS   : -1.344
+
+Type  : Slow 1200mV 0C Model Removal 'timer0:U5|FD[17]'
+Slack : -0.241
+TNS   : -1.446
+
+Type  : Slow 1200mV 0C Model Removal 'GCKP31'
+Slack : -0.094
+TNS   : -3.827
+
+Type  : Slow 1200mV 0C Model Removal 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : -0.080
+TNS   : -0.518
+
+Type  : Slow 1200mV 0C Model Removal 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : -0.048
+TNS   : -0.096
+
+Type  : Slow 1200mV 0C Model Removal 'RS232_T1:U1|Tx_f'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'WS2812BCLK'
+Slack : 0.366
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'TX_W'
+Slack : 0.686
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'FD[2]'
+Slack : 0.811
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'FD[4]'
+Slack : 1.193
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : 1.255
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : 1.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : 1.424
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'FD[5]'
+Slack : 1.464
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'loadck'
+Slack : 1.568
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'FD[30]'
+Slack : 2.687
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : 3.656
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GCKP31'
+Slack : -3.000
+TNS   : -124.934
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SResetP99'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[0]'
+Slack : -1.487
+TNS   : -275.095
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[17]'
+Slack : -1.487
+TNS   : -147.189
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[5]'
+Slack : -1.487
+TNS   : -141.265
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : -1.487
+TNS   : -133.830
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[4]'
+Slack : -1.487
+TNS   : -50.558
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[7]'
+Slack : -1.487
+TNS   : -32.714
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'timer0:U5|FD[5]'
+Slack : -1.487
+TNS   : -29.740
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[19]'
+Slack : -1.487
+TNS   : -26.766
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RS232_T1:U1|Tx_f'
+Slack : -1.487
+TNS   : -26.766
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[2]'
+Slack : -1.487
+TNS   : -25.279
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'timer0:U5|S_1'
+Slack : -1.487
+TNS   : -25.279
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : -1.487
+TNS   : -22.305
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'WS2812BCLK'
+Slack : -1.487
+TNS   : -20.818
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'timer0:U5|FD[17]'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : -1.487
+TNS   : -16.357
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TX_W'
+Slack : -1.487
+TNS   : -13.383
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'loadck'
+Slack : -1.487
+TNS   : -5.948
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[30]'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCMP_RESET'
+Slack : 0.221
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCM_RESET'
+Slack : 0.248
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RGB16x16_EP3C16Q240C8:RGB16x16|DM13A_RESET'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'S_RESET_T'
+Slack : 0.470
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'LCMP_RESET'
+Slack : -20.997
+TNS   : -361.097
+
+Type  : Fast 1200mV 0C Model Setup 'TX_W'
+Slack : -4.119
+TNS   : -30.034
+
+Type  : Fast 1200mV 0C Model Setup 'FD[0]'
+Slack : -3.875
+TNS   : -466.874
+
+Type  : Fast 1200mV 0C Model Setup 'FD[17]'
+Slack : -3.050
+TNS   : -200.524
+
+Type  : Fast 1200mV 0C Model Setup 'loadck'
+Slack : -2.710
+TNS   : -8.127
+
+Type  : Fast 1200mV 0C Model Setup 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : -2.062
+TNS   : -11.428
+
+Type  : Fast 1200mV 0C Model Setup 'FD[5]'
+Slack : -1.770
+TNS   : -109.117
+
+Type  : Fast 1200mV 0C Model Setup 'RGB16x16_EP3C16Q240C8:RGB16x16|DM13A_RESET'
+Slack : -1.678
+TNS   : -5.891
+
+Type  : Fast 1200mV 0C Model Setup 'LCM_RESET'
+Slack : -1.633
+TNS   : -4.300
+
+Type  : Fast 1200mV 0C Model Setup 'SResetP99'
+Slack : -1.512
+TNS   : -4.350
+
+Type  : Fast 1200mV 0C Model Setup 'FD[7]'
+Slack : -1.352
+TNS   : -10.893
+
+Type  : Fast 1200mV 0C Model Setup 'S_RESET_T'
+Slack : -1.245
+TNS   : -1.245
+
+Type  : Fast 1200mV 0C Model Setup 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : -1.089
+TNS   : -75.442
+
+Type  : Fast 1200mV 0C Model Setup 'timer0:U5|FD[5]'
+Slack : -0.950
+TNS   : -9.637
+
+Type  : Fast 1200mV 0C Model Setup 'RS232_T1:U1|Tx_f'
+Slack : -0.898
+TNS   : -14.275
+
+Type  : Fast 1200mV 0C Model Setup 'FD[4]'
+Slack : -0.827
+TNS   : -25.023
+
+Type  : Fast 1200mV 0C Model Setup 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : -0.777
+TNS   : -2.983
+
+Type  : Fast 1200mV 0C Model Setup 'GCKP31'
+Slack : -0.744
+TNS   : -16.546
+
+Type  : Fast 1200mV 0C Model Setup 'FD[2]'
+Slack : -0.660
+TNS   : -4.770
+
+Type  : Fast 1200mV 0C Model Setup 'WS2812BCLK'
+Slack : -0.577
+TNS   : -5.293
+
+Type  : Fast 1200mV 0C Model Setup 'timer0:U5|S_1'
+Slack : -0.526
+TNS   : -6.765
+
+Type  : Fast 1200mV 0C Model Setup 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : 0.263
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'timer0:U5|FD[17]'
+Slack : 0.377
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'FD[19]'
+Slack : 0.396
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'FD[30]'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : 0.451
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : 0.465
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'GCKP31'
+Slack : -1.203
+TNS   : -30.686
+
+Type  : Fast 1200mV 0C Model Hold 'FD[0]'
+Slack : -0.734
+TNS   : -7.510
+
+Type  : Fast 1200mV 0C Model Hold 'FD[17]'
+Slack : -0.432
+TNS   : -10.251
+
+Type  : Fast 1200mV 0C Model Hold 'LCMP_RESET'
+Slack : -0.431
+TNS   : -15.351
+
+Type  : Fast 1200mV 0C Model Hold 'SResetP99'
+Slack : -0.324
+TNS   : -0.950
+
+Type  : Fast 1200mV 0C Model Hold 'timer0:U5|FD[5]'
+Slack : -0.309
+TNS   : -0.309
+
+Type  : Fast 1200mV 0C Model Hold 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : -0.233
+TNS   : -8.730
+
+Type  : Fast 1200mV 0C Model Hold 'RS232_T1:U1|Tx_f'
+Slack : -0.201
+TNS   : -2.462
+
+Type  : Fast 1200mV 0C Model Hold 'FD[7]'
+Slack : -0.140
+TNS   : -0.313
+
+Type  : Fast 1200mV 0C Model Hold 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : -0.076
+TNS   : -0.076
+
+Type  : Fast 1200mV 0C Model Hold 'WS2812BCLK'
+Slack : 0.025
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : 0.103
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FD[19]'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FD[5]'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'timer0:U5|FD[17]'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FD[4]'
+Slack : 0.167
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : 0.167
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FD[30]'
+Slack : 0.200
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : 0.200
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'timer0:U5|S_1'
+Slack : 0.220
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TX_W'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FD[2]'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'loadck'
+Slack : 0.746
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'LCM_RESET'
+Slack : 0.842
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'S_RESET_T'
+Slack : 1.624
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RGB16x16_EP3C16Q240C8:RGB16x16|DM13A_RESET'
+Slack : 1.652
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[0]'
+Slack : -3.014
+TNS   : -370.979
+
+Type  : Fast 1200mV 0C Model Recovery 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : -1.747
+TNS   : -5.241
+
+Type  : Fast 1200mV 0C Model Recovery 'loadck'
+Slack : -1.397
+TNS   : -1.397
+
+Type  : Fast 1200mV 0C Model Recovery 'TX_W'
+Slack : -1.142
+TNS   : -1.142
+
+Type  : Fast 1200mV 0C Model Recovery 'GCKP31'
+Slack : -0.761
+TNS   : -25.454
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[17]'
+Slack : -0.715
+TNS   : -2.293
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[30]'
+Slack : -0.693
+TNS   : -2.079
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[5]'
+Slack : -0.364
+TNS   : -6.904
+
+Type  : Fast 1200mV 0C Model Recovery 'WS2812BCLK'
+Slack : -0.335
+TNS   : -3.685
+
+Type  : Fast 1200mV 0C Model Recovery 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : -0.204
+TNS   : -1.328
+
+Type  : Fast 1200mV 0C Model Recovery 'timer0:U5|FD[17]'
+Slack : -0.100
+TNS   : -0.600
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[4]'
+Slack : -0.100
+TNS   : -0.200
+
+Type  : Fast 1200mV 0C Model Recovery 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : -0.036
+TNS   : -0.144
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[2]'
+Slack : -0.003
+TNS   : -0.021
+
+Type  : Fast 1200mV 0C Model Recovery 'RS232_T1:U1|Tx_f'
+Slack : 0.111
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[7]'
+Slack : 0.157
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : 0.233
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'FD[17]'
+Slack : -0.410
+TNS   : -13.955
+
+Type  : Fast 1200mV 0C Model Removal 'FD[7]'
+Slack : -0.326
+TNS   : -4.040
+
+Type  : Fast 1200mV 0C Model Removal 'FD[0]'
+Slack : -0.305
+TNS   : -4.944
+
+Type  : Fast 1200mV 0C Model Removal 'RS232_T1:U1|Tx_f'
+Slack : -0.120
+TNS   : -0.600
+
+Type  : Fast 1200mV 0C Model Removal 'timer0:U5|FD[17]'
+Slack : -0.061
+TNS   : -0.366
+
+Type  : Fast 1200mV 0C Model Removal 'GCKP31'
+Slack : -0.040
+TNS   : -1.466
+
+Type  : Fast 1200mV 0C Model Removal 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : -0.025
+TNS   : -0.131
+
+Type  : Fast 1200mV 0C Model Removal 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : 0.031
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'WS2812BCLK'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'TX_W'
+Slack : 0.274
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'FD[2]'
+Slack : 0.373
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'FD[4]'
+Slack : 0.529
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : 0.589
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : 0.628
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'FD[5]'
+Slack : 0.633
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : 0.654
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'loadck'
+Slack : 0.757
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'FD[30]'
+Slack : 1.388
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : 1.674
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GCKP31'
+Slack : -3.000
+TNS   : -89.520
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SResetP99'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[0]'
+Slack : -1.000
+TNS   : -185.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[17]'
+Slack : -1.000
+TNS   : -96.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[5]'
+Slack : -1.000
+TNS   : -95.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[0]'
+Slack : -1.000
+TNS   : -90.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[4]'
+Slack : -1.000
+TNS   : -34.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[7]'
+Slack : -1.000
+TNS   : -22.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'timer0:U5|FD[5]'
+Slack : -1.000
+TNS   : -20.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[19]'
+Slack : -1.000
+TNS   : -18.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RS232_T1:U1|Tx_f'
+Slack : -1.000
+TNS   : -18.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[2]'
+Slack : -1.000
+TNS   : -17.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'timer0:U5|S_1'
+Slack : -1.000
+TNS   : -17.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KEYboard_EP3C16Q240C8:U7|FD[16]'
+Slack : -1.000
+TNS   : -15.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'WS2812BCLK'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'timer0:U5|FD[17]'
+Slack : -1.000
+TNS   : -12.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RGB16x16_EP3C16Q240C8:RGB16x16|FD[2]'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TX_W'
+Slack : -1.000
+TNS   : -9.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'loadck'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[30]'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ROTATE_ENCODER_EP3C16Q240C8:U6|APic[2]'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[16]'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ROTATE_ENCODER_EP3C16Q240C8:U6|FD[8]'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCM_RESET'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCMP_RESET'
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'S_RESET_T'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RGB16x16_EP3C16Q240C8:RGB16x16|DM13A_RESET'
+Slack : 0.436
+TNS   : 0.000
+
+------------------------------------------------------------

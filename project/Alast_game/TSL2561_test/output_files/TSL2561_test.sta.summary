@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -36.532
+TNS   : -1268.172
+
+Type  : Slow 1200mV 85C Model Setup 'seven_seg_display:U0|FD[10]'
+Slack : -1.909
+TNS   : -13.526
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'seven_seg_display:U0|FD[10]'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -255.790
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'seven_seg_display:U0|FD[10]'
+Slack : -1.487
+TNS   : -19.331
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -33.375
+TNS   : -1160.352
+
+Type  : Slow 1200mV 0C Model Setup 'seven_seg_display:U0|FD[10]'
+Slack : -1.715
+TNS   : -12.122
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.251
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'seven_seg_display:U0|FD[10]'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -255.790
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'seven_seg_display:U0|FD[10]'
+Slack : -1.487
+TNS   : -19.331
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -15.148
+TNS   : -463.130
+
+Type  : Fast 1200mV 0C Model Setup 'seven_seg_display:U0|FD[10]'
+Slack : -0.367
+TNS   : -2.445
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.108
+TNS   : -0.108
+
+Type  : Fast 1200mV 0C Model Hold 'seven_seg_display:U0|FD[10]'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -182.687
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'seven_seg_display:U0|FD[10]'
+Slack : -1.000
+TNS   : -13.000
+
+------------------------------------------------------------

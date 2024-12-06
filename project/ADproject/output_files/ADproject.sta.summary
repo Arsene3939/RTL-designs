@@ -1,0 +1,41 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'lpm_counter:FD_rtl_0|dffs[15]'
+Slack : -16.000
+TNS   : -184.100
+
+Type  : Setup 'lpm_counter:FD_rtl_0|dffs[10]'
+Slack : -13.200
+TNS   : -61.500
+
+Type  : Setup 'clk'
+Slack : -9.000
+TNS   : -144.000
+
+Type  : Hold 'clk'
+Slack : 0.600
+TNS   : 0.000
+
+Type  : Hold 'lpm_counter:FD_rtl_0|dffs[10]'
+Slack : 5.800
+TNS   : 0.000
+
+Type  : Hold 'lpm_counter:FD_rtl_0|dffs[15]'
+Slack : 5.800
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk'
+Slack : -3.500
+TNS   : -112.000
+
+Type  : Minimum Pulse Width 'lpm_counter:FD_rtl_0|dffs[15]'
+Slack : -3.500
+TNS   : -112.000
+
+Type  : Minimum Pulse Width 'lpm_counter:FD_rtl_0|dffs[10]'
+Slack : -3.500
+TNS   : -42.000
+
+------------------------------------------------------------

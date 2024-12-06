@@ -1,0 +1,221 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'parallel_RGBLED:U2|FD[3]'
+Slack : -2.526
+TNS   : -17.743
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -2.364
+TNS   : -51.767
+
+Type  : Slow 1200mV 85C Model Setup 'keyboard_scan:U3|FD[12]'
+Slack : -1.312
+TNS   : -6.179
+
+Type  : Slow 1200mV 85C Model Setup 'FD[22]'
+Slack : -1.016
+TNS   : -8.839
+
+Type  : Slow 1200mV 85C Model Setup 'seven_seg_display:U0|FD[10]'
+Slack : -0.926
+TNS   : -5.056
+
+Type  : Slow 1200mV 85C Model Setup 'seven_seg_display:U1|FD[10]'
+Slack : -0.570
+TNS   : -1.079
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.086
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'seven_seg_display:U0|FD[10]'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'parallel_RGBLED:U2|FD[3]'
+Slack : 0.370
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'keyboard_scan:U3|FD[12]'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'seven_seg_display:U1|FD[10]'
+Slack : 0.456
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[22]'
+Slack : 0.528
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -60.993
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[22]'
+Slack : -1.487
+TNS   : -35.688
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'seven_seg_display:U0|FD[10]'
+Slack : -1.487
+TNS   : -19.331
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'parallel_RGBLED:U2|FD[3]'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'seven_seg_display:U1|FD[10]'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keyboard_scan:U3|FD[12]'
+Slack : -1.487
+TNS   : -16.357
+
+Type  : Slow 1200mV 0C Model Setup 'parallel_RGBLED:U2|FD[3]'
+Slack : -2.198
+TNS   : -15.241
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -1.993
+TNS   : -42.408
+
+Type  : Slow 1200mV 0C Model Setup 'keyboard_scan:U3|FD[12]'
+Slack : -1.190
+TNS   : -5.447
+
+Type  : Slow 1200mV 0C Model Setup 'FD[22]'
+Slack : -0.864
+TNS   : -6.856
+
+Type  : Slow 1200mV 0C Model Setup 'seven_seg_display:U0|FD[10]'
+Slack : -0.765
+TNS   : -3.980
+
+Type  : Slow 1200mV 0C Model Setup 'seven_seg_display:U1|FD[10]'
+Slack : -0.417
+TNS   : -0.539
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'parallel_RGBLED:U2|FD[3]'
+Slack : 0.225
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'seven_seg_display:U0|FD[10]'
+Slack : 0.279
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'keyboard_scan:U3|FD[12]'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'seven_seg_display:U1|FD[10]'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FD[22]'
+Slack : 0.495
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -60.993
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[22]'
+Slack : -1.487
+TNS   : -35.688
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'seven_seg_display:U0|FD[10]'
+Slack : -1.487
+TNS   : -19.331
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'parallel_RGBLED:U2|FD[3]'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'seven_seg_display:U1|FD[10]'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keyboard_scan:U3|FD[12]'
+Slack : -1.487
+TNS   : -16.357
+
+Type  : Fast 1200mV 0C Model Setup 'parallel_RGBLED:U2|FD[3]'
+Slack : -0.520
+TNS   : -1.693
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.482
+TNS   : -3.534
+
+Type  : Fast 1200mV 0C Model Setup 'keyboard_scan:U3|FD[12]'
+Slack : -0.003
+TNS   : -0.012
+
+Type  : Fast 1200mV 0C Model Setup 'FD[22]'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'seven_seg_display:U0|FD[10]'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'seven_seg_display:U1|FD[10]'
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.156
+TNS   : -0.658
+
+Type  : Fast 1200mV 0C Model Hold 'parallel_RGBLED:U2|FD[3]'
+Slack : 0.077
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'seven_seg_display:U0|FD[10]'
+Slack : 0.085
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'keyboard_scan:U3|FD[12]'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'seven_seg_display:U1|FD[10]'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FD[22]'
+Slack : 0.207
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -44.385
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[22]'
+Slack : -1.000
+TNS   : -24.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'seven_seg_display:U0|FD[10]'
+Slack : -1.000
+TNS   : -13.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'parallel_RGBLED:U2|FD[3]'
+Slack : -1.000
+TNS   : -12.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'seven_seg_display:U1|FD[10]'
+Slack : -1.000
+TNS   : -12.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keyboard_scan:U3|FD[12]'
+Slack : -1.000
+TNS   : -11.000
+
+------------------------------------------------------------

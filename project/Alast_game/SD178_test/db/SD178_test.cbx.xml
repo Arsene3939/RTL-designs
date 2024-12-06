@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="SD178_test">
+		<CBX_INST_ENTRY INSTANCE_NAME="|SD178_test|altsyncram:Serial_available_rtl_0" CBX_FILE_NAME="altsyncram_lrh1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SD178_test|uart:u3|lpm_mult:Mult0" CBX_FILE_NAME="mult_fft.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SD178_test|uart:u3|lpm_mult:Mult1" CBX_FILE_NAME="mult_fft.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

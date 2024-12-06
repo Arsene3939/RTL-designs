@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Oct 15 14:44:45 2020
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : lcd_128x160_test
+Top-level Entity Name : lcd_128x160_test
+Family : Cyclone III
+Total logic elements : 7,777
+    Total combinational functions : 6,704
+    Dedicated logic registers : 2,395
+Total registers : 2395
+Total pins : 93
+Total virtual pins : 0
+Total memory bits : 196,696
+Embedded Multiplier 9-bit elements : 8
+Total PLLs : 0

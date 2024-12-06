@@ -1,0 +1,401 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'FD[0]'
+Slack : -12.806
+TNS   : -487.357
+
+Type  : Slow 1200mV 85C Model Setup 'LCMP_RESET'
+Slack : -11.942
+TNS   : -857.186
+
+Type  : Slow 1200mV 85C Model Setup 'FD[8]'
+Slack : -6.514
+TNS   : -130.516
+
+Type  : Slow 1200mV 85C Model Setup 'FD[4]'
+Slack : -5.882
+TNS   : -64.650
+
+Type  : Slow 1200mV 85C Model Setup 'FD[7]'
+Slack : -4.413
+TNS   : -46.982
+
+Type  : Slow 1200mV 85C Model Setup 'FD[23]'
+Slack : -3.494
+TNS   : -55.352
+
+Type  : Slow 1200mV 85C Model Setup 'gckP31'
+Slack : -2.479
+TNS   : -37.653
+
+Type  : Slow 1200mV 85C Model Setup 'LCM_RESET'
+Slack : -2.117
+TNS   : -10.430
+
+Type  : Slow 1200mV 85C Model Setup 'FD[17]'
+Slack : -0.388
+TNS   : -2.843
+
+Type  : Slow 1200mV 85C Model Hold 'FD[0]'
+Slack : -2.052
+TNS   : -15.315
+
+Type  : Slow 1200mV 85C Model Hold 'gckP31'
+Slack : -2.011
+TNS   : -25.389
+
+Type  : Slow 1200mV 85C Model Hold 'LCMP_RESET'
+Slack : 0.106
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[7]'
+Slack : 0.245
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[23]'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[17]'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[4]'
+Slack : 0.441
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FD[8]'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'LCM_RESET'
+Slack : 1.492
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[4]'
+Slack : -4.617
+TNS   : -50.676
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[0]'
+Slack : -3.248
+TNS   : -233.060
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[7]'
+Slack : -0.078
+TNS   : -0.078
+
+Type  : Slow 1200mV 85C Model Removal 'FD[0]'
+Slack : -0.959
+TNS   : -68.681
+
+Type  : Slow 1200mV 85C Model Removal 'FD[7]'
+Slack : -0.530
+TNS   : -11.101
+
+Type  : Slow 1200mV 85C Model Removal 'FD[4]'
+Slack : 2.155
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gckP31'
+Slack : -3.000
+TNS   : -38.688
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[0]'
+Slack : -1.487
+TNS   : -120.447
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[8]'
+Slack : -1.487
+TNS   : -34.201
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[7]'
+Slack : -1.487
+TNS   : -32.714
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[23]'
+Slack : -1.487
+TNS   : -29.740
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[4]'
+Slack : -1.487
+TNS   : -29.740
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[17]'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCMP_RESET'
+Slack : 0.260
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCM_RESET'
+Slack : 0.470
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'FD[0]'
+Slack : -11.802
+TNS   : -446.781
+
+Type  : Slow 1200mV 0C Model Setup 'LCMP_RESET'
+Slack : -11.076
+TNS   : -798.956
+
+Type  : Slow 1200mV 0C Model Setup 'FD[8]'
+Slack : -6.042
+TNS   : -120.514
+
+Type  : Slow 1200mV 0C Model Setup 'FD[4]'
+Slack : -5.435
+TNS   : -59.137
+
+Type  : Slow 1200mV 0C Model Setup 'FD[7]'
+Slack : -4.069
+TNS   : -42.322
+
+Type  : Slow 1200mV 0C Model Setup 'FD[23]'
+Slack : -3.277
+TNS   : -50.706
+
+Type  : Slow 1200mV 0C Model Setup 'gckP31'
+Slack : -2.074
+TNS   : -31.147
+
+Type  : Slow 1200mV 0C Model Setup 'LCM_RESET'
+Slack : -1.858
+TNS   : -9.124
+
+Type  : Slow 1200mV 0C Model Setup 'FD[17]'
+Slack : -0.247
+TNS   : -1.597
+
+Type  : Slow 1200mV 0C Model Hold 'gckP31'
+Slack : -1.827
+TNS   : -23.375
+
+Type  : Slow 1200mV 0C Model Hold 'FD[0]'
+Slack : -1.807
+TNS   : -14.014
+
+Type  : Slow 1200mV 0C Model Hold 'FD[7]'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'LCMP_RESET'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FD[23]'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FD[17]'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FD[4]'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FD[8]'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'LCM_RESET'
+Slack : 1.375
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[4]'
+Slack : -4.169
+TNS   : -45.908
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[0]'
+Slack : -2.781
+TNS   : -199.442
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[7]'
+Slack : 0.112
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'FD[0]'
+Slack : -0.972
+TNS   : -69.648
+
+Type  : Slow 1200mV 0C Model Removal 'FD[7]'
+Slack : -0.509
+TNS   : -10.679
+
+Type  : Slow 1200mV 0C Model Removal 'FD[4]'
+Slack : 1.928
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gckP31'
+Slack : -3.000
+TNS   : -38.688
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[0]'
+Slack : -1.487
+TNS   : -120.447
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[8]'
+Slack : -1.487
+TNS   : -34.201
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[7]'
+Slack : -1.487
+TNS   : -32.714
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[23]'
+Slack : -1.487
+TNS   : -29.740
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[4]'
+Slack : -1.487
+TNS   : -29.740
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[17]'
+Slack : -1.487
+TNS   : -17.844
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCMP_RESET'
+Slack : 0.107
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCM_RESET'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'FD[0]'
+Slack : -5.020
+TNS   : -173.713
+
+Type  : Fast 1200mV 0C Model Setup 'LCMP_RESET'
+Slack : -4.436
+TNS   : -290.207
+
+Type  : Fast 1200mV 0C Model Setup 'FD[8]'
+Slack : -2.393
+TNS   : -45.641
+
+Type  : Fast 1200mV 0C Model Setup 'FD[4]'
+Slack : -2.102
+TNS   : -18.196
+
+Type  : Fast 1200mV 0C Model Setup 'FD[7]'
+Slack : -1.360
+TNS   : -7.955
+
+Type  : Fast 1200mV 0C Model Setup 'FD[23]'
+Slack : -0.975
+TNS   : -13.835
+
+Type  : Fast 1200mV 0C Model Setup 'gckP31'
+Slack : -0.549
+TNS   : -4.469
+
+Type  : Fast 1200mV 0C Model Setup 'LCM_RESET'
+Slack : -0.391
+TNS   : -1.897
+
+Type  : Fast 1200mV 0C Model Setup 'FD[17]'
+Slack : 0.392
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'gckP31'
+Slack : -1.039
+TNS   : -15.102
+
+Type  : Fast 1200mV 0C Model Hold 'FD[0]'
+Slack : -0.985
+TNS   : -13.656
+
+Type  : Fast 1200mV 0C Model Hold 'LCMP_RESET'
+Slack : -0.260
+TNS   : -1.445
+
+Type  : Fast 1200mV 0C Model Hold 'FD[7]'
+Slack : 0.073
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FD[23]'
+Slack : 0.117
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FD[17]'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FD[4]'
+Slack : 0.172
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FD[8]'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'LCM_RESET'
+Slack : 0.658
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[4]'
+Slack : -1.555
+TNS   : -12.718
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[0]'
+Slack : -1.051
+TNS   : -75.156
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[7]'
+Slack : 0.093
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'FD[0]'
+Slack : -0.358
+TNS   : -25.578
+
+Type  : Fast 1200mV 0C Model Removal 'FD[7]'
+Slack : -0.220
+TNS   : -4.611
+
+Type  : Fast 1200mV 0C Model Removal 'FD[4]'
+Slack : 0.901
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gckP31'
+Slack : -3.000
+TNS   : -28.344
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[0]'
+Slack : -1.000
+TNS   : -81.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[8]'
+Slack : -1.000
+TNS   : -23.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[7]'
+Slack : -1.000
+TNS   : -22.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[23]'
+Slack : -1.000
+TNS   : -20.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[4]'
+Slack : -1.000
+TNS   : -20.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[17]'
+Slack : -1.000
+TNS   : -12.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCMP_RESET'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCM_RESET'
+Slack : 0.389
+TNS   : 0.000
+
+------------------------------------------------------------

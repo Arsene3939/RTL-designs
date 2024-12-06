@@ -1,0 +1,29 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+USE IEEE.std_logic_signed.all;
+entity ADproject is
+	port(
+		rst,clk:in std_logic;
+		LED:buffer std_logic
+	);
+end entity ADproject;
+architecture main of ADproject is
+	signal FD:std_logic_vector(20 downto 0);
+begin
+	fre:process(rst,clk)
+	begin
+		if rst='0' then
+			FD<=(others=>'0');
+		elsif rising_edge(clk)then
+			FD<=FD+1;
+		end if;
+	end process fre;
+	light:process(FD(20))
+	begin
+		if rising_edge(FD(20))then
+			LED<=not LED;
+		end if;
+	end process;
+end main;
+
+	

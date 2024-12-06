@@ -1,0 +1,293 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'gckP31'
+Slack : -9.020
+TNS   : -442.175
+
+Type  : Slow 1200mV 85C Model Setup 'Sound_RESET'
+Slack : -5.524
+TNS   : -89.989
+
+Type  : Slow 1200mV 85C Model Setup 'FD[0]'
+Slack : -3.457
+TNS   : -49.193
+
+Type  : Slow 1200mV 85C Model Setup 'S2S[0]'
+Slack : -3.422
+TNS   : -3.422
+
+Type  : Slow 1200mV 85C Model Setup 'FD[18]'
+Slack : -1.473
+TNS   : -2.083
+
+Type  : Slow 1200mV 85C Model Setup 'FD[17]'
+Slack : -0.477
+TNS   : -1.058
+
+Type  : Slow 1200mV 85C Model Hold 'gckP31'
+Slack : -1.645
+TNS   : -15.224
+
+Type  : Slow 1200mV 85C Model Hold 'FD[18]'
+Slack : -1.614
+TNS   : -1.614
+
+Type  : Slow 1200mV 85C Model Hold 'FD[17]'
+Slack : -0.539
+TNS   : -0.539
+
+Type  : Slow 1200mV 85C Model Hold 'FD[0]'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Sound_RESET'
+Slack : 2.016
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'S2S[0]'
+Slack : 2.882
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[0]'
+Slack : -2.921
+TNS   : -43.096
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[18]'
+Slack : -0.459
+TNS   : -0.459
+
+Type  : Slow 1200mV 85C Model Recovery 'gckP31'
+Slack : -0.188
+TNS   : -8.022
+
+Type  : Slow 1200mV 85C Model Removal 'FD[18]'
+Slack : -1.146
+TNS   : -1.146
+
+Type  : Slow 1200mV 85C Model Removal 'FD[0]'
+Slack : -0.278
+TNS   : -3.058
+
+Type  : Slow 1200mV 85C Model Removal 'gckP31'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gckP31'
+Slack : -3.000
+TNS   : -102.629
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[0]'
+Slack : -1.487
+TNS   : -22.305
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[17]'
+Slack : -1.487
+TNS   : -8.922
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[18]'
+Slack : -1.487
+TNS   : -2.974
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'S2S[0]'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Sound_RESET'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'gckP31'
+Slack : -8.407
+TNS   : -404.855
+
+Type  : Slow 1200mV 0C Model Setup 'Sound_RESET'
+Slack : -5.029
+TNS   : -82.795
+
+Type  : Slow 1200mV 0C Model Setup 'S2S[0]'
+Slack : -3.134
+TNS   : -3.134
+
+Type  : Slow 1200mV 0C Model Setup 'FD[0]'
+Slack : -3.133
+TNS   : -44.363
+
+Type  : Slow 1200mV 0C Model Setup 'FD[18]'
+Slack : -1.316
+TNS   : -1.805
+
+Type  : Slow 1200mV 0C Model Setup 'FD[17]'
+Slack : -0.399
+TNS   : -0.720
+
+Type  : Slow 1200mV 0C Model Hold 'FD[18]'
+Slack : -1.504
+TNS   : -1.504
+
+Type  : Slow 1200mV 0C Model Hold 'gckP31'
+Slack : -1.462
+TNS   : -13.705
+
+Type  : Slow 1200mV 0C Model Hold 'FD[17]'
+Slack : -0.518
+TNS   : -0.518
+
+Type  : Slow 1200mV 0C Model Hold 'FD[0]'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Sound_RESET'
+Slack : 1.822
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'S2S[0]'
+Slack : 2.648
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[0]'
+Slack : -2.611
+TNS   : -38.454
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[18]'
+Slack : -0.377
+TNS   : -0.377
+
+Type  : Slow 1200mV 0C Model Recovery 'gckP31'
+Slack : -0.012
+TNS   : -0.108
+
+Type  : Slow 1200mV 0C Model Removal 'FD[18]'
+Slack : -1.098
+TNS   : -1.098
+
+Type  : Slow 1200mV 0C Model Removal 'FD[0]'
+Slack : -0.329
+TNS   : -3.840
+
+Type  : Slow 1200mV 0C Model Removal 'gckP31'
+Slack : 0.108
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gckP31'
+Slack : -3.000
+TNS   : -102.629
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[0]'
+Slack : -1.487
+TNS   : -22.305
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[17]'
+Slack : -1.487
+TNS   : -8.922
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[18]'
+Slack : -1.487
+TNS   : -2.974
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'S2S[0]'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Sound_RESET'
+Slack : 0.362
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'gckP31'
+Slack : -3.345
+TNS   : -151.697
+
+Type  : Fast 1200mV 0C Model Setup 'Sound_RESET'
+Slack : -1.771
+TNS   : -27.851
+
+Type  : Fast 1200mV 0C Model Setup 'FD[0]'
+Slack : -0.951
+TNS   : -12.768
+
+Type  : Fast 1200mV 0C Model Setup 'S2S[0]'
+Slack : -0.873
+TNS   : -0.873
+
+Type  : Fast 1200mV 0C Model Setup 'FD[18]'
+Slack : -0.057
+TNS   : -0.057
+
+Type  : Fast 1200mV 0C Model Setup 'FD[17]'
+Slack : 0.226
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'gckP31'
+Slack : -0.897
+TNS   : -9.965
+
+Type  : Fast 1200mV 0C Model Hold 'FD[18]'
+Slack : -0.722
+TNS   : -0.722
+
+Type  : Fast 1200mV 0C Model Hold 'FD[17]'
+Slack : -0.376
+TNS   : -0.381
+
+Type  : Fast 1200mV 0C Model Hold 'FD[0]'
+Slack : 0.167
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Sound_RESET'
+Slack : 0.851
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'S2S[0]'
+Slack : 1.190
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[0]'
+Slack : -0.728
+TNS   : -10.361
+
+Type  : Fast 1200mV 0C Model Recovery 'gckP31'
+Slack : 0.122
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[18]'
+Slack : 0.415
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'FD[18]'
+Slack : -0.438
+TNS   : -0.438
+
+Type  : Fast 1200mV 0C Model Removal 'FD[0]'
+Slack : -0.104
+TNS   : -1.132
+
+Type  : Fast 1200mV 0C Model Removal 'gckP31'
+Slack : 0.003
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gckP31'
+Slack : -3.000
+TNS   : -73.736
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[0]'
+Slack : -1.000
+TNS   : -15.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[17]'
+Slack : -1.000
+TNS   : -6.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[18]'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Sound_RESET'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'S2S[0]'
+Slack : 0.457
+TNS   : 0.000
+
+------------------------------------------------------------

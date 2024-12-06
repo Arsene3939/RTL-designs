@@ -1,0 +1,293 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'FD[3]'
+Slack : -11.301
+TNS   : -110.388
+
+Type  : Slow 1200mV 85C Model Setup 'oLED_RESET'
+Slack : -8.694
+TNS   : -61.224
+
+Type  : Slow 1200mV 85C Model Setup 'oLED_LoadCK'
+Slack : -7.080
+TNS   : -48.631
+
+Type  : Slow 1200mV 85C Model Setup 'gckP31'
+Slack : -5.470
+TNS   : -138.579
+
+Type  : Slow 1200mV 85C Model Setup 'FD[17]'
+Slack : -3.641
+TNS   : -70.365
+
+Type  : Slow 1200mV 85C Model Setup 'oLED_P_RESET'
+Slack : -0.464
+TNS   : -0.726
+
+Type  : Slow 1200mV 85C Model Hold 'gckP31'
+Slack : -1.389
+TNS   : -11.725
+
+Type  : Slow 1200mV 85C Model Hold 'oLED_LoadCK'
+Slack : -1.017
+TNS   : -3.425
+
+Type  : Slow 1200mV 85C Model Hold 'oLED_RESET'
+Slack : -0.554
+TNS   : -0.554
+
+Type  : Slow 1200mV 85C Model Hold 'FD[3]'
+Slack : -0.153
+TNS   : -0.297
+
+Type  : Slow 1200mV 85C Model Hold 'oLED_P_RESET'
+Slack : -0.001
+TNS   : -0.001
+
+Type  : Slow 1200mV 85C Model Hold 'FD[17]'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'gckP31'
+Slack : -1.491
+TNS   : -25.314
+
+Type  : Slow 1200mV 85C Model Recovery 'oLED_LoadCK'
+Slack : -0.873
+TNS   : -0.873
+
+Type  : Slow 1200mV 85C Model Recovery 'FD[3]'
+Slack : -0.812
+TNS   : -25.046
+
+Type  : Slow 1200mV 85C Model Removal 'oLED_LoadCK'
+Slack : -0.361
+TNS   : -0.361
+
+Type  : Slow 1200mV 85C Model Removal 'FD[3]'
+Slack : 0.778
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'gckP31'
+Slack : 1.142
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gckP31'
+Slack : -3.000
+TNS   : -65.454
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[3]'
+Slack : -1.487
+TNS   : -46.097
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[17]'
+Slack : -1.487
+TNS   : -37.175
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'oLED_LoadCK'
+Slack : -1.487
+TNS   : -14.870
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'oLED_P_RESET'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'oLED_RESET'
+Slack : 0.424
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'FD[3]'
+Slack : -10.761
+TNS   : -103.303
+
+Type  : Slow 1200mV 0C Model Setup 'oLED_RESET'
+Slack : -8.254
+TNS   : -57.752
+
+Type  : Slow 1200mV 0C Model Setup 'oLED_LoadCK'
+Slack : -6.724
+TNS   : -45.741
+
+Type  : Slow 1200mV 0C Model Setup 'gckP31'
+Slack : -5.143
+TNS   : -126.481
+
+Type  : Slow 1200mV 0C Model Setup 'FD[17]'
+Slack : -3.283
+TNS   : -63.926
+
+Type  : Slow 1200mV 0C Model Setup 'oLED_P_RESET'
+Slack : -0.341
+TNS   : -0.476
+
+Type  : Slow 1200mV 0C Model Hold 'gckP31'
+Slack : -1.236
+TNS   : -10.739
+
+Type  : Slow 1200mV 0C Model Hold 'oLED_LoadCK'
+Slack : -0.932
+TNS   : -3.707
+
+Type  : Slow 1200mV 0C Model Hold 'oLED_RESET'
+Slack : -0.498
+TNS   : -0.498
+
+Type  : Slow 1200mV 0C Model Hold 'oLED_P_RESET'
+Slack : -0.102
+TNS   : -0.186
+
+Type  : Slow 1200mV 0C Model Hold 'FD[3]'
+Slack : -0.095
+TNS   : -0.095
+
+Type  : Slow 1200mV 0C Model Hold 'FD[17]'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'gckP31'
+Slack : -1.161
+TNS   : -19.037
+
+Type  : Slow 1200mV 0C Model Recovery 'oLED_LoadCK'
+Slack : -0.664
+TNS   : -0.664
+
+Type  : Slow 1200mV 0C Model Recovery 'FD[3]'
+Slack : -0.636
+TNS   : -19.652
+
+Type  : Slow 1200mV 0C Model Removal 'oLED_LoadCK'
+Slack : -0.253
+TNS   : -0.253
+
+Type  : Slow 1200mV 0C Model Removal 'FD[3]'
+Slack : 0.720
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'gckP31'
+Slack : 1.070
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gckP31'
+Slack : -3.000
+TNS   : -65.454
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[3]'
+Slack : -1.487
+TNS   : -46.097
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[17]'
+Slack : -1.487
+TNS   : -37.175
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'oLED_LoadCK'
+Slack : -1.487
+TNS   : -14.870
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'oLED_P_RESET'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'oLED_RESET'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'FD[3]'
+Slack : -4.480
+TNS   : -31.486
+
+Type  : Fast 1200mV 0C Model Setup 'oLED_RESET'
+Slack : -3.379
+TNS   : -22.394
+
+Type  : Fast 1200mV 0C Model Setup 'oLED_LoadCK'
+Slack : -2.679
+TNS   : -16.876
+
+Type  : Fast 1200mV 0C Model Setup 'gckP31'
+Slack : -1.755
+TNS   : -36.418
+
+Type  : Fast 1200mV 0C Model Setup 'FD[17]'
+Slack : -0.989
+TNS   : -16.125
+
+Type  : Fast 1200mV 0C Model Setup 'oLED_P_RESET'
+Slack : 0.328
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'gckP31'
+Slack : -0.798
+TNS   : -9.434
+
+Type  : Fast 1200mV 0C Model Hold 'oLED_LoadCK'
+Slack : -0.599
+TNS   : -2.844
+
+Type  : Fast 1200mV 0C Model Hold 'oLED_RESET'
+Slack : -0.385
+TNS   : -0.486
+
+Type  : Fast 1200mV 0C Model Hold 'FD[3]'
+Slack : -0.183
+TNS   : -0.671
+
+Type  : Fast 1200mV 0C Model Hold 'oLED_P_RESET'
+Slack : 0.005
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FD[17]'
+Slack : 0.167
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'gckP31'
+Slack : -0.533
+TNS   : -7.356
+
+Type  : Fast 1200mV 0C Model Recovery 'FD[3]'
+Slack : -0.265
+TNS   : -8.165
+
+Type  : Fast 1200mV 0C Model Recovery 'oLED_LoadCK'
+Slack : 0.192
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'oLED_LoadCK'
+Slack : -0.323
+TNS   : -0.323
+
+Type  : Fast 1200mV 0C Model Removal 'FD[3]'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'gckP31'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gckP31'
+Slack : -3.000
+TNS   : -47.342
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[3]'
+Slack : -1.000
+TNS   : -31.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[17]'
+Slack : -1.000
+TNS   : -25.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'oLED_LoadCK'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'oLED_RESET'
+Slack : 0.336
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'oLED_P_RESET'
+Slack : 0.337
+TNS   : 0.000
+
+------------------------------------------------------------

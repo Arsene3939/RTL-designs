@@ -1,0 +1,6 @@
+
+State Machine - |exam_108_1|Main_State
+Name Main_State.delay Main_State.button_process Main_State.event_check 
+Main_State.event_check 0 0 0 
+Main_State.button_process 0 1 1 
+Main_State.delay 1 0 1 

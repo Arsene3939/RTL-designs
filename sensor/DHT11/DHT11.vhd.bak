@@ -1,0 +1,28 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+USE IEEE.std_logic_signed.all;
+entity DHT11 is
+	port(
+		DHT11_data:inout std_logic;
+		clk,rst:in std_logic;
+		addr:buffer std_logic_vector(3 downto 0);
+		R,G,B:buffer std_logic;
+		sck,EA,LE:buffer std_logic;
+		LED:buffer std_logic_vector(15 downto 0);
+		debug:buffer std_logic_vector(7 downto 0)
+	);
+end entity DHT11;
+architecture main of DHT11 is
+	signal FD:std_logic_vector(50 downto 0);
+begin
+	fre:process(rst,clk)
+	begin
+		if rst='0' then
+			FD<=(others=>'0');
+		elsif rising_edge(clk)then
+			FD<=FD+1;
+		end if;
+	end process fre;
+end main;
+
+	

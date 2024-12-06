@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="LCD12864">
+		<CBX_INST_ENTRY INSTANCE_NAME="|LCD12864|uart:u0|lpm_mult:Mult0" CBX_FILE_NAME="mult_fft.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

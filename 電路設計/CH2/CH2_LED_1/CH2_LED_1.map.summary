@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Mar 10 11:43:23 2018
+Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
+Revision Name : CH2_LED_1
+Top-level Entity Name : CH2_LED_1
+Family : Cyclone III
+Total logic elements : 427
+    Total combinational functions : 427
+    Dedicated logic registers : 149
+Total registers : 149
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

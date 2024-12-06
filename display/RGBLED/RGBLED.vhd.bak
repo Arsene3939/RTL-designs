@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use std_logic_unsigned.all;
+entity RGBLED is
+	port(
+		clk,rst:in std_logic;
+		Do:out std_logic
+	);
+end RGBLED;
+architecture main of RGBLED is
+	component serialRGBLED is
+		generic(N:integer range 0 to 255:=6);
+		port(
+			clk,rst:in std_logic;
+			Do:out std_logic;
+			busy:out std_logic;
+			ena,RW:in std_logic;
+			addr:in std_logic_vector(7 downto 0);
+			color_bus:in std_logic_vector(23 downto 0)
+		);
+	end component serialRGBLED;
+	FD:
+begin
+end main;

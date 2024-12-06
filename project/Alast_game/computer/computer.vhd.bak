@@ -1,0 +1,322 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+
+entity comouter is
+	port(    	      	                                       --謘 
+         fin, nReset : in 	   std_logic;                       --暹49) & RESET145) 
+		   SD178_sda  	: INOUT  STD_LOGIC;                  	   --SD178B IIC SDA()
+         SD178_scl  	: INOUT  STD_LOGIC;                  	   --SD178B IIC SCL()
+         SD178_nrst 	: OUT    STD_LOGIC;                  	   --SD178B nRESET ()
+         dipsw1    	: IN 	   std_logic_vector(7 downto 0);    --DIP SW()
+         key_col   	: IN 	   std_logic_vector(3 downto 0);    --KEYBOARD ()
+         key_scan  	: OUT    std_logic_vector(3 downto 0);  
+         debug  		: OUT    std_logic_vector(7 downto 0);
+        	bz:out STD_LOGIC;
+         segout  	   : out    std_logic_vector(7 downto 0);    --璈怠鞊船撠
+         segsel  	   : out    std_logic_vector(3 downto 0);    --璈怠鞊船撠佇)
+
+         LED         : buffer	std_logic_vector(15 downto 0);
+         BL,RES,CS,DC,SDA,SCL : OUT    STD_LOGIC              	--LCD
+
+   
+   	 );
+   end comouter;
+   architecture beh of comouter is
+      --KEYBOARD , DIP switch
+   signal  key_pressed: std_logic ;
+   signal  number, workingMode: std_logic_vector(3 downto 0) ;
+   signal  actionID: std_logic_vector(2 downto 0) ;           
+   --other
+   SIGNAL  clk_1KHz,clk_1MHz, clk_100hz, clk_1hz : STD_LOGIC;        
+   SIGNAL  mode_lcd, mode_7seg, mode_sd178, mode_motor   :integer range 0 to 15;
+   SIGNAL  motor_speed   :integer range 0 to 10;
+   SIGNAL  motor_dir : STD_LOGIC; 
+   signal  FD:std_logic_vector(50 downto 0);      
+   type arr is array(0 to 15) of std_logic_vector(3 downto 0);
+	constant to_vector:arr:=(X"0",X"1",X"2",X"3",X"4",X"5",X"6",X"7",X"8",X"9",X"A",X"B",X"C",X"D",X"E",X"F");
+   --LCD   
+   SIGNAL  lcd_write, lcd_show, lcd_busy    : std_logic;
+   SIGNAL  lcd_address          : std_logic_vector(14 downto 0);
+   SIGNAL  lcd_color            : std_logic_vector(5 DOWNTO 0);  
+
+   signal        SD178_debug :   STD_LOGIC_vector(3 downto 0); 
+   component lcdControl is
+      port (  clk : in std_logic;
+               nReset: in std_logic;
+               mode_lcd: in integer range 0 to 15; 
+               HU_BUFF, TE_BUFF : in STD_LOGIC_VECTOR(7 DOWNTO 0);  
+               TSL2561_data : STD_LOGIC_VECTOR(19 DOWNTO 0);
+               key_pressed: in std_logic ;
+               workingMode: in std_logic_vector(3 downto 0) ;
+               R_SBUF		 : in std_LOGIC_vector(7 downto 0) ;
+               uart_pers  : in std_logic;
+               lcd_busy  : in    STD_LOGIC;                     
+               lcd_write, lcd_show  : out  STD_LOGIC ;
+               lcd_address          : buffer  std_logic_vector(14 downto 0);
+               lcd_color            : out  std_logic_vector(5 DOWNTO 0)
+            );
+   end component lcdControl;
+   component clock_generator is
+   port( 
+        fin:in std_logic;
+        clk_1MHz:buffer std_logic ;
+        clk_1KHz:buffer std_logic ;
+        clk_100Hz:buffer std_logic ;
+        clk_1Hz:buffer std_logic  
+       );
+   end component clock_generator;
+   component keypad is
+   port (  clk : in std_logic;
+           nReset: in std_logic;
+           key_col   : IN std_logic_vector(3 downto 0);        --BUTTON ()               
+           key_scan  : OUT  std_logic_vector(3 downto 0);  
+           key_pressed: out std_logic ;
+           number: out std_logic_vector(3 downto 0) 
+          );
+   end component keypad;
+   component LCD_DRV is
+   port(								                            --謘 
+           fin, nReset  :in std_logic;                    --暹49) & RESET145) 
+           BL,RES,CS,DC,SDA,SCL : OUT    STD_LOGIC;       --LCD 
+           lcd_busy  : OUT    STD_LOGIC;
+           lcd_write, lcd_show  : in  STD_LOGIC ;
+           lcd_address          : in  std_logic_vector(14 downto 0);
+           lcd_color            : in  std_logic_vector(5 DOWNTO 0)               
+
+       );
+   end component LCD_DRV;
+   component seven_seg_display is
+   	port(
+   		cathed:in std_logic;
+	   	rst:in std_logic;
+	   	ck0:in std_logic;
+	   	digit:buffer std_logic_vector(3 downto 0);
+	   	ssd:buffer std_logic_vector(6 downto 0);
+	   	N1:in std_logic_vector(3 downto 0);
+	   	N2:in std_logic_vector(3 downto 0);
+	   	N3:in std_logic_vector(3 downto 0);
+	   	N4:in std_logic_vector(3 downto 0)
+	   );
+   end component seven_seg_display;
+   component SD178 is 
+      port(
+         fin, nReset  :in std_logic;        
+         SD178_sda  : inout  std_logic;                  --SD178B IIC SDA() 
+         SD178_scl  : inout  std_logic;                  --SD178B IIC SCL()                                                              
+         SD178_nrst : out    std_logic;                  --SD178B nRESET ()  
+      
+         R_SBUF     : in std_logic_vector(7 downto 0) ;
+         uart_pers	 : in std_logic;
+
+         mode_sd178  :in integer range 0 to 15;
+         HU_BUFF, TE_BUFF : in std_logic_vector(7 downto 0);  
+         TSL2561_data :in std_logic_vector(19 downto 0);
+         key_pressed: in std_logic ;
+         workingMode: in std_logic_vector(3 downto 0) ;
+
+         dipsw1    : IN std_logic_vector(3 downto 0)  ;  --DIP SW()        
+         debug  : OUT std_logic_vector(3 downto 0)
+      );
+   end component SD178;
+begin
+   process(nReset,clk_1MHz)            --撖
+      variable delay_1   :integer range 0 to 100;
+      variable i,j         :integer range 0 to 100;
+      variable dbg: std_logic_vector(5 downto 0); 
+ 	begin	  
+      if(nReset='0')then
+         mode_lcd   <= 0;
+         delay_1   := 0;
+		 dbg := "111111";
+       Main_State  <= event_check;
+      ELSIF(clk_1MHz'EVENT AND clk_1MHz='1')then
+         CASE Main_State IS                
+            when event_check=>       
+            	if (key_pressed = '1') then 
+         	         --謅ENT PULSE
+         	         delay_1 :=0; 
+         	         --j := to_integer(unsigned(workingMode));
+         	         Main_State <= button_process; 
+         	         --
+               	     if(workingMode = "0000") then       -- 凸1   i-->j      	                  	         	                 
+									if(actionID = "010") then         	            
+										mode_7seg <= 0;
+										mode_sd178 <= 0;
+										mode_motor <= 2;
+									end if;            	      
+									mode_lcd<=conv_integer(actionID);
+               	     elsif(workingMode = "0010")  then    -- 凸3   i-->j            	                     	      
+               	        if(actionID = "000") then         	                  	         
+               	           mode_lcd  <= 0;     
+               	           mode_7seg <= 0;
+               	           mode_sd178 <= 0;
+                        elsif(actionID = "001") then         	         
+                           mode_7seg  <= 1;                                   --垮質頩  
+                           mode_motor <= 0;                                   --垮質  
+                        elsif(actionID = "010") then         	         
+                           mode_7seg  <= 0;     
+                           mode_motor <= 0;                                   --垮質                       
+                        elsif(actionID = "011") then         	         
+               	           mode_sd178 <= 0;
+                        elsif(actionID = "100") then         	         
+                           mode_7seg  <= 1;                                   --垮質瞍	         
+               	           mode_sd178 <= 0;                                       
+                           mode_motor <= 0;          
+               	        end if;   
+                 	end if;	         	         
+                end if;           
+                                                                                                                                                
+            when button_process =>              		   
+                  if delay_1 >= 10 then                                   -- us餌,button_event                        
+          		      if(key_pressed = '0')  then  
+                        delay_1 :=0;                                                     
+                        Main_State <= event_check;                                                                       
+                     end if;                           
+                  else
+                     delay_1:= delay_1+1;
+                  end if;  
+                      
+            when others =>  
+                      Main_State <= event_check;                                                                        
+                          
+            END CASE;            
+      end if; 	   
+    end process;
+    u1:clock_generator
+    port map(    
+       fin         => fin,  
+       clk_1MHz    => clk_1MHz , 
+       clk_1KHz    => clk_1KHz ,  
+       clk_100Hz   => clk_100hz,
+       clk_1Hz     => clk_1hz
+  );
+ 
+ u2: lcdControl
+    port map(  
+       clk 			   => fin,
+       nReset 		   => nReset,
+       mode_lcd		   => mode_lcd,
+       HU_BUFF		   => HU_BUFF, 
+       TE_BUFF  		=> TE_BUFF,
+       TSL2561_data	=> TSL2561_data,
+       key_pressed 	=> key_pressed,
+       workingMode 	=> workingMode,
+
+       R_SBUF 		   => R_SBUF,
+       uart_pers		=> uart_pers,
+
+          lcd_address 	=> lcd_address,
+          lcd_color   	=> lcd_color, 
+         lcd_write 		=> lcd_write, 
+         lcd_show  		=> lcd_show,  
+         lcd_busy  		=> lcd_busy  
+       );
+   u3:LCD_DRV           --LCD 佇
+      port map(      
+         fin       		=> fin,       
+         nReset    		=> nReset,        
+         BL        		=> BL,
+         RES       		=> RES,
+         CS        		=> CS,
+         DC        		=> DC,
+         SDA       		=> SDA,
+         SCL       		=> SCL,
+         lcd_address => lcd_address,
+         lcd_color   => lcd_color, 
+         lcd_write   => lcd_write, 
+         lcd_show    => lcd_show,
+         lcd_busy    => lcd_busy
+   ); 
+   u4: keypad
+   port map(  
+         clk    		=> clk_100hz,
+         nReset => nReset,
+         key_col   	=> key_col,               
+         key_scan  	=> key_scan ,
+         key_pressed => key_pressed, 
+         number 		=>	number
+       );
+   u5: SD178
+      port map(
+         fin 			   => fin,
+         nReset 			=> nReset,
+         SD178_sda		=> SD178_sda,
+         SD178_scl		=> SD178_scl,
+         SD178_nrst		=> SD178_nrst,
+         mode_sd178		=> 1,
+         HU_BUFF			=> HU_BUFF, 
+         TE_BUFF  		=> TE_BUFF,
+         TSL2561_data	=> TSL2561_data,
+         key_pressed 	=> key_pressed,
+         workingMode 	=> workingMode,
+         dipsw1			=> dipsw1(7 downto 4),
+         debug			=> SD178_debug,
+         
+         R_SBUF 		   => R_SBUF,
+         uart_pers		=> uart_pers
+     ); 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+USE IEEE.std_logic_signed.all;
+entity SD178_test is
+	port(
+		clk,rst:in std_logic;
+		SD178_sda  : inout  std_logic;
+		SD178_scl  : inout  std_logic;
+		SD178_nrst : out    std_logic;
+	);
+end entity SD178_test;
+architecture main of SD178_test is
+	signal FD:std_logic_vector(50 downto 0);
+	component SD178 is 
+		port(
+			fin, nReset  :in std_logic;        
+			SD178_sda  : inout  std_logic;                  --SD178B IIC SDA() 
+			SD178_scl  : inout  std_logic;                  --SD178B IIC SCL()                                                              
+			SD178_nrst : out    std_logic;                  --SD178B nRESET ()  
+
+			mode_sd178  :in integer range 0 to 15;
+			HU_BUFF, TE_BUFF : in std_logic(7 downto 0);  
+			TSL2561_data :in std_logic_vector(19 downto 0);
+			key_pressed: in std_logic ;
+			workingMode: in std_logic_vector(3 downto 0) ;
+
+			dipsw1    : IN std_logic_vector(3 downto 0)  ;  --DIP SW()        
+			debug  : OUT    std_logic  
+		);
+	end component SD178;
+begin
+	fre:process(rst,clk)
+	begin
+		if rst='0' then
+			FD<=(others=>'0');
+		elsif rising_edge(clk)then
+			FD<=FD+1;
+		end if;
+	end process fre;
+	u0: SD178 
+		port map(    	   
+			fin 				=> clk,
+			nReset 			=> rst,
+			SD178_sda		=> SD178_sda,
+			SD178_scl		=> SD178_scl,
+			SD178_nrst		=> SD178_nrst,
+			mode_sd178		=> mode_sd178,
+			HU_BUFF			=> X"20",
+			TE_BUFF  		=> X"20",
+			TSL2561_data	=> X"00100",
+			key_pressed 	=> '1',
+			workingMode 	=> "0000",
+			dipsw1			=> "11",
+			debug				=> '0'
+		);
+end main;
+
+	

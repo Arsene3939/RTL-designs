@@ -1,0 +1,10 @@
+library ieee;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+entity LCD1602 is
+	port();
+end LCD1602;
+architecture main of LCD1602 is
+begin
+end main;

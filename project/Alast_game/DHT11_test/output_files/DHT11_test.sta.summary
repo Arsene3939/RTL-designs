@@ -1,0 +1,173 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'seven_seg_display:U0|FD[10]'
+Slack : -13.822
+TNS   : -99.107
+
+Type  : Slow 1200mV 85C Model Setup 'DHT11:DHT11_decoder|clk_1M'
+Slack : -6.253
+TNS   : -557.617
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -1.848
+TNS   : -22.243
+
+Type  : Slow 1200mV 85C Model Setup 'DHT11:DHT11_decoder|DHT11_BASIC:u0|clks'
+Slack : -1.150
+TNS   : -26.836
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.037
+TNS   : -0.037
+
+Type  : Slow 1200mV 85C Model Hold 'DHT11:DHT11_decoder|DHT11_BASIC:u0|clks'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'DHT11:DHT11_decoder|clk_1M'
+Slack : 0.209
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'seven_seg_display:U0|FD[10]'
+Slack : 0.510
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'DHT11:DHT11_decoder|clk_1M'
+Slack : -1.798
+TNS   : -11.671
+
+Type  : Slow 1200mV 85C Model Removal 'DHT11:DHT11_decoder|clk_1M'
+Slack : 2.118
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -41.662
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DHT11:DHT11_decoder|clk_1M'
+Slack : -1.487
+TNS   : -168.031
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DHT11:DHT11_decoder|DHT11_BASIC:u0|clks'
+Slack : -1.487
+TNS   : -69.889
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'seven_seg_display:U0|FD[10]'
+Slack : -1.487
+TNS   : -19.331
+
+Type  : Slow 1200mV 0C Model Setup 'seven_seg_display:U0|FD[10]'
+Slack : -12.592
+TNS   : -90.261
+
+Type  : Slow 1200mV 0C Model Setup 'DHT11:DHT11_decoder|clk_1M'
+Slack : -5.782
+TNS   : -514.533
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -1.685
+TNS   : -17.828
+
+Type  : Slow 1200mV 0C Model Setup 'DHT11:DHT11_decoder|DHT11_BASIC:u0|clks'
+Slack : -1.042
+TNS   : -22.853
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.026
+TNS   : -0.026
+
+Type  : Slow 1200mV 0C Model Hold 'DHT11:DHT11_decoder|DHT11_BASIC:u0|clks'
+Slack : 0.120
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'DHT11:DHT11_decoder|clk_1M'
+Slack : 0.239
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'seven_seg_display:U0|FD[10]'
+Slack : 0.470
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'DHT11:DHT11_decoder|clk_1M'
+Slack : -1.566
+TNS   : -10.227
+
+Type  : Slow 1200mV 0C Model Removal 'DHT11:DHT11_decoder|clk_1M'
+Slack : 1.926
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -41.662
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DHT11:DHT11_decoder|clk_1M'
+Slack : -1.487
+TNS   : -168.031
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DHT11:DHT11_decoder|DHT11_BASIC:u0|clks'
+Slack : -1.487
+TNS   : -69.889
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'seven_seg_display:U0|FD[10]'
+Slack : -1.487
+TNS   : -19.331
+
+Type  : Fast 1200mV 0C Model Setup 'seven_seg_display:U0|FD[10]'
+Slack : -5.391
+TNS   : -37.690
+
+Type  : Fast 1200mV 0C Model Setup 'DHT11:DHT11_decoder|clk_1M'
+Slack : -2.090
+TNS   : -174.182
+
+Type  : Fast 1200mV 0C Model Setup 'DHT11:DHT11_decoder|DHT11_BASIC:u0|clks'
+Slack : -0.348
+TNS   : -2.259
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.200
+TNS   : -0.364
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.218
+TNS   : -0.278
+
+Type  : Fast 1200mV 0C Model Hold 'DHT11:DHT11_decoder|clk_1M'
+Slack : -0.051
+TNS   : -0.051
+
+Type  : Fast 1200mV 0C Model Hold 'DHT11:DHT11_decoder|DHT11_BASIC:u0|clks'
+Slack : 0.037
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'seven_seg_display:U0|FD[10]'
+Slack : 0.207
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'DHT11:DHT11_decoder|clk_1M'
+Slack : -0.238
+TNS   : -1.306
+
+Type  : Fast 1200mV 0C Model Removal 'DHT11:DHT11_decoder|clk_1M'
+Slack : 0.905
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -30.482
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DHT11:DHT11_decoder|clk_1M'
+Slack : -1.000
+TNS   : -113.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DHT11:DHT11_decoder|DHT11_BASIC:u0|clks'
+Slack : -1.000
+TNS   : -47.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'seven_seg_display:U0|FD[10]'
+Slack : -1.000
+TNS   : -13.000
+
+------------------------------------------------------------

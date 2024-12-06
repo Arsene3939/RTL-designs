@@ -1,0 +1,7 @@
+40bit
+high bit prior
+HU(15 downto 0)+TE(15downto 0)+check sum(7 downto 0)
+MCU send '0' last 18mS and set 'Z',pull up to '1'  then wait DHT11 send '0' signal
+'0' signal:50uS low + 27uS high
+'1' signal:50uS low + 70uS high
+after data sent complete,DHT11 set'Z',pull up to '1' and wait next transmition.

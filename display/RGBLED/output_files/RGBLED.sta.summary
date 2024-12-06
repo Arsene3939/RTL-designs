@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'serialRGBLED:u0|sck'
+Slack : -9.085
+TNS   : -85.824
+
+Type  : Slow 1200mV 85C Model Setup 'FD[20]'
+Slack : -3.560
+TNS   : -59.203
+
+Type  : Slow 1200mV 85C Model Setup 'RW'
+Slack : -3.125
+TNS   : -207.594
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -2.713
+TNS   : -51.284
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.848
+TNS   : -2.650
+
+Type  : Slow 1200mV 85C Model Hold 'FD[20]'
+Slack : -0.326
+TNS   : -0.326
+
+Type  : Slow 1200mV 85C Model Hold 'serialRGBLED:u0|sck'
+Slack : -0.043
+TNS   : -0.215
+
+Type  : Slow 1200mV 85C Model Hold 'RW'
+Slack : 0.121
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -49.097
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FD[20]'
+Slack : -1.487
+TNS   : -43.123
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'serialRGBLED:u0|sck'
+Slack : -1.487
+TNS   : -34.201
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RW'
+Slack : 0.305
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'serialRGBLED:u0|sck'
+Slack : -8.399
+TNS   : -78.472
+
+Type  : Slow 1200mV 0C Model Setup 'FD[20]'
+Slack : -3.198
+TNS   : -53.977
+
+Type  : Slow 1200mV 0C Model Setup 'RW'
+Slack : -3.128
+TNS   : -211.053
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -2.330
+TNS   : -43.712
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.728
+TNS   : -2.202
+
+Type  : Slow 1200mV 0C Model Hold 'FD[20]'
+Slack : -0.185
+TNS   : -0.185
+
+Type  : Slow 1200mV 0C Model Hold 'serialRGBLED:u0|sck'
+Slack : 0.076
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'RW'
+Slack : 0.289
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -49.097
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FD[20]'
+Slack : -1.487
+TNS   : -43.154
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'serialRGBLED:u0|sck'
+Slack : -1.487
+TNS   : -34.201
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RW'
+Slack : 0.137
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'serialRGBLED:u0|sck'
+Slack : -3.350
+TNS   : -24.102
+
+Type  : Fast 1200mV 0C Model Setup 'FD[20]'
+Slack : -1.054
+TNS   : -9.273
+
+Type  : Fast 1200mV 0C Model Setup 'RW'
+Slack : -0.992
+TNS   : -30.015
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.646
+TNS   : -6.897
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.532
+TNS   : -2.338
+
+Type  : Fast 1200mV 0C Model Hold 'FD[20]'
+Slack : -0.329
+TNS   : -0.329
+
+Type  : Fast 1200mV 0C Model Hold 'serialRGBLED:u0|sck'
+Slack : -0.197
+TNS   : -1.390
+
+Type  : Fast 1200mV 0C Model Hold 'RW'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -35.718
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FD[20]'
+Slack : -1.000
+TNS   : -29.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'serialRGBLED:u0|sck'
+Slack : -1.000
+TNS   : -23.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RW'
+Slack : 0.276
+TNS   : 0.000
+
+------------------------------------------------------------

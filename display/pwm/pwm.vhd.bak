@@ -1,0 +1,10 @@
+library IEEE;
+USE IEEE.std_logic_1164;
+USE IEEE.std_logic_unsigned;
+entity pwm is;
+	port(clk,rstP99:in std_logic;		 
+			LED:buffer std_logic_vector(15 downto 0)
+	);
+end entity pwm;
+architecture ledVector of pwm is
+	signal FD:std_logic_vector(24 downto 0);

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Nov 12 23:26:29 2020
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : exam_108_1
+Top-level Entity Name : exam_108_1
+Family : Cyclone III
+Device : EP3C16Q240C8
+Timing Models : Final
+Total logic elements : 5,591 / 15,408 ( 36 % )
+    Total combinational functions : 5,432 / 15,408 ( 35 % )
+    Dedicated logic registers : 1,281 / 15,408 ( 8 % )
+Total registers : 1281
+Total pins : 97 / 161 ( 60 % )
+Total virtual pins : 0
+Total memory bits : 196,696 / 516,096 ( 38 % )
+Embedded Multiplier 9-bit elements : 8 / 112 ( 7 % )
+Total PLLs : 0 / 4 ( 0 % )

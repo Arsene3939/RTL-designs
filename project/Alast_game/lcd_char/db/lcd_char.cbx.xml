@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lcd_char">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lcd_char|LCD_DRV:u3|raminfr:u2|altsyncram:RAM_rtl_0" CBX_FILE_NAME="altsyncram_fh41.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lcd_char|lcdControl:u2|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_9gm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lcd_char|lcdControl:u2|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_agm.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,1082 @@
+Analysis & Synthesis report for gurenka
+Sun Nov 22 11:38:36 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 15. lpm_mult Parameter Settings by Entity Instance
+ 16. Port Connectivity Checks: "LCM_4bit_driver:LCMset"
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Nov 22 11:38:36 2020           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; gurenka                                         ;
+; Top-level Entity Name              ; gurenka                                         ;
+; Family                             ; Cyclone III                                     ;
+; Total logic elements               ; 1,440                                           ;
+;     Total combinational functions  ; 1,436                                           ;
+;     Dedicated logic registers      ; 317                                             ;
+; Total registers                    ; 317                                             ;
+; Total pins                         ; 15                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 4                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16Q240C8       ;                    ;
+; Top-level entity name                                                      ; gurenka            ; gurenka            ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; gurenka.vhd                      ; yes             ; User VHDL File               ; C:/Users/willy7086/Desktop/Quartus/VHDL/gurenka/gurenka.vhd     ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; d:/quartus_13.0/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; d:/quartus_13.0/quartus/libraries/megafunctions/aglobal130.inc  ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; d:/quartus_13.0/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; d:/quartus_13.0/quartus/libraries/megafunctions/multcore.inc    ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; d:/quartus_13.0/quartus/libraries/megafunctions/bypassff.inc    ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; d:/quartus_13.0/quartus/libraries/megafunctions/altshift.inc    ;         ;
+; db/mult_25t.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/willy7086/Desktop/Quartus/VHDL/gurenka/db/mult_25t.tdf ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 1,440   ;
+;                                             ;         ;
+; Total combinational functions               ; 1436    ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 873     ;
+;     -- 3 input functions                    ; 301     ;
+;     -- <=2 input functions                  ; 262     ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 1296    ;
+;     -- arithmetic mode                      ; 140     ;
+;                                             ;         ;
+; Total registers                             ; 317     ;
+;     -- Dedicated logic registers            ; 317     ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 15      ;
+; Embedded Multiplier 9-bit elements          ; 4       ;
+; Maximum fan-out node                        ; LCM_P~5 ;
+; Maximum fan-out                             ; 436     ;
+; Total fan-out                               ; 6150    ;
+; Average fan-out                             ; 3.43    ;
++---------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                             ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+--------------+
+; |gurenka                        ; 1436 (1372)       ; 317 (295)    ; 0           ; 4            ; 0       ; 2         ; 15   ; 0            ; |gurenka                                        ; work         ;
+;    |LCM_4bit_driver:LCMset|     ; 50 (50)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gurenka|LCM_4bit_driver:LCMset                 ; work         ;
+;    |lpm_mult:Mult0|             ; 14 (0)            ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |gurenka|lpm_mult:Mult0                         ; work         ;
+;       |mult_25t:auto_generated| ; 14 (14)           ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |gurenka|lpm_mult:Mult0|mult_25t:auto_generated ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 2           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 4           ;
+; Signed Embedded Multipliers           ; 1           ;
+; Unsigned Embedded Multipliers         ; 0           ;
+; Mixed Sign Embedded Multipliers       ; 1           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++-----------------------------------------------------+----------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal  ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------+------------------------+
+; LCMx[0]                                             ; LCM_P                ; yes                    ;
+; LCMx[1]                                             ; LCM_P                ; yes                    ;
+; LCMx[2]                                             ; LCM_P                ; yes                    ;
+; LCMx[3]                                             ; LCM_P                ; yes                    ;
+; LCMx[4]                                             ; LCM_P                ; yes                    ;
+; LCMx[5]                                             ; LCM_P                ; yes                    ;
+; LCM_com_data2[1][0]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[0][4]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[0][2]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[0][0]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[3][7]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[5][7]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[6][7]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[4][7]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[7][7]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[2][7]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[10][7]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[9][7]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[8][7]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[11][7]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[12][7]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[10][6]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[8][6]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[6][6]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[5][6]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[4][6]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[3][6]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[12][6]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[18][5]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[17][5]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[16][5]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[19][5]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[20][5]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[5][5]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[6][5]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[4][5]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[7][5]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[3][5]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[10][5]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[9][5]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[8][5]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[11][5]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[13][5]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[14][5]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[12][5]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[15][5]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[10][4]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[8][4]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[2][4]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[3][4]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[6][4]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[5][4]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[4][4]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[7][4]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[8][3]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[11][3]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[3][3]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[6][3]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[5][3]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[4][3]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[7][3]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[9][2]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[3][2]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[6][2]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[5][2]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[4][2]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[7][2]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[12][2]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[8][1]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[11][1]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[3][1]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[6][1]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[5][1]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[4][1]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[7][1]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[5][0]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[10][0]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[6][0]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[8][0]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[4][0]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[12][0]                                ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[7][0]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; LCM_com_data2[3][0]                                 ; LCM_com_data2[19][1] ; yes                    ;
+; Number of user-specified and inferred latches = 83  ;                      ;                        ;
++-----------------------------------------------------+----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++----------------------------------------+------------------------------------------+
+; Register name                          ; Reason for Removal                       ;
++----------------------------------------+------------------------------------------+
+; ton[11..14,17..31]                     ; Stuck at GND due to stuck port data_in   ;
+; RW                                     ; Stuck at GND due to stuck port data_in   ;
+; ton[15]                                ; Merged with ton[16]                      ;
+; LCM_com_data[0][7]                     ; Stuck at GND due to stuck port data_in   ;
+; LCM_com_data[0][6]                     ; Stuck at GND due to stuck port data_in   ;
+; LCM_com_data[0][5]                     ; Stuck at GND due to stuck port data_in   ;
+; LCM_com_data[1][7]                     ; Stuck at GND due to stuck port data_in   ;
+; LCM_com_data[1][6]                     ; Stuck at GND due to stuck port data_in   ;
+; LCM_com_data[1][5]                     ; Stuck at GND due to stuck port data_in   ;
+; LCM_com_data[1][4]                     ; Stuck at GND due to stuck port data_in   ;
+; LCM_com_data[1][3]                     ; Stuck at GND due to stuck port data_in   ;
+; LCM_com_data[2][6]                     ; Stuck at GND due to stuck port data_in   ;
+; LCM_com_data[2][2]                     ; Stuck at GND due to stuck port data_in   ;
+; LCM_com_data[2][1]                     ; Stuck at GND due to stuck port data_in   ;
+; LCM_com_data[0][3]                     ; Merged with LCM_com_data[0][1]           ;
+; LCM_com_data[17][6]                    ; Merged with LCM_com_data[0][1]           ;
+; LCM_com_data[1][1]                     ; Merged with LCM_com_data[0][1]           ;
+; LCM_com_data[1][2]                     ; Merged with LCM_com_data[0][1]           ;
+; LCM_com_data[2][3]                     ; Merged with LCM_com_data[0][1]           ;
+; LCM_com_data[2][5]                     ; Merged with LCM_com_data[0][1]           ;
+; LCM_com_data[9][6]                     ; Merged with LCM_com_data[0][1]           ;
+; LCM_com_data[19][3]                    ; Merged with LCM_com_data[11][6]          ;
+; LCM_com_data[20][6]                    ; Merged with LCM_com_data[19][7]          ;
+; FD[20..25]                             ; Lost fanout                              ;
+; LCM_com_data[0][4]~_emulated           ; Merged with LCM_com_data[1][0]~_emulated ;
+; LCM_com_data[17][5]~_emulated          ; Merged with LCM_com_data[1][0]~_emulated ;
+; LCM_com_data[5][5]~_emulated           ; Merged with LCM_com_data[3][7]~_emulated ;
+; Total Number of Removed Registers = 50 ;                                          ;
++----------------------------------------+------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 317   ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 248   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 257   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; LCM_INI[1]                              ; 57      ;
+; LCM_com_data[0][2]                      ; 3       ;
+; LCM_com_data[0][0]                      ; 2       ;
+; LCM_4bit_driver:LCMset|BF               ; 2       ;
+; ton[5]                                  ; 2       ;
+; ton[7]                                  ; 2       ;
+; ton[9]                                  ; 2       ;
+; ton[10]                                 ; 2       ;
+; ton[16]                                 ; 4       ;
+; LCM_com_data[9][7]                      ; 1       ;
+; LCM_com_data[9][5]                      ; 1       ;
+; Total number of inverted registers = 11 ;         ;
++-----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |gurenka|LCM_INI[4]                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |gurenka|beat[3]                           ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; Yes        ; |gurenka|DBi[5]                            ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 26 LEs               ; 2 LEs                  ; Yes        ; |gurenka|DBi[3]                            ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 26 LEs               ; 2 LEs                  ; Yes        ; |gurenka|DBi[1]                            ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 16 LEs               ; 10 LEs                 ; Yes        ; |gurenka|LCM_4bit_driver:LCMset|LCMruns[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                    ;
++------------------------------------------------+-------------+---------------------+
+; Parameter Name                                 ; Value       ; Type                ;
++------------------------------------------------+-------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON          ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF         ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON          ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF         ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 27          ; Untyped             ;
+; LPM_WIDTHB                                     ; 18          ; Untyped             ;
+; LPM_WIDTHP                                     ; 45          ; Untyped             ;
+; LPM_WIDTHR                                     ; 45          ; Untyped             ;
+; LPM_WIDTHS                                     ; 1           ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED      ; Untyped             ;
+; LPM_PIPELINE                                   ; 0           ; Untyped             ;
+; LATENCY                                        ; 0           ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO          ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO          ; Untyped             ;
+; USE_EAB                                        ; OFF         ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5           ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone III ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL      ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT         ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0           ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0           ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_25t    ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx          ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx          ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF         ; Untyped             ;
++------------------------------------------------+-------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance         ;
++---------------------------------------+----------------+
+; Name                                  ; Value          ;
++---------------------------------------+----------------+
+; Number of entity instances            ; 1              ;
+; Entity Instance                       ; lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 27             ;
+;     -- LPM_WIDTHB                     ; 18             ;
+;     -- LPM_WIDTHP                     ; 45             ;
+;     -- LPM_REPRESENTATION             ; SIGNED         ;
+;     -- INPUT_A_IS_CONSTANT            ; NO             ;
+;     -- INPUT_B_IS_CONSTANT            ; NO             ;
+;     -- USE_EAB                        ; OFF            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
++---------------------------------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LCM_4bit_driver:LCMset"                                                              ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; dbo   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; lcm_s ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:08     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Nov 22 11:38:25 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off gurenka -c gurenka
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 4 design units, including 2 entities, in source file gurenka.vhd
+    Info (12022): Found design unit 1: gurenka-Albert
+    Info (12022): Found design unit 2: LCM_4bit_driver-Albert
+    Info (12023): Found entity 1: gurenka
+    Info (12023): Found entity 2: LCM_4bit_driver
+Info (12127): Elaborating entity "gurenka" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at gurenka.vhd(24): object "DBo" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at gurenka.vhd(25): object "LCM_S" assigned a value but never read
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(90): used explicit default value for signal "LCM_IT_0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(93): used explicit default value for signal "LCM_0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(96): used explicit default value for signal "LCM_0_0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(99): used explicit default value for signal "LCM_1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(102): used explicit default value for signal "LCM_2" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(105): used explicit default value for signal "LCM_2_0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(108): used explicit default value for signal "LCM_3" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(111): used explicit default value for signal "LCM_4" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(114): used explicit default value for signal "LCM_4_0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(117): used explicit default value for signal "LCM_5" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(120): used explicit default value for signal "LCM_6" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(123): used explicit default value for signal "LCM_6_0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(126): used explicit default value for signal "LCM_7" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(129): used explicit default value for signal "LCM_7_0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(132): used explicit default value for signal "LCM_8" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(135): used explicit default value for signal "LCM_9" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(138): used explicit default value for signal "LCM_9_0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(141): used explicit default value for signal "LCM_10" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(144): used explicit default value for signal "LCM_11" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(147): used explicit default value for signal "LCM_12" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(150): used explicit default value for signal "LCM_13" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(153): used explicit default value for signal "LCM_14" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(156): used explicit default value for signal "LCM_14_0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(159): used explicit default value for signal "LCM_15" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(162): used explicit default value for signal "LCM_15_0" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(165): used explicit default value for signal "LCM_16" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(168): used explicit default value for signal "LCM_17" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(171): used explicit default value for signal "LCM_18" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at gurenka.vhd(174): used explicit default value for signal "LCM_19" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(200): signal "speed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(205): signal "rstbz" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(229): signal "rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(232): signal "rstbz" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(234): signal "trigg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(248): signal "LCM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(248): signal "LCMx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(248): signal "LCMP_RESET" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(249): signal "LCM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(253): signal "LCM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(256): signal "LCM_IT_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(259): signal "LCM_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(260): signal "LCM_0_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(263): signal "LCM_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(265): signal "LCM_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(266): signal "LCM_2_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(268): signal "LCM_3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(270): signal "LCM_4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(271): signal "LCM_4_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(274): signal "LCM_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(276): signal "LCM_6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(277): signal "LCM_6_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(280): signal "LCM_7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(281): signal "LCM_7_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(284): signal "LCM_8" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(286): signal "LCM_9" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(287): signal "LCM_9_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(290): signal "LCM_10" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(292): signal "LCM_11" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(294): signal "LCM_12" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(296): signal "LCM_13" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(298): signal "LCM_14" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(299): signal "LCM_14_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(302): signal "LCM_15" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(303): signal "LCM_15_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(306): signal "LCM_16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(308): signal "LCM_17" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(310): signal "LCM_18" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(312): signal "LCM_19" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at gurenka.vhd(245): inferring latch(es) for signal or variable "LCMx", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at gurenka.vhd(245): inferring latch(es) for signal or variable "LCM_com_data2", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(347): signal "S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(352): signal "S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(360): signal "rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (10041): Inferred latch for "LCM_com_data2[20][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[20][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[20][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[20][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[20][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[20][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[20][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[20][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[19][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[19][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[19][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[19][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[19][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[19][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[19][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[19][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[18][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[18][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[18][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[18][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[18][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[18][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[18][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[18][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[17][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[17][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[17][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[17][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[17][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[17][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[17][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[17][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[16][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[16][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[16][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[16][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[16][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[16][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[16][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[16][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[15][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[15][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[15][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[15][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[15][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[15][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[15][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[15][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[14][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[14][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[14][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[14][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[14][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[14][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[14][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[14][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[13][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[13][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[13][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[13][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[13][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[13][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[13][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[13][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[12][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[12][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[12][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[12][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[12][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[12][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[12][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[12][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[11][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[11][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[11][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[11][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[11][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[11][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[11][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[11][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[10][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[10][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[10][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[10][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[10][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[10][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[10][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[10][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[9][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[9][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[9][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[9][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[9][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[9][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[9][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[9][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[8][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[8][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[8][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[8][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[8][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[8][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[8][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[8][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[7][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[7][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[7][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[7][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[7][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[7][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[7][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[7][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[6][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[6][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[6][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[6][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[6][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[6][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[6][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[6][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[5][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[5][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[5][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[5][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[5][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[5][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[5][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[5][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[4][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[4][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[4][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[4][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[4][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[4][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[4][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[4][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[3][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[3][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[3][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[3][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[3][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[3][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[3][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[3][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[2][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[2][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[2][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[2][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[2][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[2][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[2][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[2][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[1][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[1][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[1][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[1][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[1][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[1][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[1][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[1][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[0][0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[0][1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[0][2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[0][3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[0][4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[0][5]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[0][6]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCM_com_data2[0][7]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCMx[0]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCMx[1]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCMx[2]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCMx[3]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCMx[4]" at gurenka.vhd(245)
+Info (10041): Inferred latch for "LCMx[5]" at gurenka.vhd(245)
+Info (12128): Elaborating entity "LCM_4bit_driver" for hierarchy "LCM_4bit_driver:LCMset"
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(392): signal "DBi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(393): signal "RS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at gurenka.vhd(395): signal "RW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer Mux0
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0"
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "27"
+    Info (12134): Parameter "LPM_WIDTHB" = "18"
+    Info (12134): Parameter "LPM_WIDTHP" = "45"
+    Info (12134): Parameter "LPM_WIDTHR" = "45"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_25t.tdf
+    Info (12023): Found entity 1: mult_25t
+Info (13014): Ignored 42 buffer(s)
+    Info (13019): Ignored 42 SOFT buffer(s)
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[19][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[18][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[17][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[16][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[15][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[14][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[13][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[11][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[9][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[7][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[2][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[2][7]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[0][0]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[0][2]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[0][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[20][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[5][5]" merged with LATCH primitive "LCM_com_data2[3][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[3][5]" merged with LATCH primitive "LCM_com_data2[3][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[8][4]" merged with LATCH primitive "LCM_com_data2[6][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[8][7]" merged with LATCH primitive "LCM_com_data2[6][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[7][0]" merged with LATCH primitive "LCM_com_data2[6][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[7][4]" merged with LATCH primitive "LCM_com_data2[6][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[8][1]" merged with LATCH primitive "LCM_com_data2[7][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[8][6]" merged with LATCH primitive "LCM_com_data2[7][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[12][0]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[12][2]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[12][6]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[12][7]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[11][1]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[11][3]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[11][7]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[10][0]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[10][4]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[10][6]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[9][2]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[9][7]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[8][0]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[6][4]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[3][1]" merged with LATCH primitive "LCM_com_data2[10][7]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[6][0]" merged with LATCH primitive "LCM_com_data2[5][6]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[5][1]" merged with LATCH primitive "LCM_com_data2[5][6]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[3][6]" merged with LATCH primitive "LCM_com_data2[5][6]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[4][0]" merged with LATCH primitive "LCM_com_data2[4][6]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[12][5]" merged with LATCH primitive "LCM_com_data2[10][5]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[8][5]" merged with LATCH primitive "LCM_com_data2[10][5]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[8][3]" merged with LATCH primitive "LCM_com_data2[3][4]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[7][2]" merged with LATCH primitive "LCM_com_data2[3][4]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[6][3]" merged with LATCH primitive "LCM_com_data2[3][4]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[5][0]" merged with LATCH primitive "LCM_com_data2[5][4]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[4][3]" merged with LATCH primitive "LCM_com_data2[5][4]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[7][1]" merged with LATCH primitive "LCM_com_data2[5][3]"
+    Info (13026): Duplicate LATCH primitive "LCM_com_data2[7][3]" merged with LATCH primitive "LCM_com_data2[5][3]"
+Warning (13012): Latch LCMx[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[0]
+Warning (13012): Latch LCMx[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[1]
+Warning (13012): Latch LCMx[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[2]
+Warning (13012): Latch LCMx[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[3]
+Warning (13012): Latch LCMx[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[4]
+Warning (13012): Latch LCMx[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[5]
+Warning (13012): Latch LCM_com_data2[1][0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[0]
+Warning (13012): Latch LCM_com_data2[3][7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[4]
+Warning (13012): Latch LCM_com_data2[5][7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[0]
+Warning (13012): Latch LCM_com_data2[6][7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[0]
+Warning (13012): Latch LCM_com_data2[4][7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[0]
+Warning (13012): Latch LCM_com_data2[7][7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[0]
+Warning (13012): Latch LCM_com_data2[10][7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[1]
+Warning (13012): Latch LCM_com_data2[6][6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[1]
+Warning (13012): Latch LCM_com_data2[5][6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[0]
+Warning (13012): Latch LCM_com_data2[4][6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[1]
+Warning (13012): Latch LCM_com_data2[6][5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[0]
+Warning (13012): Latch LCM_com_data2[4][5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[3]
+Warning (13012): Latch LCM_com_data2[10][5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[2]
+Warning (13012): Latch LCM_com_data2[3][4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[0]
+Warning (13012): Latch LCM_com_data2[5][4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[4]
+Warning (13012): Latch LCM_com_data2[4][4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[2]
+Warning (13012): Latch LCM_com_data2[3][3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[3]
+Warning (13012): Latch LCM_com_data2[5][3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[0]
+Warning (13012): Latch LCM_com_data2[3][2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[1]
+Warning (13012): Latch LCM_com_data2[6][2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[2]
+Warning (13012): Latch LCM_com_data2[5][2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[0]
+Warning (13012): Latch LCM_com_data2[4][2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[3]
+Warning (13012): Latch LCM_com_data2[6][1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[1]
+Warning (13012): Latch LCM_com_data2[4][1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[1]
+Warning (13012): Latch LCM_com_data2[3][0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal LCM[0]
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "LCM_4bit_driver:LCMset|RSo" is converted into an equivalent circuit using register "LCM_4bit_driver:LCMset|RSo~_emulated" and latch "LCM_4bit_driver:LCMset|RSo~1"
+    Warning (13310): Register "LCM_com_data[0][1]" is converted into an equivalent circuit using register "LCM_com_data[0][1]~_emulated" and latch "LCM_com_data[0][1]~1"
+    Warning (13310): Register "LCM_com_data[1][0]" is converted into an equivalent circuit using register "LCM_com_data[1][0]~_emulated" and latch "LCM_com_data[1][0]~5"
+    Warning (13310): Register "LCM_com_data[0][4]" is converted into an equivalent circuit using register "LCM_com_data[0][4]~_emulated" and latch "LCM_com_data[1][0]~5"
+    Warning (13310): Register "LCM_4bit_driver:LCMset|DBii[0]" is converted into an equivalent circuit using register "LCM_4bit_driver:LCMset|DBii[0]~_emulated" and latch "LCM_4bit_driver:LCMset|DBii[0]~1"
+    Warning (13310): Register "LCM_4bit_driver:LCMset|DBii[1]" is converted into an equivalent circuit using register "LCM_4bit_driver:LCMset|DBii[1]~_emulated" and latch "LCM_4bit_driver:LCMset|DBii[1]~5"
+    Warning (13310): Register "LCM_4bit_driver:LCMset|DBii[2]" is converted into an equivalent circuit using register "LCM_4bit_driver:LCMset|DBii[2]~_emulated" and latch "LCM_4bit_driver:LCMset|DBii[2]~9"
+    Warning (13310): Register "LCM_4bit_driver:LCMset|DBii[3]" is converted into an equivalent circuit using register "LCM_4bit_driver:LCMset|DBii[3]~_emulated" and latch "LCM_4bit_driver:LCMset|DBii[3]~13"
+    Warning (13310): Register "LCM_com_data[17][7]" is converted into an equivalent circuit using register "LCM_com_data[17][7]~_emulated" and latch "LCM_com_data[17][7]~11"
+    Warning (13310): Register "LCM_com_data[18][7]" is converted into an equivalent circuit using register "LCM_com_data[18][7]~_emulated" and latch "LCM_com_data[18][7]~15"
+    Warning (13310): Register "LCM_com_data[16][7]" is converted into an equivalent circuit using register "LCM_com_data[16][7]~_emulated" and latch "LCM_com_data[16][7]~19"
+    Warning (13310): Register "LCM_com_data[19][7]" is converted into an equivalent circuit using register "LCM_com_data[19][7]~_emulated" and latch "LCM_com_data[19][7]~23"
+    Warning (13310): Register "LCM_com_data[20][7]" is converted into an equivalent circuit using register "LCM_com_data[20][7]~_emulated" and latch "LCM_com_data[20][7]~27"
+    Warning (13310): Register "LCM_com_data[3][7]" is converted into an equivalent circuit using register "LCM_com_data[3][7]~_emulated" and latch "LCM_com_data[1][0]~5"
+    Warning (13310): Register "LCM_com_data[5][7]" is converted into an equivalent circuit using register "LCM_com_data[5][7]~_emulated" and latch "LCM_com_data[1][0]~5"
+    Warning (13310): Register "LCM_com_data[6][7]" is converted into an equivalent circuit using register "LCM_com_data[6][7]~_emulated" and latch "LCM_com_data[6][7]~35"
+    Warning (13310): Register "LCM_com_data[4][7]" is converted into an equivalent circuit using register "LCM_com_data[4][7]~_emulated" and latch "LCM_com_data[4][7]~39"
+    Warning (13310): Register "LCM_com_data[7][7]" is converted into an equivalent circuit using register "LCM_com_data[7][7]~_emulated" and latch "LCM_com_data[1][0]~5"
+    Warning (13310): Register "LCM_com_data[10][7]" is converted into an equivalent circuit using register "LCM_com_data[10][7]~_emulated" and latch "LCM_com_data[10][7]~45"
+    Warning (13310): Register "LCM_com_data[8][7]" is converted into an equivalent circuit using register "LCM_com_data[8][7]~_emulated" and latch "LCM_com_data[8][7]~49"
+    Warning (13310): Register "LCM_com_data[11][7]" is converted into an equivalent circuit using register "LCM_com_data[11][7]~_emulated" and latch "LCM_com_data[11][7]~53"
+    Warning (13310): Register "LCM_com_data[13][7]" is converted into an equivalent circuit using register "LCM_com_data[13][7]~_emulated" and latch "LCM_com_data[13][7]~57"
+    Warning (13310): Register "LCM_com_data[14][7]" is converted into an equivalent circuit using register "LCM_com_data[14][7]~_emulated" and latch "LCM_com_data[14][7]~61"
+    Warning (13310): Register "LCM_com_data[12][7]" is converted into an equivalent circuit using register "LCM_com_data[12][7]~_emulated" and latch "LCM_com_data[12][7]~65"
+    Warning (13310): Register "LCM_com_data[15][7]" is converted into an equivalent circuit using register "LCM_com_data[15][7]~_emulated" and latch "LCM_com_data[15][7]~69"
+    Warning (13310): Register "LCM_com_data[10][6]" is converted into an equivalent circuit using register "LCM_com_data[10][6]~_emulated" and latch "LCM_com_data[10][6]~73"
+    Warning (13310): Register "LCM_com_data[8][6]" is converted into an equivalent circuit using register "LCM_com_data[8][6]~_emulated" and latch "LCM_com_data[8][6]~77"
+    Warning (13310): Register "LCM_com_data[11][6]" is converted into an equivalent circuit using register "LCM_com_data[11][6]~_emulated" and latch "LCM_com_data[11][6]~81"
+    Warning (13310): Register "LCM_com_data[6][6]" is converted into an equivalent circuit using register "LCM_com_data[6][6]~_emulated" and latch "LCM_com_data[6][6]~85"
+    Warning (13310): Register "LCM_com_data[4][6]" is converted into an equivalent circuit using register "LCM_com_data[4][6]~_emulated" and latch "LCM_com_data[4][6]~89"
+    Warning (13310): Register "LCM_com_data[7][6]" is converted into an equivalent circuit using register "LCM_com_data[7][6]~_emulated" and latch "LCM_com_data[7][6]~93"
+    Warning (13310): Register "LCM_com_data[3][6]" is converted into an equivalent circuit using register "LCM_com_data[3][6]~_emulated" and latch "LCM_com_data[3][6]~97"
+    Warning (13310): Register "LCM_com_data[14][6]" is converted into an equivalent circuit using register "LCM_com_data[14][6]~_emulated" and latch "LCM_com_data[14][6]~101"
+    Warning (13310): Register "LCM_com_data[13][6]" is converted into an equivalent circuit using register "LCM_com_data[13][6]~_emulated" and latch "LCM_com_data[13][6]~105"
+    Warning (13310): Register "LCM_com_data[12][6]" is converted into an equivalent circuit using register "LCM_com_data[12][6]~_emulated" and latch "LCM_com_data[12][6]~109"
+    Warning (13310): Register "LCM_com_data[15][6]" is converted into an equivalent circuit using register "LCM_com_data[15][6]~_emulated" and latch "LCM_com_data[15][6]~113"
+    Warning (13310): Register "LCM_com_data[18][6]" is converted into an equivalent circuit using register "LCM_com_data[18][6]~_emulated" and latch "LCM_com_data[18][6]~117"
+    Warning (13310): Register "LCM_com_data[16][6]" is converted into an equivalent circuit using register "LCM_com_data[16][6]~_emulated" and latch "LCM_com_data[16][6]~121"
+    Warning (13310): Register "LCM_com_data[19][6]" is converted into an equivalent circuit using register "LCM_com_data[19][6]~_emulated" and latch "LCM_com_data[19][6]~125"
+    Warning (13310): Register "LCM_com_data[18][5]" is converted into an equivalent circuit using register "LCM_com_data[18][5]~_emulated" and latch "LCM_com_data[18][5]~129"
+    Warning (13310): Register "LCM_com_data[17][5]" is converted into an equivalent circuit using register "LCM_com_data[17][5]~_emulated" and latch "LCM_com_data[1][0]~5"
+    Warning (13310): Register "LCM_com_data[16][5]" is converted into an equivalent circuit using register "LCM_com_data[16][5]~_emulated" and latch "LCM_com_data[16][5]~135"
+    Warning (13310): Register "LCM_com_data[19][5]" is converted into an equivalent circuit using register "LCM_com_data[19][5]~_emulated" and latch "LCM_com_data[19][5]~139"
+    Warning (13310): Register "LCM_com_data[20][5]" is converted into an equivalent circuit using register "LCM_com_data[20][5]~_emulated" and latch "LCM_com_data[20][5]~143"
+    Warning (13310): Register "LCM_com_data[5][5]" is converted into an equivalent circuit using register "LCM_com_data[5][5]~_emulated" and latch "LCM_com_data[1][0]~5"
+    Warning (13310): Register "LCM_com_data[6][5]" is converted into an equivalent circuit using register "LCM_com_data[6][5]~_emulated" and latch "LCM_com_data[6][5]~149"
+    Warning (13310): Register "LCM_com_data[4][5]" is converted into an equivalent circuit using register "LCM_com_data[4][5]~_emulated" and latch "LCM_com_data[4][5]~153"
+    Warning (13310): Register "LCM_com_data[7][5]" is converted into an equivalent circuit using register "LCM_com_data[7][5]~_emulated" and latch "LCM_com_data[7][5]~157"
+    Warning (13310): Register "LCM_com_data[3][5]" is converted into an equivalent circuit using register "LCM_com_data[3][5]~_emulated" and latch "LCM_com_data[3][5]~161"
+    Warning (13310): Register "LCM_com_data[10][5]" is converted into an equivalent circuit using register "LCM_com_data[10][5]~_emulated" and latch "LCM_com_data[10][5]~165"
+    Warning (13310): Register "LCM_com_data[8][5]" is converted into an equivalent circuit using register "LCM_com_data[8][5]~_emulated" and latch "LCM_com_data[8][5]~169"
+    Warning (13310): Register "LCM_com_data[11][5]" is converted into an equivalent circuit using register "LCM_com_data[11][5]~_emulated" and latch "LCM_com_data[11][5]~173"
+    Warning (13310): Register "LCM_com_data[13][5]" is converted into an equivalent circuit using register "LCM_com_data[13][5]~_emulated" and latch "LCM_com_data[13][5]~177"
+    Warning (13310): Register "LCM_com_data[14][5]" is converted into an equivalent circuit using register "LCM_com_data[14][5]~_emulated" and latch "LCM_com_data[14][5]~181"
+    Warning (13310): Register "LCM_com_data[12][5]" is converted into an equivalent circuit using register "LCM_com_data[12][5]~_emulated" and latch "LCM_com_data[12][5]~185"
+    Warning (13310): Register "LCM_com_data[15][5]" is converted into an equivalent circuit using register "LCM_com_data[15][5]~_emulated" and latch "LCM_com_data[15][5]~189"
+    Warning (13310): Register "LCM_com_data[17][4]" is converted into an equivalent circuit using register "LCM_com_data[17][4]~_emulated" and latch "LCM_com_data[17][4]~193"
+    Warning (13310): Register "LCM_com_data[18][4]" is converted into an equivalent circuit using register "LCM_com_data[18][4]~_emulated" and latch "LCM_com_data[18][4]~197"
+    Warning (13310): Register "LCM_com_data[16][4]" is converted into an equivalent circuit using register "LCM_com_data[16][4]~_emulated" and latch "LCM_com_data[16][4]~201"
+    Warning (13310): Register "LCM_com_data[19][4]" is converted into an equivalent circuit using register "LCM_com_data[19][4]~_emulated" and latch "LCM_com_data[19][4]~205"
+    Warning (13310): Register "LCM_com_data[10][4]" is converted into an equivalent circuit using register "LCM_com_data[10][4]~_emulated" and latch "LCM_com_data[10][4]~209"
+    Warning (13310): Register "LCM_com_data[9][4]" is converted into an equivalent circuit using register "LCM_com_data[9][4]~_emulated" and latch "LCM_com_data[9][4]~213"
+    Warning (13310): Register "LCM_com_data[8][4]" is converted into an equivalent circuit using register "LCM_com_data[8][4]~_emulated" and latch "LCM_com_data[8][4]~217"
+    Warning (13310): Register "LCM_com_data[11][4]" is converted into an equivalent circuit using register "LCM_com_data[11][4]~_emulated" and latch "LCM_com_data[11][4]~221"
+    Warning (13310): Register "LCM_com_data[3][4]" is converted into an equivalent circuit using register "LCM_com_data[3][4]~_emulated" and latch "LCM_com_data[3][4]~225"
+    Warning (13310): Register "LCM_com_data[6][4]" is converted into an equivalent circuit using register "LCM_com_data[6][4]~_emulated" and latch "LCM_com_data[6][4]~229"
+    Warning (13310): Register "LCM_com_data[5][4]" is converted into an equivalent circuit using register "LCM_com_data[5][4]~_emulated" and latch "LCM_com_data[5][4]~233"
+    Warning (13310): Register "LCM_com_data[4][4]" is converted into an equivalent circuit using register "LCM_com_data[4][4]~_emulated" and latch "LCM_com_data[4][4]~237"
+    Warning (13310): Register "LCM_com_data[7][4]" is converted into an equivalent circuit using register "LCM_com_data[7][4]~_emulated" and latch "LCM_com_data[7][4]~241"
+    Warning (13310): Register "LCM_com_data[13][4]" is converted into an equivalent circuit using register "LCM_com_data[13][4]~_emulated" and latch "LCM_com_data[13][4]~245"
+    Warning (13310): Register "LCM_com_data[14][4]" is converted into an equivalent circuit using register "LCM_com_data[14][4]~_emulated" and latch "LCM_com_data[14][4]~249"
+    Warning (13310): Register "LCM_com_data[12][4]" is converted into an equivalent circuit using register "LCM_com_data[12][4]~_emulated" and latch "LCM_com_data[12][4]~253"
+    Warning (13310): Register "LCM_com_data[15][4]" is converted into an equivalent circuit using register "LCM_com_data[15][4]~_emulated" and latch "LCM_com_data[15][4]~257"
+    Warning (13310): Register "LCM_com_data[20][4]" is converted into an equivalent circuit using register "LCM_com_data[20][4]~_emulated" and latch "LCM_com_data[20][4]~261"
+    Warning (13310): Register "LCM_com_data[10][3]" is converted into an equivalent circuit using register "LCM_com_data[10][3]~_emulated" and latch "LCM_com_data[10][3]~265"
+    Warning (13310): Register "LCM_com_data[9][3]" is converted into an equivalent circuit using register "LCM_com_data[9][3]~_emulated" and latch "LCM_com_data[9][3]~269"
+    Warning (13310): Register "LCM_com_data[8][3]" is converted into an equivalent circuit using register "LCM_com_data[8][3]~_emulated" and latch "LCM_com_data[8][3]~273"
+    Warning (13310): Register "LCM_com_data[11][3]" is converted into an equivalent circuit using register "LCM_com_data[11][3]~_emulated" and latch "LCM_com_data[11][3]~277"
+    Warning (13310): Register "LCM_com_data[17][3]" is converted into an equivalent circuit using register "LCM_com_data[17][3]~_emulated" and latch "LCM_com_data[17][3]~281"
+    Warning (13310): Register "LCM_com_data[18][3]" is converted into an equivalent circuit using register "LCM_com_data[18][3]~_emulated" and latch "LCM_com_data[18][3]~285"
+    Warning (13310): Register "LCM_com_data[16][3]" is converted into an equivalent circuit using register "LCM_com_data[16][3]~_emulated" and latch "LCM_com_data[16][3]~289"
+    Warning (13310): Register "LCM_com_data[3][3]" is converted into an equivalent circuit using register "LCM_com_data[3][3]~_emulated" and latch "LCM_com_data[3][3]~293"
+    Warning (13310): Register "LCM_com_data[6][3]" is converted into an equivalent circuit using register "LCM_com_data[6][3]~_emulated" and latch "LCM_com_data[6][3]~297"
+    Warning (13310): Register "LCM_com_data[5][3]" is converted into an equivalent circuit using register "LCM_com_data[5][3]~_emulated" and latch "LCM_com_data[5][3]~301"
+    Warning (13310): Register "LCM_com_data[4][3]" is converted into an equivalent circuit using register "LCM_com_data[4][3]~_emulated" and latch "LCM_com_data[4][3]~305"
+    Warning (13310): Register "LCM_com_data[7][3]" is converted into an equivalent circuit using register "LCM_com_data[7][3]~_emulated" and latch "LCM_com_data[7][3]~309"
+    Warning (13310): Register "LCM_com_data[13][3]" is converted into an equivalent circuit using register "LCM_com_data[13][3]~_emulated" and latch "LCM_com_data[13][3]~313"
+    Warning (13310): Register "LCM_com_data[14][3]" is converted into an equivalent circuit using register "LCM_com_data[14][3]~_emulated" and latch "LCM_com_data[14][3]~317"
+    Warning (13310): Register "LCM_com_data[12][3]" is converted into an equivalent circuit using register "LCM_com_data[12][3]~_emulated" and latch "LCM_com_data[12][3]~321"
+    Warning (13310): Register "LCM_com_data[15][3]" is converted into an equivalent circuit using register "LCM_com_data[15][3]~_emulated" and latch "LCM_com_data[15][3]~325"
+    Warning (13310): Register "LCM_com_data[20][3]" is converted into an equivalent circuit using register "LCM_com_data[20][3]~_emulated" and latch "LCM_com_data[20][3]~329"
+    Warning (13310): Register "LCM_com_data[17][2]" is converted into an equivalent circuit using register "LCM_com_data[17][2]~_emulated" and latch "LCM_com_data[17][2]~333"
+    Warning (13310): Register "LCM_com_data[18][2]" is converted into an equivalent circuit using register "LCM_com_data[18][2]~_emulated" and latch "LCM_com_data[18][2]~337"
+    Warning (13310): Register "LCM_com_data[16][2]" is converted into an equivalent circuit using register "LCM_com_data[16][2]~_emulated" and latch "LCM_com_data[16][2]~341"
+    Warning (13310): Register "LCM_com_data[19][2]" is converted into an equivalent circuit using register "LCM_com_data[19][2]~_emulated" and latch "LCM_com_data[19][2]~345"
+    Warning (13310): Register "LCM_com_data[10][2]" is converted into an equivalent circuit using register "LCM_com_data[10][2]~_emulated" and latch "LCM_com_data[10][2]~349"
+    Warning (13310): Register "LCM_com_data[9][2]" is converted into an equivalent circuit using register "LCM_com_data[9][2]~_emulated" and latch "LCM_com_data[9][2]~353"
+    Warning (13310): Register "LCM_com_data[8][2]" is converted into an equivalent circuit using register "LCM_com_data[8][2]~_emulated" and latch "LCM_com_data[8][2]~357"
+    Warning (13310): Register "LCM_com_data[11][2]" is converted into an equivalent circuit using register "LCM_com_data[11][2]~_emulated" and latch "LCM_com_data[11][2]~361"
+    Warning (13310): Register "LCM_com_data[3][2]" is converted into an equivalent circuit using register "LCM_com_data[3][2]~_emulated" and latch "LCM_com_data[3][2]~365"
+    Warning (13310): Register "LCM_com_data[6][2]" is converted into an equivalent circuit using register "LCM_com_data[6][2]~_emulated" and latch "LCM_com_data[6][2]~369"
+    Warning (13310): Register "LCM_com_data[5][2]" is converted into an equivalent circuit using register "LCM_com_data[5][2]~_emulated" and latch "LCM_com_data[5][2]~373"
+    Warning (13310): Register "LCM_com_data[4][2]" is converted into an equivalent circuit using register "LCM_com_data[4][2]~_emulated" and latch "LCM_com_data[4][2]~377"
+    Warning (13310): Register "LCM_com_data[7][2]" is converted into an equivalent circuit using register "LCM_com_data[7][2]~_emulated" and latch "LCM_com_data[7][2]~381"
+    Warning (13310): Register "LCM_com_data[13][2]" is converted into an equivalent circuit using register "LCM_com_data[13][2]~_emulated" and latch "LCM_com_data[13][2]~385"
+    Warning (13310): Register "LCM_com_data[14][2]" is converted into an equivalent circuit using register "LCM_com_data[14][2]~_emulated" and latch "LCM_com_data[14][2]~389"
+    Warning (13310): Register "LCM_com_data[12][2]" is converted into an equivalent circuit using register "LCM_com_data[12][2]~_emulated" and latch "LCM_com_data[12][2]~393"
+    Warning (13310): Register "LCM_com_data[15][2]" is converted into an equivalent circuit using register "LCM_com_data[15][2]~_emulated" and latch "LCM_com_data[15][2]~397"
+    Warning (13310): Register "LCM_com_data[20][2]" is converted into an equivalent circuit using register "LCM_com_data[20][2]~_emulated" and latch "LCM_com_data[20][2]~401"
+    Warning (13310): Register "LCM_com_data[10][1]" is converted into an equivalent circuit using register "LCM_com_data[10][1]~_emulated" and latch "LCM_com_data[10][1]~405"
+    Warning (13310): Register "LCM_com_data[9][1]" is converted into an equivalent circuit using register "LCM_com_data[9][1]~_emulated" and latch "LCM_com_data[9][1]~409"
+    Warning (13310): Register "LCM_com_data[8][1]" is converted into an equivalent circuit using register "LCM_com_data[8][1]~_emulated" and latch "LCM_com_data[8][1]~413"
+    Warning (13310): Register "LCM_com_data[11][1]" is converted into an equivalent circuit using register "LCM_com_data[11][1]~_emulated" and latch "LCM_com_data[11][1]~417"
+    Warning (13310): Register "LCM_com_data[17][1]" is converted into an equivalent circuit using register "LCM_com_data[17][1]~_emulated" and latch "LCM_com_data[17][1]~421"
+    Warning (13310): Register "LCM_com_data[18][1]" is converted into an equivalent circuit using register "LCM_com_data[18][1]~_emulated" and latch "LCM_com_data[18][1]~425"
+    Warning (13310): Register "LCM_com_data[16][1]" is converted into an equivalent circuit using register "LCM_com_data[16][1]~_emulated" and latch "LCM_com_data[16][1]~429"
+    Warning (13310): Register "LCM_com_data[19][1]" is converted into an equivalent circuit using register "LCM_com_data[19][1]~_emulated" and latch "LCM_com_data[19][1]~433"
+    Warning (13310): Register "LCM_com_data[3][1]" is converted into an equivalent circuit using register "LCM_com_data[3][1]~_emulated" and latch "LCM_com_data[3][1]~437"
+    Warning (13310): Register "LCM_com_data[6][1]" is converted into an equivalent circuit using register "LCM_com_data[6][1]~_emulated" and latch "LCM_com_data[6][1]~441"
+    Warning (13310): Register "LCM_com_data[5][1]" is converted into an equivalent circuit using register "LCM_com_data[5][1]~_emulated" and latch "LCM_com_data[5][1]~445"
+    Warning (13310): Register "LCM_com_data[4][1]" is converted into an equivalent circuit using register "LCM_com_data[4][1]~_emulated" and latch "LCM_com_data[4][1]~449"
+    Warning (13310): Register "LCM_com_data[7][1]" is converted into an equivalent circuit using register "LCM_com_data[7][1]~_emulated" and latch "LCM_com_data[7][1]~453"
+    Warning (13310): Register "LCM_com_data[13][1]" is converted into an equivalent circuit using register "LCM_com_data[13][1]~_emulated" and latch "LCM_com_data[13][1]~457"
+    Warning (13310): Register "LCM_com_data[14][1]" is converted into an equivalent circuit using register "LCM_com_data[14][1]~_emulated" and latch "LCM_com_data[14][1]~461"
+    Warning (13310): Register "LCM_com_data[12][1]" is converted into an equivalent circuit using register "LCM_com_data[12][1]~_emulated" and latch "LCM_com_data[12][1]~465"
+    Warning (13310): Register "LCM_com_data[15][1]" is converted into an equivalent circuit using register "LCM_com_data[15][1]~_emulated" and latch "LCM_com_data[15][1]~469"
+    Warning (13310): Register "LCM_com_data[20][1]" is converted into an equivalent circuit using register "LCM_com_data[20][1]~_emulated" and latch "LCM_com_data[20][1]~473"
+    Warning (13310): Register "LCM_com_data[9][0]" is converted into an equivalent circuit using register "LCM_com_data[9][0]~_emulated" and latch "LCM_com_data[9][0]~477"
+    Warning (13310): Register "LCM_com_data[5][0]" is converted into an equivalent circuit using register "LCM_com_data[5][0]~_emulated" and latch "LCM_com_data[5][0]~481"
+    Warning (13310): Register "LCM_com_data[13][0]" is converted into an equivalent circuit using register "LCM_com_data[13][0]~_emulated" and latch "LCM_com_data[13][0]~485"
+    Warning (13310): Register "LCM_com_data[10][0]" is converted into an equivalent circuit using register "LCM_com_data[10][0]~_emulated" and latch "LCM_com_data[10][0]~489"
+    Warning (13310): Register "LCM_com_data[6][0]" is converted into an equivalent circuit using register "LCM_com_data[6][0]~_emulated" and latch "LCM_com_data[6][0]~493"
+    Warning (13310): Register "LCM_com_data[2][0]" is converted into an equivalent circuit using register "LCM_com_data[2][0]~_emulated" and latch "LCM_com_data[1][0]~5"
+    Warning (13310): Register "LCM_com_data[14][0]" is converted into an equivalent circuit using register "LCM_com_data[14][0]~_emulated" and latch "LCM_com_data[14][0]~499"
+    Warning (13310): Register "LCM_com_data[8][0]" is converted into an equivalent circuit using register "LCM_com_data[8][0]~_emulated" and latch "LCM_com_data[8][0]~503"
+    Warning (13310): Register "LCM_com_data[4][0]" is converted into an equivalent circuit using register "LCM_com_data[4][0]~_emulated" and latch "LCM_com_data[4][0]~507"
+    Warning (13310): Register "LCM_com_data[12][0]" is converted into an equivalent circuit using register "LCM_com_data[12][0]~_emulated" and latch "LCM_com_data[12][0]~511"
+    Warning (13310): Register "LCM_com_data[11][0]" is converted into an equivalent circuit using register "LCM_com_data[11][0]~_emulated" and latch "LCM_com_data[11][0]~515"
+    Warning (13310): Register "LCM_com_data[7][0]" is converted into an equivalent circuit using register "LCM_com_data[7][0]~_emulated" and latch "LCM_com_data[7][0]~519"
+    Warning (13310): Register "LCM_com_data[3][0]" is converted into an equivalent circuit using register "LCM_com_data[3][0]~_emulated" and latch "LCM_com_data[3][0]~523"
+    Warning (13310): Register "LCM_com_data[15][0]" is converted into an equivalent circuit using register "LCM_com_data[15][0]~_emulated" and latch "LCM_com_data[15][0]~527"
+    Warning (13310): Register "LCM_com_data[18][0]" is converted into an equivalent circuit using register "LCM_com_data[18][0]~_emulated" and latch "LCM_com_data[18][0]~531"
+    Warning (13310): Register "LCM_com_data[17][0]" is converted into an equivalent circuit using register "LCM_com_data[17][0]~_emulated" and latch "LCM_com_data[17][0]~535"
+    Warning (13310): Register "LCM_com_data[16][0]" is converted into an equivalent circuit using register "LCM_com_data[16][0]~_emulated" and latch "LCM_com_data[16][0]~539"
+    Warning (13310): Register "LCM_com_data[19][0]" is converted into an equivalent circuit using register "LCM_com_data[19][0]~_emulated" and latch "LCM_com_data[19][0]~543"
+    Warning (13310): Register "LCM_com_data[20][0]" is converted into an equivalent circuit using register "LCM_com_data[20][0]~_emulated" and latch "LCM_com_data[20][0]~547"
+    Warning (13310): Register "LN" is converted into an equivalent circuit using register "LN~_emulated" and latch "LN~1"
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register LCM_INI[1] will power up to High
+    Critical Warning (18010): Register ton[2] will power up to Low
+    Critical Warning (18010): Register ton[4] will power up to Low
+    Critical Warning (18010): Register ton[5] will power up to High
+    Critical Warning (18010): Register ton[7] will power up to High
+    Critical Warning (18010): Register ton[9] will power up to High
+    Critical Warning (18010): Register ton[10] will power up to High
+    Critical Warning (18010): Register ton[16] will power up to High
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "S1"
+    Warning (15610): No output dependent on input pin "S2"
+Info (21057): Implemented 1536 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21060): Implemented 4 bidirectional pins
+    Info (21061): Implemented 1517 logic cells
+    Info (21062): Implemented 4 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 302 warnings
+    Info: Peak virtual memory: 4670 megabytes
+    Info: Processing ended: Sun Nov 22 11:38:36 2020
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:09
+
+

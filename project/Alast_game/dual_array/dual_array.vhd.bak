@@ -1,0 +1,36 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+USE IEEE.std_logic_signed.all;
+entity dual_array is
+	port(
+		clk,rst:in std_logic;
+		S,R,G:buffer std_logic_vector(7 downto 0)
+	);
+end entity dual_array;
+architecture main of dual_array is
+	signal FD:std_logic_vector(50 downto 0);
+	type arr is array(0 to 7) of std_logic_vector(15 downto 0);
+	signal data:arr:=(X"AA55",X"55AA",X"AA55",X"55AA",X"AA55",X"55AA",X"AA55",X"55AA");
+begin
+	fre:process(rst,clk)
+	begin
+		if rst='0' then
+			FD<=(others=>'0');
+		elsif rising_edge(clk)then
+			FD<=FD+1;
+		end if;
+	end process fre;
+	scan:process(FD(10))
+		variable i:integer range 0 to 7:=0
+	begin
+		if rst='0' then
+			S<=X"FE";
+			i:=0
+		elsif rising_edge(FD(20))then
+			R<=X"FF";
+			G<=X"FF";
+		end if;
+	end process;
+end main;
+
+	

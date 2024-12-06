@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Sep 20 10:06:04 2020
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : TSL2561_test
+Top-level Entity Name : TSL2561_test
+Family : Cyclone III
+Total logic elements : 1,464
+    Total combinational functions : 1,415
+    Dedicated logic registers : 183
+Total registers : 183
+Total pins : 31
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

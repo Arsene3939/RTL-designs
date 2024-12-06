@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="uart">
+		<CBX_INST_ENTRY INSTANCE_NAME="|uart|altsyncram:Serial_available_rtl_0" CBX_FILE_NAME="altsyncram_9ng1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|uart|lpm_mult:Mult0" CBX_FILE_NAME="mult_fft.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|uart|lpm_mult:Mult1" CBX_FILE_NAME="mult_fft.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

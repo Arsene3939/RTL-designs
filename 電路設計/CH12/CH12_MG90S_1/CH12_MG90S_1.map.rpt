@@ -1,0 +1,1595 @@
+Analysis & Synthesis report for CH12_MG90S_1
+Mon Mar 19 14:13:11 2018
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 15. Parameter Settings for Inferred Entity Instance: MG90S_Driver:U1|lpm_mult:Mult0
+ 16. Parameter Settings for Inferred Entity Instance: MG90S_Driver:U1|lpm_divide:Div0
+ 17. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
+ 18. Parameter Settings for Inferred Entity Instance: MG90S_Driver:U12|lpm_mult:Mult0
+ 19. Parameter Settings for Inferred Entity Instance: MG90S_Driver:U12|lpm_divide:Div0
+ 20. Parameter Settings for Inferred Entity Instance: lpm_divide:Div4
+ 21. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 22. Parameter Settings for Inferred Entity Instance: lpm_divide:Div3
+ 23. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2
+ 24. Parameter Settings for Inferred Entity Instance: lpm_divide:Div2
+ 25. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 26. Parameter Settings for Inferred Entity Instance: lpm_divide:Div7
+ 27. Parameter Settings for Inferred Entity Instance: lpm_divide:Div6
+ 28. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod5
+ 29. Parameter Settings for Inferred Entity Instance: lpm_divide:Div5
+ 30. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod4
+ 31. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod3
+ 32. lpm_mult Parameter Settings by Entity Instance
+ 33. Port Connectivity Checks: "LCM_4bit_driver:LCMset"
+ 34. Port Connectivity Checks: "MCP3202_Driver:U2"
+ 35. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Mar 19 14:13:11 2018        ;
+; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name                      ; CH12_MG90S_1                                 ;
+; Top-level Entity Name              ; CH12_MG90S_1                                 ;
+; Family                             ; Cyclone III                                  ;
+; Total logic elements               ; 2,878                                        ;
+;     Total combinational functions  ; 2,839                                        ;
+;     Dedicated logic registers      ; 187                                          ;
+; Total registers                    ; 187                                          ;
+; Total pins                         ; 15                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16Q240C8       ;                    ;
+; Top-level entity name                                                      ; CH12_MG90S_1       ; CH12_MG90S_1       ;
+; Family name                                                                ; Cyclone III        ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
+; ch12_mg90s_1.vhd                 ; yes             ; Auto-Found VHDL File         ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/ch12_mg90s_1.vhd           ;
+; mg90s_driver.vhd                 ; yes             ; Auto-Found VHDL File         ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/mg90s_driver.vhd           ;
+; mcp3202_driver.vhd               ; yes             ; Auto-Found VHDL File         ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/mcp3202_driver.vhd         ;
+; lcm_4bit_driver.vhd              ; yes             ; Auto-Found VHDL File         ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/lcm_4bit_driver.vhd        ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_divide.tdf   ;
+; db/lpm_divide_thm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/lpm_divide_thm.tdf      ;
+; db/sign_div_unsign_ulh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/sign_div_unsign_ulh.tdf ;
+; db/alt_u_div_76f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/alt_u_div_76f.tdf       ;
+; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/add_sub_unc.tdf         ;
+; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/add_sub_vnc.tdf         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_mult.tdf     ;
+; multcore.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/multcore.tdf     ;
+; mpar_add.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/mpar_add.tdf     ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf  ;
+; db/add_sub_ffh.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/add_sub_ffh.tdf         ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/altshift.tdf     ;
+; db/lpm_divide_rhm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/lpm_divide_rhm.tdf      ;
+; db/sign_div_unsign_slh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/sign_div_unsign_slh.tdf ;
+; db/alt_u_div_36f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/alt_u_div_36f.tdf       ;
+; db/lpm_divide_2jm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/lpm_divide_2jm.tdf      ;
+; db/sign_div_unsign_3nh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/sign_div_unsign_3nh.tdf ;
+; db/alt_u_div_h8f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/alt_u_div_h8f.tdf       ;
+; db/lpm_divide_7bm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/lpm_divide_7bm.tdf      ;
+; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/sign_div_unsign_5nh.tdf ;
+; db/alt_u_div_l8f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/alt_u_div_l8f.tdf       ;
+; db/lpm_divide_ohm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/lpm_divide_ohm.tdf      ;
+; db/sign_div_unsign_plh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/sign_div_unsign_plh.tdf ;
+; db/alt_u_div_t5f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/alt_u_div_t5f.tdf       ;
+; db/lpm_divide_lhm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/lpm_divide_lhm.tdf      ;
+; db/sign_div_unsign_mlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/sign_div_unsign_mlh.tdf ;
+; db/alt_u_div_n5f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/KTM-626®ÑÄy/½d¨Ò/CH12/CH12_MG90S_1/db/alt_u_div_n5f.tdf       ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 2,878   ;
+;                                             ;         ;
+; Total combinational functions               ; 2839    ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 580     ;
+;     -- 3 input functions                    ; 888     ;
+;     -- <=2 input functions                  ; 1371    ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 1875    ;
+;     -- arithmetic mode                      ; 964     ;
+;                                             ;         ;
+; Total registers                             ; 187     ;
+;     -- Dedicated logic registers            ; 187     ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 15      ;
+; Maximum fan-out node                        ; LCM_P~6 ;
+; Maximum fan-out                             ; 94      ;
+; Total fan-out                               ; 8122    ;
+; Average fan-out                             ; 2.65    ;
++---------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                          ;
++------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                              ; Library Name ;
++------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |CH12_MG90S_1                                  ; 2839 (333)        ; 187 (97)     ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |CH12_MG90S_1                                                                                                                    ; work         ;
+;    |LCM_4bit_driver:LCMset|                    ; 50 (50)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|LCM_4bit_driver:LCMset                                                                                             ;              ;
+;    |MCP3202_Driver:U2|                         ; 32 (32)           ; 49 (49)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MCP3202_Driver:U2                                                                                                  ;              ;
+;    |MG90S_Driver:U12|                          ; 288 (63)          ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U12                                                                                                   ;              ;
+;       |lpm_divide:Div0|                        ; 186 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U12|lpm_divide:Div0                                                                                   ;              ;
+;          |lpm_divide_rhm:auto_generated|       ; 186 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U12|lpm_divide:Div0|lpm_divide_rhm:auto_generated                                                     ;              ;
+;             |sign_div_unsign_slh:divider|      ; 186 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U12|lpm_divide:Div0|lpm_divide_rhm:auto_generated|sign_div_unsign_slh:divider                         ;              ;
+;                |alt_u_div_36f:divider|         ; 186 (186)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U12|lpm_divide:Div0|lpm_divide_rhm:auto_generated|sign_div_unsign_slh:divider|alt_u_div_36f:divider   ;              ;
+;       |lpm_mult:Mult0|                         ; 39 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U12|lpm_mult:Mult0                                                                                    ;              ;
+;          |multcore:mult_core|                  ; 39 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U12|lpm_mult:Mult0|multcore:mult_core                                                                 ;              ;
+;             |mpar_add:padder|                  ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U12|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                 ;              ;
+;                |lpm_add_sub:adder[0]|          ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U12|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ;              ;
+;                   |add_sub_ffh:auto_generated| ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U12|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_ffh:auto_generated ;              ;
+;    |MG90S_Driver:U1|                           ; 319 (94)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U1                                                                                                    ;              ;
+;       |lpm_divide:Div0|                        ; 186 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U1|lpm_divide:Div0                                                                                    ;              ;
+;          |lpm_divide_rhm:auto_generated|       ; 186 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U1|lpm_divide:Div0|lpm_divide_rhm:auto_generated                                                      ;              ;
+;             |sign_div_unsign_slh:divider|      ; 186 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U1|lpm_divide:Div0|lpm_divide_rhm:auto_generated|sign_div_unsign_slh:divider                          ;              ;
+;                |alt_u_div_36f:divider|         ; 186 (186)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U1|lpm_divide:Div0|lpm_divide_rhm:auto_generated|sign_div_unsign_slh:divider|alt_u_div_36f:divider    ;              ;
+;       |lpm_mult:Mult0|                         ; 39 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U1|lpm_mult:Mult0                                                                                     ;              ;
+;          |multcore:mult_core|                  ; 39 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U1|lpm_mult:Mult0|multcore:mult_core                                                                  ;              ;
+;             |mpar_add:padder|                  ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                  ;              ;
+;                |lpm_add_sub:adder[0]|          ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                             ;              ;
+;                   |add_sub_ffh:auto_generated| ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|MG90S_Driver:U1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_ffh:auto_generated  ;              ;
+;    |lpm_divide:Div0|                           ; 213 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div0                                                                                                    ;              ;
+;       |lpm_divide_thm:auto_generated|          ; 213 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div0|lpm_divide_thm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_ulh:divider|         ; 213 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div0|lpm_divide_thm:auto_generated|sign_div_unsign_ulh:divider                                          ;              ;
+;             |alt_u_div_76f:divider|            ; 213 (213)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div0|lpm_divide_thm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_76f:divider                    ;              ;
+;    |lpm_divide:Div1|                           ; 213 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div1                                                                                                    ;              ;
+;       |lpm_divide_thm:auto_generated|          ; 213 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div1|lpm_divide_thm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_ulh:divider|         ; 213 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div1|lpm_divide_thm:auto_generated|sign_div_unsign_ulh:divider                                          ;              ;
+;             |alt_u_div_76f:divider|            ; 213 (213)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div1|lpm_divide_thm:auto_generated|sign_div_unsign_ulh:divider|alt_u_div_76f:divider                    ;              ;
+;    |lpm_divide:Div2|                           ; 108 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div2                                                                                                    ;              ;
+;       |lpm_divide_lhm:auto_generated|          ; 108 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div2|lpm_divide_lhm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_mlh:divider|         ; 108 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div2|lpm_divide_lhm:auto_generated|sign_div_unsign_mlh:divider                                          ;              ;
+;             |alt_u_div_n5f:divider|            ; 108 (108)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div2|lpm_divide_lhm:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_n5f:divider                    ;              ;
+;    |lpm_divide:Div3|                           ; 113 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div3                                                                                                    ;              ;
+;       |lpm_divide_ohm:auto_generated|          ; 113 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div3|lpm_divide_ohm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_plh:divider|         ; 113 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div3|lpm_divide_ohm:auto_generated|sign_div_unsign_plh:divider                                          ;              ;
+;             |alt_u_div_t5f:divider|            ; 113 (113)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div3|lpm_divide_ohm:auto_generated|sign_div_unsign_plh:divider|alt_u_div_t5f:divider                    ;              ;
+;    |lpm_divide:Div4|                           ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div4                                                                                                    ;              ;
+;       |lpm_divide_2jm:auto_generated|          ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div4|lpm_divide_2jm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_3nh:divider|         ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div4|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider                                          ;              ;
+;             |alt_u_div_h8f:divider|            ; 61 (61)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div4|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_h8f:divider                    ;              ;
+;    |lpm_divide:Div5|                           ; 108 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div5                                                                                                    ;              ;
+;       |lpm_divide_lhm:auto_generated|          ; 108 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div5|lpm_divide_lhm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_mlh:divider|         ; 108 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div5|lpm_divide_lhm:auto_generated|sign_div_unsign_mlh:divider                                          ;              ;
+;             |alt_u_div_n5f:divider|            ; 108 (108)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div5|lpm_divide_lhm:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_n5f:divider                    ;              ;
+;    |lpm_divide:Div6|                           ; 113 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div6                                                                                                    ;              ;
+;       |lpm_divide_ohm:auto_generated|          ; 113 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div6|lpm_divide_ohm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_plh:divider|         ; 113 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div6|lpm_divide_ohm:auto_generated|sign_div_unsign_plh:divider                                          ;              ;
+;             |alt_u_div_t5f:divider|            ; 113 (113)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div6|lpm_divide_ohm:auto_generated|sign_div_unsign_plh:divider|alt_u_div_t5f:divider                    ;              ;
+;    |lpm_divide:Div7|                           ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div7                                                                                                    ;              ;
+;       |lpm_divide_2jm:auto_generated|          ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div7|lpm_divide_2jm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_3nh:divider|         ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div7|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider                                          ;              ;
+;             |alt_u_div_h8f:divider|            ; 61 (61)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Div7|lpm_divide_2jm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_h8f:divider                    ;              ;
+;    |lpm_divide:Mod0|                           ; 195 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod0                                                                                                    ;              ;
+;       |lpm_divide_7bm:auto_generated|          ; 195 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod0|lpm_divide_7bm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_5nh:divider|         ; 195 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod0|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider                                          ;              ;
+;             |alt_u_div_l8f:divider|            ; 195 (195)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod0|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_l8f:divider                    ;              ;
+;    |lpm_divide:Mod1|                           ; 147 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod1                                                                                                    ;              ;
+;       |lpm_divide_7bm:auto_generated|          ; 147 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod1|lpm_divide_7bm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_5nh:divider|         ; 147 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod1|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider                                          ;              ;
+;             |alt_u_div_l8f:divider|            ; 147 (147)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod1|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_l8f:divider                    ;              ;
+;    |lpm_divide:Mod2|                           ; 71 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod2                                                                                                    ;              ;
+;       |lpm_divide_7bm:auto_generated|          ; 71 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod2|lpm_divide_7bm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_5nh:divider|         ; 71 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod2|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider                                          ;              ;
+;             |alt_u_div_l8f:divider|            ; 71 (71)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod2|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_l8f:divider                    ;              ;
+;    |lpm_divide:Mod3|                           ; 195 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod3                                                                                                    ;              ;
+;       |lpm_divide_7bm:auto_generated|          ; 195 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod3|lpm_divide_7bm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_5nh:divider|         ; 195 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod3|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider                                          ;              ;
+;             |alt_u_div_l8f:divider|            ; 195 (195)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod3|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_l8f:divider                    ;              ;
+;    |lpm_divide:Mod4|                           ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod4                                                                                                    ;              ;
+;       |lpm_divide_7bm:auto_generated|          ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod4|lpm_divide_7bm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_5nh:divider|         ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod4|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider                                          ;              ;
+;             |alt_u_div_l8f:divider|            ; 148 (148)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod4|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_l8f:divider                    ;              ;
+;    |lpm_divide:Mod5|                           ; 71 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod5                                                                                                    ;              ;
+;       |lpm_divide_7bm:auto_generated|          ; 71 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod5|lpm_divide_7bm:auto_generated                                                                      ;              ;
+;          |sign_div_unsign_5nh:divider|         ; 71 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod5|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider                                          ;              ;
+;             |alt_u_div_l8f:divider|            ; 71 (71)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH12_MG90S_1|lpm_divide:Mod5|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_l8f:divider                    ;              ;
++------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++-----------------------------------------------------+----------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal  ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------+------------------------+
+; LCMx[0]                                             ; LCM_P                ; yes                    ;
+; LCMx[1]                                             ; LCM_P                ; yes                    ;
+; LCM_com_data2[1][0]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[0][4]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[0][2]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[0][0]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[2][7]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[3][6]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[4][6]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[13][6]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[14][6]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[5][5]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[6][5]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[7][5]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[12][5]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[10][5]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[11][5]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[8][5]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[9][5]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[15][5]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[16][5]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[17][5]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[18][5]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[19][5]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[20][5]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[2][4]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[5][4]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[6][4]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[7][4]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[10][4]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[8][4]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[9][4]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[15][4]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[16][4]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[17][4]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[18][4]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[19][4]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[20][4]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[4][3]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[6][3]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[10][3]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[8][3]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[9][3]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[14][3]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[16][3]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[18][3]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[19][3]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[20][3]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[7][2]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[10][2]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[8][2]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[9][2]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[17][2]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[18][2]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[19][2]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[20][2]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[3][1]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[6][1]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[7][1]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[10][1]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[13][1]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[8][1]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[9][1]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[16][1]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[17][1]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[18][1]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[19][1]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[20][1]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[3][0]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[7][0]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[10][0]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[13][0]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[8][0]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[9][0]                                 ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[15][0]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[17][0]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[18][0]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[19][0]                                ; LCM_com_data2[16][1] ; yes                    ;
+; LCM_com_data2[20][0]                                ; LCM_com_data2[16][1] ; yes                    ;
+; Number of user-specified and inferred latches = 79  ;                      ;                        ;
++-----------------------------------------------------+----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++-----------------------------------------+-------------------------------------------+
+; Register name                           ; Reason for Removal                        ;
++-----------------------------------------+-------------------------------------------+
+; RW                                      ; Stuck at GND due to stuck port data_in    ;
+; LCM[2]                                  ; Stuck at GND due to stuck port data_in    ;
+; MG90S_Driver:U1|MG90Serv[0]             ; Merged with MG90S_Driver:U12|MG90Serv[0]  ;
+; MG90S_Driver:U1|MG90Serv[18]            ; Merged with MG90S_Driver:U12|MG90Serv[18] ;
+; MG90S_Driver:U1|MG90Serv[17]            ; Merged with MG90S_Driver:U12|MG90Serv[17] ;
+; MG90S_Driver:U1|MG90Serv[16]            ; Merged with MG90S_Driver:U12|MG90Serv[16] ;
+; MG90S_Driver:U1|MG90Serv[15]            ; Merged with MG90S_Driver:U12|MG90Serv[15] ;
+; MG90S_Driver:U1|MG90Serv[14]            ; Merged with MG90S_Driver:U12|MG90Serv[14] ;
+; MG90S_Driver:U1|MG90Serv[13]            ; Merged with MG90S_Driver:U12|MG90Serv[13] ;
+; MG90S_Driver:U1|MG90Serv[12]            ; Merged with MG90S_Driver:U12|MG90Serv[12] ;
+; MG90S_Driver:U1|MG90Serv[11]            ; Merged with MG90S_Driver:U12|MG90Serv[11] ;
+; MG90S_Driver:U1|MG90Serv[10]            ; Merged with MG90S_Driver:U12|MG90Serv[10] ;
+; MG90S_Driver:U1|MG90Serv[9]             ; Merged with MG90S_Driver:U12|MG90Serv[9]  ;
+; MG90S_Driver:U1|MG90Serv[8]             ; Merged with MG90S_Driver:U12|MG90Serv[8]  ;
+; MG90S_Driver:U1|MG90Serv[7]             ; Merged with MG90S_Driver:U12|MG90Serv[7]  ;
+; MG90S_Driver:U1|MG90Serv[6]             ; Merged with MG90S_Driver:U12|MG90Serv[6]  ;
+; MG90S_Driver:U1|MG90Serv[5]             ; Merged with MG90S_Driver:U12|MG90Serv[5]  ;
+; MG90S_Driver:U1|MG90Serv[4]             ; Merged with MG90S_Driver:U12|MG90Serv[4]  ;
+; MG90S_Driver:U1|MG90Serv[3]             ; Merged with MG90S_Driver:U12|MG90Serv[3]  ;
+; MG90S_Driver:U1|MG90Serv[2]             ; Merged with MG90S_Driver:U12|MG90Serv[2]  ;
+; MG90S_Driver:U1|MG90Serv[1]             ; Merged with MG90S_Driver:U12|MG90Serv[1]  ;
+; LCM_com_data[0][7]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[0][6]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[0][5]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[1][7]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[1][6]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[1][5]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[1][4]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[1][3]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[2][6]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[2][2]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[2][1]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[3][7]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[3][4]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[3][2]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[4][7]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[4][4]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[4][1]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[5][7]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[5][6]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[6][7]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[7][7]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[8][7]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[11][0]                     ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[12][0]                     ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[13][4]                     ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[14][4]                     ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[14][2]                     ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[15][1]                     ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[16][2]                     ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[17][6]                     ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[18][6]                     ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[19][6]                     ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[5][2]                      ; Merged with LCM_com_data[6][2]            ;
+; LCM_com_data[6][2]                      ; Merged with LCM_com_data[14][0]           ;
+; LCM_com_data[14][0]                     ; Merged with LCM_com_data[13][5]           ;
+; LCM_com_data[12][4]                     ; Merged with LCM_com_data[4][2]            ;
+; LCM_com_data[4][2]                      ; Merged with LCM_com_data[4][0]            ;
+; LCM_com_data[4][0]                      ; Merged with LCM_com_data[5][3]            ;
+; LCM_com_data[5][3]                      ; Merged with LCM_com_data[16][0]           ;
+; LCM_com_data[16][0]                     ; Merged with LCM_com_data[5][0]            ;
+; LCM_com_data[5][0]                      ; Merged with LCM_com_data[6][6]            ;
+; LCM_com_data[6][6]                      ; Merged with LCM_com_data[15][2]           ;
+; LCM_com_data[15][2]                     ; Merged with LCM_com_data[15][6]           ;
+; LCM_com_data[15][6]                     ; Merged with LCM_com_data[6][0]            ;
+; LCM_com_data[6][0]                      ; Merged with LCM_com_data[7][6]            ;
+; LCM_com_data[7][6]                      ; Merged with LCM_com_data[8][6]            ;
+; LCM_com_data[8][6]                      ; Merged with LCM_com_data[11][4]           ;
+; LCM_com_data[11][3]                     ; Merged with LCM_com_data[12][6]           ;
+; LCM_com_data[12][6]                     ; Merged with LCM_com_data[14][5]           ;
+; LCM_com_data[14][5]                     ; Merged with LCM_com_data[13][2]           ;
+; LCM_com_data[13][2]                     ; Merged with LCM_com_data[10][6]           ;
+; LCM_com_data[10][6]                     ; Merged with LCM_com_data[11][2]           ;
+; LCM_com_data[11][2]                     ; Merged with LCM_com_data[12][2]           ;
+; LCM_com_data[0][1]                      ; Merged with LCM_com_data[0][3]            ;
+; LCM_com_data[0][3]                      ; Merged with LCM_com_data[9][6]            ;
+; LCM_com_data[9][6]                      ; Merged with LCM_com_data[13][3]           ;
+; LCM_com_data[13][3]                     ; Merged with LCM_com_data[12][3]           ;
+; LCM_com_data[12][3]                     ; Merged with LCM_com_data[2][3]            ;
+; LCM_com_data[2][3]                      ; Merged with LCM_com_data[11][6]           ;
+; LCM_com_data[11][6]                     ; Merged with LCM_com_data[5][1]            ;
+; LCM_com_data[5][1]                      ; Merged with LCM_com_data[3][3]            ;
+; LCM_com_data[3][3]                      ; Merged with LCM_com_data[2][5]            ;
+; LCM_com_data[2][5]                      ; Merged with LCM_com_data[1][1]            ;
+; LCM_com_data[1][1]                      ; Merged with LCM_com_data[1][2]            ;
+; LCM_com_data[16][6]                     ; Merged with LCM_com_data[2][0]            ;
+; LCM_com_data[2][0]                      ; Merged with LCM_com_data[12][1]           ;
+; LCM_com_data[17][7]                     ; Merged with LCM_com_data[14][7]           ;
+; LCM_com_data[14][7]                     ; Merged with LCM_com_data[14][1]           ;
+; LCM_com_data[14][1]                     ; Merged with LCM_com_data[15][3]           ;
+; LCM_com_data[15][3]                     ; Merged with LCM_com_data[16][7]           ;
+; LCM_com_data[16][7]                     ; Merged with LCM_com_data[12][7]           ;
+; LCM_com_data[12][7]                     ; Merged with LCM_com_data[18][7]           ;
+; LCM_com_data[18][7]                     ; Merged with LCM_com_data[19][7]           ;
+; LCM_com_data[19][7]                     ; Merged with LCM_com_data[20][7]           ;
+; LCM_com_data[20][7]                     ; Merged with LCM_com_data[20][6]           ;
+; LCM_com_data[20][6]                     ; Merged with LCM_com_data[11][1]           ;
+; LCM_com_data[11][1]                     ; Merged with LCM_com_data[15][7]           ;
+; LCM_com_data[15][7]                     ; Merged with LCM_com_data[11][7]           ;
+; LCM_com_data[11][7]                     ; Merged with LCM_com_data[13][7]           ;
+; LCM_com_data[13][7]                     ; Merged with LCM_com_data[10][7]           ;
+; LCM_com_data[10][7]                     ; Merged with LCM_com_data[9][7]            ;
+; LCM_com_data[4][5]                      ; Merged with LCM_com_data[3][5]            ;
+; FD[18..24]                              ; Lost fanout                               ;
+; LCM_com_data[7][3]                      ; Stuck at GND due to stuck port data_in    ;
+; LCM_com_data[17][3]                     ; Merged with LCM_com_data[11][4]           ;
+; LCM_com_data[0][4]                      ; Merged with LCM_com_data[1][0]            ;
+; LCM_com_data[5][5]                      ; Merged with LCM_com_data[1][0]            ;
+; LCM_com_data[9][5]                      ; Merged with LCM_com_data[1][0]            ;
+; LCM_com_data[9][4]                      ; Merged with LCM_com_data[1][0]            ;
+; LCM_com_data[16][1]                     ; Merged with LCM_com_data[1][0]            ;
+; LCM_com_data[11][5]                     ; Merged with LCM_com_data[0][2]            ;
+; LCM_com_data[0][0]                      ; Merged with LCM_com_data[0][2]            ;
+; LCM_com_data[19][5]                     ; Merged with LCM_com_data[0][2]            ;
+; LCM_com_data[18][5]                     ; Merged with LCM_com_data[0][2]            ;
+; LCM_com_data[17][5]                     ; Merged with LCM_com_data[0][2]            ;
+; LCM_com_data[10][5]                     ; Merged with LCM_com_data[0][2]            ;
+; LCM_com_data[15][0]                     ; Merged with LCM_com_data[2][7]            ;
+; LCM_com_data[15][4]                     ; Merged with LCM_com_data[2][7]            ;
+; LCM_com_data[6][1]                      ; Merged with LCM_com_data[2][7]            ;
+; LCM_com_data[6][4]                      ; Merged with LCM_com_data[2][7]            ;
+; LCM_com_data[4][6]                      ; Merged with LCM_com_data[2][7]            ;
+; LCM_com_data[3][0]                      ; Merged with LCM_com_data[2][7]            ;
+; LCM_com_data[3][1]                      ; Merged with LCM_com_data[2][7]            ;
+; LCM_com_data[3][6]                      ; Merged with LCM_com_data[2][7]            ;
+; LCM_com_data[2][4]                      ; Merged with LCM_com_data[2][7]            ;
+; LCM_com_data[18][4]                     ; Merged with LCM_com_data[2][7]            ;
+; LCM_com_data[7][4]                      ; Merged with LCM_com_data[2][7]            ;
+; LCM_com_data[13][0]                     ; Merged with LCM_com_data[13][6]           ;
+; LCM_com_data[15][5]                     ; Merged with LCM_com_data[13][6]           ;
+; LCM_com_data[16][5]                     ; Merged with LCM_com_data[13][6]           ;
+; LCM_com_data[5][4]                      ; Merged with LCM_com_data[14][6]           ;
+; LCM_com_data[8][4]                      ; Merged with LCM_com_data[14][6]           ;
+; LCM_com_data[10][4]                     ; Merged with LCM_com_data[14][6]           ;
+; LCM_com_data[17][4]                     ; Merged with LCM_com_data[14][6]           ;
+; LCM_com_data[7][5]                      ; Merged with LCM_com_data[6][5]            ;
+; LCM_com_data[8][5]                      ; Merged with LCM_com_data[6][5]            ;
+; LCM_com_data[14][3]                     ; Merged with LCM_com_data[6][5]            ;
+; LCM_com_data[16][4]                     ; Merged with LCM_com_data[6][5]            ;
+; LCM_com_data[16][3]                     ; Merged with LCM_com_data[6][5]            ;
+; LCM_com_data[19][4]                     ; Merged with LCM_com_data[6][5]            ;
+; LCM_com_data[20][4]                     ; Merged with LCM_com_data[6][5]            ;
+; LCM_com_data[4][3]                      ; Merged with LCM_com_data[12][5]           ;
+; LCM_com_data[6][3]                      ; Merged with LCM_com_data[12][5]           ;
+; LCM_com_data[20][5]                     ; Merged with LCM_com_data[12][5]           ;
+; Total Number of Removed Registers = 151 ;                                           ;
++-----------------------------------------+-------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                     ;
++---------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++---------------+---------------------------+-------------------------------------------------------------------------------------+
+; LCM[2]        ; Stuck at GND              ; LCM_com_data[0][7], LCM_com_data[0][6], LCM_com_data[0][5], LCM_com_data[1][7],     ;
+;               ; due to stuck port data_in ; LCM_com_data[1][6], LCM_com_data[1][5], LCM_com_data[1][4], LCM_com_data[1][3],     ;
+;               ;                           ; LCM_com_data[2][6], LCM_com_data[2][2], LCM_com_data[2][1], LCM_com_data[3][7],     ;
+;               ;                           ; LCM_com_data[3][4], LCM_com_data[3][2], LCM_com_data[4][7], LCM_com_data[4][4],     ;
+;               ;                           ; LCM_com_data[4][1], LCM_com_data[5][7], LCM_com_data[5][6], LCM_com_data[6][7],     ;
+;               ;                           ; LCM_com_data[7][7], LCM_com_data[8][7], LCM_com_data[11][0], LCM_com_data[12][0],   ;
+;               ;                           ; LCM_com_data[13][4], LCM_com_data[14][4], LCM_com_data[14][2], LCM_com_data[15][1], ;
+;               ;                           ; LCM_com_data[16][2], LCM_com_data[17][6], LCM_com_data[18][6], LCM_com_data[19][6], ;
+;               ;                           ; LCM_com_data[7][3]                                                                  ;
++---------------+---------------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 187   ;
+; Number of registers using Synchronous Clear  ; 5     ;
+; Number of registers using Synchronous Load   ; 12    ;
+; Number of registers using Asynchronous Clear ; 124   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 131   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; MCP3202_Driver:U2|MCP3202_CS           ; 5       ;
+; MCP3202_Driver:U2|MCP3202_tryN[0]      ; 5       ;
+; LCM_INI[1]                             ; 40      ;
+; LCM_com_data[0][2]                     ; 6       ;
+; LCM_4bit_driver:LCMset|BF              ; 2       ;
+; LCM_com_data[3][5]                     ; 2       ;
+; Total number of inverted registers = 6 ;         ;
++----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |CH12_MG90S_1|times[4]                          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CH12_MG90S_1|LCM_INI[3]                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CH12_MG90S_1|LCM[1]                            ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |CH12_MG90S_1|MCP3202_Driver:U2|i[4]            ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 16 LEs               ; 10 LEs                 ; Yes        ; |CH12_MG90S_1|LCM_4bit_driver:LCMset|LCMruns[2] ;
+; 1:1                ; 32 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |CH12_MG90S_1|Mux48                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 16             ; Untyped                ;
+; LPM_WIDTHD             ; 8              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_thm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MG90S_Driver:U1|lpm_mult:Mult0    ;
++------------------------------------------------+-------------+---------------------+
+; Parameter Name                                 ; Value       ; Type                ;
++------------------------------------------------+-------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON          ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF         ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON          ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF         ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 11          ; Untyped             ;
+; LPM_WIDTHB                                     ; 7           ; Untyped             ;
+; LPM_WIDTHP                                     ; 18          ; Untyped             ;
+; LPM_WIDTHR                                     ; 18          ; Untyped             ;
+; LPM_WIDTHS                                     ; 1           ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED    ; Untyped             ;
+; LPM_PIPELINE                                   ; 0           ; Untyped             ;
+; LATENCY                                        ; 0           ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; YES         ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO          ; Untyped             ;
+; USE_EAB                                        ; OFF         ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6           ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone III ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL      ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT         ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0           ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0           ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx          ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx          ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF         ; Untyped             ;
++------------------------------------------------+-------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MG90S_Driver:U1|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 18             ; Untyped                                ;
+; LPM_WIDTHD             ; 4              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_rhm ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 16             ; Untyped                ;
+; LPM_WIDTHD             ; 8              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_thm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MG90S_Driver:U12|lpm_mult:Mult0   ;
++------------------------------------------------+-------------+---------------------+
+; Parameter Name                                 ; Value       ; Type                ;
++------------------------------------------------+-------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON          ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF         ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON          ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF         ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 11          ; Untyped             ;
+; LPM_WIDTHB                                     ; 7           ; Untyped             ;
+; LPM_WIDTHP                                     ; 18          ; Untyped             ;
+; LPM_WIDTHR                                     ; 18          ; Untyped             ;
+; LPM_WIDTHS                                     ; 1           ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED    ; Untyped             ;
+; LPM_PIPELINE                                   ; 0           ; Untyped             ;
+; LATENCY                                        ; 0           ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; YES         ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO          ; Untyped             ;
+; USE_EAB                                        ; OFF         ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6           ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone III ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL      ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT         ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO        ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0           ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0           ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx          ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx          ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF         ; Untyped             ;
++------------------------------------------------+-------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MG90S_Driver:U12|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------+
+; Parameter Name         ; Value          ; Type                                    ;
++------------------------+----------------+-----------------------------------------+
+; LPM_WIDTHN             ; 18             ; Untyped                                 ;
+; LPM_WIDTHD             ; 4              ; Untyped                                 ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                 ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                 ;
+; LPM_PIPELINE           ; 0              ; Untyped                                 ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                 ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                 ;
+; CBXI_PARAMETER         ; lpm_divide_rhm ; Untyped                                 ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                 ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                 ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                          ;
++------------------------+----------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div4 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                ;
+; LPM_WIDTHD             ; 10             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_2jm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                ;
+; LPM_WIDTHD             ; 12             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_7bm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div3 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                ;
+; LPM_WIDTHD             ; 7              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_ohm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                ;
+; LPM_WIDTHD             ; 12             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_7bm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div2 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_lhm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                ;
+; LPM_WIDTHD             ; 12             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_7bm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div7 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                ;
+; LPM_WIDTHD             ; 10             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_2jm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div6 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                ;
+; LPM_WIDTHD             ; 7              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_ohm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod5 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                ;
+; LPM_WIDTHD             ; 12             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_7bm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div5 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_lhm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod4 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                ;
+; LPM_WIDTHD             ; 12             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_7bm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod3 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                ;
+; LPM_WIDTHD             ; 12             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_7bm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                          ;
++---------------------------------------+---------------------------------+
+; Name                                  ; Value                           ;
++---------------------------------------+---------------------------------+
+; Number of entity instances            ; 2                               ;
+; Entity Instance                       ; MG90S_Driver:U1|lpm_mult:Mult0  ;
+;     -- LPM_WIDTHA                     ; 11                              ;
+;     -- LPM_WIDTHB                     ; 7                               ;
+;     -- LPM_WIDTHP                     ; 18                              ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                        ;
+;     -- INPUT_A_IS_CONSTANT            ; YES                             ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                              ;
+;     -- USE_EAB                        ; OFF                             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                            ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                              ;
+; Entity Instance                       ; MG90S_Driver:U12|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 11                              ;
+;     -- LPM_WIDTHB                     ; 7                               ;
+;     -- LPM_WIDTHP                     ; 18                              ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                        ;
+;     -- INPUT_A_IS_CONSTANT            ; YES                             ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                              ;
+;     -- USE_EAB                        ; OFF                             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                            ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                              ;
++---------------------------------------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "LCM_4bit_driver:LCMset"                                                              ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; dbo   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; lcm_s ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "MCP3202_Driver:U2"      ;
++------------------+-------+----------+--------------+
+; Port             ; Type  ; Severity ; Details      ;
++------------------+-------+----------+--------------+
+; mcp3202_try_n[1] ; Input ; Info     ; Stuck at GND ;
+; mcp3202_try_n[0] ; Input ; Info     ; Stuck at VCC ;
+; mcp3202_ch1_0[1] ; Input ; Info     ; Stuck at VCC ;
+; mcp3202_ch1_0[0] ; Input ; Info     ; Stuck at GND ;
+; mcp3202_sgl_diff ; Input ; Info     ; Stuck at VCC ;
++------------------+-------+----------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Mar 19 14:13:04 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CH12_MG90S_1 -c CH12_MG90S_1
+Warning: Using design file ch12_mg90s_1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: CH12_MG90S_1-Albert
+    Info: Found entity 1: CH12_MG90S_1
+Info: Elaborating entity "CH12_MG90S_1" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at ch12_mg90s_1.vhd(59): used explicit default value for signal "MCP3202_try_N" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ch12_mg90s_1.vhd(61): used explicit default value for signal "MCP3202_SGL_DIFF" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at ch12_mg90s_1.vhd(78): object "DBo" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at ch12_mg90s_1.vhd(79): object "LCM_S" assigned a value but never read
+Warning (10540): VHDL Signal Declaration warning at ch12_mg90s_1.vhd(97): used explicit default value for signal "LCM_1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at ch12_mg90s_1.vhd(109): used explicit default value for signal "LCM_2" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at ch12_mg90s_1.vhd(155): signal "rstP99" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ch12_mg90s_1.vhd(153): inferring latch(es) for signal or variable "MCP3202_CH1_0", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at ch12_mg90s_1.vhd(204): signal "LCM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ch12_mg90s_1.vhd(204): signal "LCMx" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ch12_mg90s_1.vhd(204): signal "LCMP_RESET" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ch12_mg90s_1.vhd(205): signal "LCM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ch12_mg90s_1.vhd(209): signal "LCM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ch12_mg90s_1.vhd(213): signal "LCM_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ch12_mg90s_1.vhd(214): signal "LCM_12" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ch12_mg90s_1.vhd(217): signal "LCM_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ch12_mg90s_1.vhd(201): inferring latch(es) for signal or variable "LCMx", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ch12_mg90s_1.vhd(201): inferring latch(es) for signal or variable "LCM_com_data2", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at ch12_mg90s_1.vhd(254): signal "rstP99" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (10041): Inferred latch for "LCM_com_data2[20][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[20][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[20][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[20][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[20][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[20][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[20][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[20][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[19][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[19][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[19][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[19][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[19][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[19][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[19][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[19][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[18][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[18][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[18][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[18][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[18][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[18][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[18][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[18][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[17][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[17][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[17][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[17][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[17][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[17][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[17][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[17][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[16][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[16][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[16][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[16][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[16][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[16][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[16][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[16][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[15][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[15][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[15][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[15][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[15][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[15][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[15][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[15][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[14][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[14][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[14][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[14][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[14][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[14][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[14][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[14][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[13][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[13][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[13][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[13][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[13][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[13][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[13][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[13][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[12][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[12][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[12][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[12][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[12][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[12][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[12][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[12][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[11][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[11][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[11][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[11][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[11][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[11][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[11][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[11][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[10][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[10][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[10][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[10][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[10][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[10][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[10][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[10][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[9][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[9][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[9][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[9][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[9][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[9][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[9][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[9][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[8][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[8][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[8][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[8][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[8][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[8][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[8][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[8][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[7][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[7][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[7][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[7][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[7][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[7][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[7][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[7][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[6][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[6][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[6][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[6][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[6][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[6][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[6][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[6][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[5][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[5][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[5][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[5][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[5][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[5][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[5][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[5][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[4][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[4][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[4][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[4][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[4][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[4][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[4][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[4][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[3][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[3][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[3][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[3][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[3][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[3][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[3][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[3][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[2][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[2][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[2][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[2][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[2][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[2][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[2][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[2][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[1][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[1][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[1][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[1][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[1][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[1][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[1][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[1][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[0][0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[0][1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[0][2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[0][3]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[0][4]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[0][5]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[0][6]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCM_com_data2[0][7]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCMx[0]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCMx[1]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "LCMx[2]" at ch12_mg90s_1.vhd(201)
+Info (10041): Inferred latch for "MCP3202_CH1_0[0]" at ch12_mg90s_1.vhd(153)
+Info (10041): Inferred latch for "MCP3202_CH1_0[1]" at ch12_mg90s_1.vhd(153)
+Warning: Using design file mg90s_driver.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: MG90S_Driver-Albert
+    Info: Found entity 1: MG90S_Driver
+Info: Elaborating entity "MG90S_Driver" for hierarchy "MG90S_Driver:U1"
+Warning: Using design file mcp3202_driver.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: MCP3202_Driver-Albert
+    Info: Found entity 1: MCP3202_Driver
+Info: Elaborating entity "MCP3202_Driver" for hierarchy "MCP3202_Driver:U2"
+Warning (10492): VHDL Process Statement warning at mcp3202_driver.vhd(38): signal "MCP3202_try_N" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mcp3202_driver.vhd(39): signal "MCP3202_CH1_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mcp3202_driver.vhd(42): signal "MCP3202_CH1_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mcp3202_driver.vhd(42): signal "MCP3202_SGL_DIFF" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at mcp3202_driver.vhd(34): inferring latch(es) for signal or variable "MCP3202_Chs", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at mcp3202_driver.vhd(34): inferring latch(es) for signal or variable "MCP3202Dis", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "MCP3202Dis[0]" at mcp3202_driver.vhd(34)
+Info (10041): Inferred latch for "MCP3202Dis[2]" at mcp3202_driver.vhd(34)
+Info (10041): Inferred latch for "MCP3202_Chs[1]" at mcp3202_driver.vhd(34)
+Warning: Using design file lcm_4bit_driver.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: LCM_4bit_driver-Albert
+    Info: Found entity 1: LCM_4bit_driver
+Info: Elaborating entity "LCM_4bit_driver" for hierarchy "LCM_4bit_driver:LCMset"
+Warning (10492): VHDL Process Statement warning at lcm_4bit_driver.vhd(38): signal "DBi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at lcm_4bit_driver.vhd(39): signal "RS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at lcm_4bit_driver.vhd(41): signal "RW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Inferred 18 megafunctions from design logic
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0"
+    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "MG90S_Driver:U1|Mult0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MG90S_Driver:U1|Div0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1"
+    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "MG90S_Driver:U12|Mult0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MG90S_Driver:U12|Div0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div4"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div3"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div7"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div6"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod5"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div5"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod4"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod3"
+Info: Elaborated megafunction instantiation "lpm_divide:Div0"
+Info: Instantiated megafunction "lpm_divide:Div0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "16"
+    Info: Parameter "LPM_WIDTHD" = "8"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_thm.tdf
+    Info: Found entity 1: lpm_divide_thm
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ulh.tdf
+    Info: Found entity 1: sign_div_unsign_ulh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_76f.tdf
+    Info: Found entity 1: alt_u_div_76f
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_unc.tdf
+    Info: Found entity 1: add_sub_unc
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_vnc.tdf
+    Info: Found entity 1: add_sub_vnc
+Info: Elaborated megafunction instantiation "MG90S_Driver:U1|lpm_mult:Mult0"
+Info: Instantiated megafunction "MG90S_Driver:U1|lpm_mult:Mult0" with the following parameter:
+    Info: Parameter "LPM_WIDTHA" = "11"
+    Info: Parameter "LPM_WIDTHB" = "7"
+    Info: Parameter "LPM_WIDTHP" = "18"
+    Info: Parameter "LPM_WIDTHR" = "18"
+    Info: Parameter "LPM_WIDTHS" = "1"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "INPUT_A_IS_CONSTANT" = "YES"
+    Info: Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info: Parameter "MAXIMIZE_SPEED" = "6"
+Info: Elaborated megafunction instantiation "MG90S_Driver:U1|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "MG90S_Driver:U1|lpm_mult:Mult0"
+Info: Elaborated megafunction instantiation "MG90S_Driver:U1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "MG90S_Driver:U1|lpm_mult:Mult0"
+Info: Elaborated megafunction instantiation "MG90S_Driver:U1|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "MG90S_Driver:U1|lpm_mult:Mult0"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_ffh.tdf
+    Info: Found entity 1: add_sub_ffh
+Info: Elaborated megafunction instantiation "MG90S_Driver:U1|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "MG90S_Driver:U1|lpm_mult:Mult0"
+Info: Elaborated megafunction instantiation "MG90S_Driver:U1|lpm_divide:Div0"
+Info: Instantiated megafunction "MG90S_Driver:U1|lpm_divide:Div0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "18"
+    Info: Parameter "LPM_WIDTHD" = "4"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_rhm.tdf
+    Info: Found entity 1: lpm_divide_rhm
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_slh.tdf
+    Info: Found entity 1: sign_div_unsign_slh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_36f.tdf
+    Info: Found entity 1: alt_u_div_36f
+Info: Elaborated megafunction instantiation "lpm_divide:Div4"
+Info: Instantiated megafunction "lpm_divide:Div4" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "12"
+    Info: Parameter "LPM_WIDTHD" = "10"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_2jm.tdf
+    Info: Found entity 1: lpm_divide_2jm
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_3nh.tdf
+    Info: Found entity 1: sign_div_unsign_3nh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_h8f.tdf
+    Info: Found entity 1: alt_u_div_h8f
+Info: Elaborated megafunction instantiation "lpm_divide:Mod0"
+Info: Instantiated megafunction "lpm_divide:Mod0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "12"
+    Info: Parameter "LPM_WIDTHD" = "12"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_7bm.tdf
+    Info: Found entity 1: lpm_divide_7bm
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5nh.tdf
+    Info: Found entity 1: sign_div_unsign_5nh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_l8f.tdf
+    Info: Found entity 1: alt_u_div_l8f
+Info: Elaborated megafunction instantiation "lpm_divide:Div3"
+Info: Instantiated megafunction "lpm_divide:Div3" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "12"
+    Info: Parameter "LPM_WIDTHD" = "7"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_ohm.tdf
+    Info: Found entity 1: lpm_divide_ohm
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_plh.tdf
+    Info: Found entity 1: sign_div_unsign_plh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_t5f.tdf
+    Info: Found entity 1: alt_u_div_t5f
+Info: Elaborated megafunction instantiation "lpm_divide:Div2"
+Info: Instantiated megafunction "lpm_divide:Div2" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "12"
+    Info: Parameter "LPM_WIDTHD" = "4"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_lhm.tdf
+    Info: Found entity 1: lpm_divide_lhm
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_mlh.tdf
+    Info: Found entity 1: sign_div_unsign_mlh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_n5f.tdf
+    Info: Found entity 1: alt_u_div_n5f
+Info: Duplicate LATCH primitives merged into single LATCH primitive
+    Info: Duplicate LATCH primitive "LCM_com_data2[16][1]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[16][3]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[16][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[16][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[15][0]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[15][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[15][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[14][3]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[14][6]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[13][0]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[13][1]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[13][6]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[12][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[11][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[6][1]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[6][3]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[6][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[6][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[5][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[5][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[4][3]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[4][6]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[3][0]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[3][1]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[3][6]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[2][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[2][7]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[0][0]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[0][2]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[0][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[20][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[20][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[19][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[19][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[18][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[18][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[17][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[17][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[10][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[10][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[9][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[9][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[8][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[8][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[7][4]" merged with LATCH primitive "LCM_com_data2[1][0]"
+    Info: Duplicate LATCH primitive "LCM_com_data2[7][5]" merged with LATCH primitive "LCM_com_data2[1][0]"
+Warning: Latch LCMx[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal LCM[0]
+Warning: Latch LCMx[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal LCM[1]
+Warning: Latch LCM_com_data2[1][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal LCM[0]
+Info: Registers with preset signals will power-up high
+Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning: Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "LCM_4bit_driver:LCMset|RSo" is converted into an equivalent circuit using register "LCM_4bit_driver:LCMset|RSo~_emulated" and latch "LCM_4bit_driver:LCMset|RSo~latch"
+    Warning (13310): Register "LCM_com_data[1][2]" is converted into an equivalent circuit using register "LCM_com_data[1][2]~_emulated" and latch "LCM_com_data[1][2]~latch"
+    Warning (13310): Register "LCM_com_data[1][0]" is converted into an equivalent circuit using register "LCM_com_data[1][0]~_emulated" and latch "LCM_com_data[1][0]~latch"
+    Warning (13310): Register "LCM_4bit_driver:LCMset|DBii[0]" is converted into an equivalent circuit using register "LCM_4bit_driver:LCMset|DBii[0]~_emulated" and latch "LCM_4bit_driver:LCMset|DBii[0]~latch"
+    Warning (13310): Register "LCM_4bit_driver:LCMset|DBii[1]" is converted into an equivalent circuit using register "LCM_4bit_driver:LCMset|DBii[1]~_emulated" and latch "LCM_4bit_driver:LCMset|DBii[1]~latch"
+    Warning (13310): Register "LCM_4bit_driver:LCMset|DBii[2]" is converted into an equivalent circuit using register "LCM_4bit_driver:LCMset|DBii[2]~_emulated" and latch "LCM_4bit_driver:LCMset|DBii[2]~latch"
+    Warning (13310): Register "LCM_4bit_driver:LCMset|DBii[3]" is converted into an equivalent circuit using register "LCM_4bit_driver:LCMset|DBii[3]~_emulated" and latch "LCM_4bit_driver:LCMset|DBii[3]~latch"
+    Warning (13310): Register "LN" is converted into an equivalent circuit using register "LN~_emulated" and latch "LN~latch"
+    Warning (13310): Register "LCM_com_data[9][7]" is converted into an equivalent circuit using register "LCM_com_data[9][7]~_emulated" and latch "LCM_com_data[9][7]~latch"
+    Warning (13310): Register "LCM_com_data[11][4]" is converted into an equivalent circuit using register "LCM_com_data[11][4]~_emulated" and latch "LN~latch"
+    Warning (13310): Register "LCM_com_data[12][2]" is converted into an equivalent circuit using register "LCM_com_data[12][2]~_emulated" and latch "LCM_com_data[12][2]~latch"
+    Warning (13310): Register "LCM_com_data[13][6]" is converted into an equivalent circuit using register "LCM_com_data[13][6]~_emulated" and latch "LCM_com_data[12][2]~latch"
+    Warning (13310): Register "LCM_com_data[14][6]" is converted into an equivalent circuit using register "LCM_com_data[14][6]~_emulated" and latch "LN~latch"
+    Warning (13310): Register "LCM_com_data[12][1]" is converted into an equivalent circuit using register "LCM_com_data[12][1]~_emulated" and latch "LCM_com_data[1][0]~latch"
+    Warning (13310): Register "LCM_com_data[6][5]" is converted into an equivalent circuit using register "LCM_com_data[6][5]~_emulated" and latch "LCM_com_data[9][7]~latch"
+    Warning (13310): Register "LCM_com_data[12][5]" is converted into an equivalent circuit using register "LCM_com_data[12][5]~_emulated" and latch "LCM_com_data[12][5]~latch"
+    Warning (13310): Register "LCM_com_data[13][5]" is converted into an equivalent circuit using register "LCM_com_data[13][5]~_emulated" and latch "LCM_com_data[12][5]~latch"
+    Warning (13310): Register "LCM_com_data[10][3]" is converted into an equivalent circuit using register "LCM_com_data[10][3]~_emulated" and latch "LCM_com_data[9][7]~latch"
+    Warning (13310): Register "LCM_com_data[9][3]" is converted into an equivalent circuit using register "LCM_com_data[9][3]~_emulated" and latch "LCM_com_data[12][2]~latch"
+    Warning (13310): Register "LCM_com_data[18][3]" is converted into an equivalent circuit using register "LCM_com_data[18][3]~_emulated" and latch "LN~latch"
+    Warning (13310): Register "LCM_com_data[10][2]" is converted into an equivalent circuit using register "LCM_com_data[10][2]~_emulated" and latch "LCM_com_data[1][2]~latch"
+    Warning (13310): Register "LCM_com_data[17][2]" is converted into an equivalent circuit using register "LCM_com_data[17][2]~_emulated" and latch "LCM_com_data[1][0]~latch"
+    Warning (13310): Register "LCM_com_data[18][2]" is converted into an equivalent circuit using register "LCM_com_data[18][2]~_emulated" and latch "LN~latch"
+    Warning (13310): Register "LCM_com_data[7][1]" is converted into an equivalent circuit using register "LCM_com_data[7][1]~_emulated" and latch "LN~latch"
+    Warning (13310): Register "LCM_com_data[10][1]" is converted into an equivalent circuit using register "LCM_com_data[10][1]~_emulated" and latch "LCM_com_data[1][0]~latch"
+    Warning (13310): Register "LCM_com_data[13][1]" is converted into an equivalent circuit using register "LCM_com_data[13][1]~_emulated" and latch "LCM_com_data[1][2]~latch"
+    Warning (13310): Register "LCM_com_data[9][1]" is converted into an equivalent circuit using register "LCM_com_data[9][1]~_emulated" and latch "LN~latch"
+    Warning (13310): Register "LCM_com_data[18][1]" is converted into an equivalent circuit using register "LCM_com_data[18][1]~_emulated" and latch "LCM_com_data[9][7]~latch"
+    Warning (13310): Register "LCM_com_data[7][0]" is converted into an equivalent circuit using register "LCM_com_data[7][0]~_emulated" and latch "LCM_com_data[12][5]~latch"
+    Warning (13310): Register "LCM_com_data[10][0]" is converted into an equivalent circuit using register "LCM_com_data[10][0]~_emulated" and latch "LCM_com_data[1][2]~latch"
+    Warning (13310): Register "LCM_com_data[8][0]" is converted into an equivalent circuit using register "LCM_com_data[8][0]~_emulated" and latch "LCM_com_data[1][2]~latch"
+    Warning (13310): Register "LCM_com_data[9][0]" is converted into an equivalent circuit using register "LCM_com_data[9][0]~_emulated" and latch "LN~latch"
+    Warning (13310): Register "LCM_com_data[17][0]" is converted into an equivalent circuit using register "LCM_com_data[17][0]~_emulated" and latch "LCM_com_data[1][0]~latch"
+    Warning (13310): Register "LCM_com_data[18][0]" is converted into an equivalent circuit using register "LCM_com_data[18][0]~_emulated" and latch "LN~latch"
+    Warning (13310): Register "LCM_com_data[19][0]" is converted into an equivalent circuit using register "LCM_com_data[19][0]~_emulated" and latch "LCM_com_data[9][7]~latch"
+    Warning (13310): Register "LCM_com_data[20][0]" is converted into an equivalent circuit using register "LCM_com_data[20][0]~_emulated" and latch "LCM_com_data[9][7]~latch"
+Info: Duplicate LATCH primitives merged into single LATCH primitive
+    Info: Duplicate LATCH primitive "LCM_com_data[9][7]~latch" merged with LATCH primitive "LCMx[1]"
+Critical Warning: Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register MCP3202_Driver:U2|MCP3202_tryN[0] will power up to High
+    Critical Warning (18010): Register LCM_INI[1] will power up to High
+Info: Timing-Driven Synthesis is running
+Info: 7 registers lost all their fanouts during netlist optimizations. The first 7 are displayed below.
+    Info: Register "FD[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "FD[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "FD[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "FD[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "FD[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "FD[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "FD[24]" lost all its fanouts during netlist optimizations.
+Info: Found the following redundant logic cells in design
+    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_l8f:divider|op_10~18"
+    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_l8f:divider|add_sub_10_result_int[0]~22"
+    Info (17048): Logic cell "lpm_divide:Mod4|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_l8f:divider|add_sub_8_result_int[0]~18"
+    Info (17048): Logic cell "lpm_divide:Mod2|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_l8f:divider|add_sub_11_result_int[0]~24"
+    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_l8f:divider|add_sub_11_result_int[0]~0"
+    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_l8f:divider|op_10~18"
+    Info (17048): Logic cell "lpm_divide:Mod5|lpm_divide_7bm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_l8f:divider|add_sub_10_result_int[0]~22"
+Info: Implemented 2916 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 8 output pins
+    Info: Implemented 4 bidirectional pins
+    Info: Implemented 2901 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 78 warnings
+    Info: Peak virtual memory: 323 megabytes
+    Info: Processing ended: Mon Mar 19 14:13:11 2018
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
+
+

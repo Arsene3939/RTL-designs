@@ -1,0 +1,706 @@
+Analysis & Synthesis report for CH7_OLED_1
+Sat Mar 10 11:20:50 2018
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "SSD1306_Driver:U1"
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Mar 10 11:20:50 2018        ;
+; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name                      ; CH7_OLED_1                                   ;
+; Top-level Entity Name              ; CH7_OLED_1                                   ;
+; Family                             ; Cyclone III                                  ;
+; Total logic elements               ; 445                                          ;
+;     Total combinational functions  ; 444                                          ;
+;     Dedicated logic registers      ; 181                                          ;
+; Total registers                    ; 181                                          ;
+; Total pins                         ; 4                                            ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16Q240C8       ;                    ;
+; Top-level entity name                                                      ; CH7_OLED_1         ; CH7_OLED_1         ;
+; Family name                                                                ; Cyclone III        ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                             ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                          ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------+
+; ssd1306_Driver.vhd               ; yes             ; User VHDL File        ; D:/KTM-626®ÑÄy/½d¨Ò/CH7/CH7_OLED_1/ssd1306_Driver.vhd ;
+; ch7_oled_1.vhd                   ; yes             ; Auto-Found VHDL File  ; D:/KTM-626®ÑÄy/½d¨Ò/CH7/CH7_OLED_1/ch7_oled_1.vhd     ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 445          ;
+;                                             ;              ;
+; Total combinational functions               ; 444          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 267          ;
+;     -- 3 input functions                    ; 85           ;
+;     -- <=2 input functions                  ; 92           ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 376          ;
+;     -- arithmetic mode                      ; 68           ;
+;                                             ;              ;
+; Total registers                             ; 181          ;
+;     -- Dedicated logic registers            ; 181          ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 4            ;
+; Maximum fan-out node                        ; rstP99~input ;
+; Maximum fan-out                             ; 116          ;
+; Total fan-out                               ; 2180         ;
+; Average fan-out                             ; 3.44         ;
++---------------------------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                   ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
+; |CH7_OLED_1                ; 444 (348)         ; 181 (140)    ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |CH7_OLED_1                   ; work         ;
+;    |SSD1306_Driver:U1|     ; 96 (96)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CH7_OLED_1|SSD1306_Driver:U1 ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++----------------------------------------+------------------------------------------+
+; Register name                          ; Reason for Removal                       ;
++----------------------------------------+------------------------------------------+
+; OLED_COM_POINTERs[3..4]                ; Stuck at GND due to stuck port data_in   ;
+; OLED_COM_POINTERs[1]                   ; Merged with OLED_COM_POINTERs[2]         ;
+; OLED_COM_POINTERs[2]                   ; Merged with OLED_COM_POINTERs[5]         ;
+; oLED_CoDc[0]                           ; Merged with oLED_CoDc[1]                 ;
+; SSD1306_Driver:U1|CoDc_Bf[0]           ; Merged with SSD1306_Driver:U1|CoDc_Bf[1] ;
+; SSD1306_Driver:U1|Wdata[18]            ; Merged with SSD1306_Driver:U1|Wdata[19]  ;
+; FD[18..24]                             ; Lost fanout                              ;
+; Total Number of Removed Registers = 14 ;                                          ;
++----------------------------------------+------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 181   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 7     ;
+; Number of registers using Asynchronous Clear ; 171   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 134   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; SSD1306_Driver:U1|SCLs                  ; 2       ;
+; SSD1306_Driver:U1|WN[0]                 ; 14      ;
+; SSD1306_Driver:U1|WN[4]                 ; 7       ;
+; SSD1306_Driver:U1|WN[2]                 ; 6       ;
+; SSD1306_Driver:U1|WN[3]                 ; 6       ;
+; SSD1306_Driver:U1|PN[0]                 ; 6       ;
+; SSD1306_Driver:U1|PN[4]                 ; 2       ;
+; SSD1306_Driver:U1|PN[3]                 ; 2       ;
+; SSD1306_Driver:U1|PN[2]                 ; 2       ;
+; SSD1306_Driver:U1|RWNS[1]               ; 4       ;
+; oLED_CoDc[1]                            ; 18      ;
+; SSD1306_Driver:U1|SDAs                  ; 3       ;
+; SSD1306_Driver:U1|RWNS[0]               ; 4       ;
+; \OLED_P:SW                              ; 5       ;
+; OLED_COM_POINTERs[0]                    ; 3       ;
+; times[7]                                ; 3       ;
+; times[6]                                ; 3       ;
+; times[3]                                ; 3       ;
+; Total number of inverted registers = 18 ;         ;
++-----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CH7_OLED_1|SSD1306_Driver:U1|I[1]  ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 0 LEs                ; 35 LEs                 ; Yes        ; |CH7_OLED_1|Vline[6]                ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |CH7_OLED_1|OLEDtestM[1]            ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 8 LEs                ; 48 LEs                 ; Yes        ; |CH7_OLED_1|HN[0]                   ;
+; 12:1               ; 62 bits   ; 496 LEs       ; 124 LEs              ; 372 LEs                ; Yes        ; |CH7_OLED_1|Hline[17]               ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CH7_OLED_1|SSD1306_Driver:U1|WN[4] ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |CH7_OLED_1|Mux3                    ;
+; 75:1               ; 8 bits    ; 400 LEs       ; 304 LEs              ; 96 LEs                 ; No         ; |CH7_OLED_1|oLED_Data_byte[7]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SSD1306_Driver:U1"                                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; sa0       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rwn[1..0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; rwn[3..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i2cs      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Mar 10 11:20:47 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CH7_OLED_1 -c CH7_OLED_1
+Info: Found 2 design units, including 1 entities, in source file ssd1306_driver.vhd
+    Info: Found design unit 1: SSD1306_Driver-Albert
+    Info: Found entity 1: SSD1306_Driver
+Warning: Using design file ch7_oled_1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: CH7_OLED_1-Albert
+    Info: Found entity 1: CH7_OLED_1
+Info: Elaborating entity "CH7_OLED_1" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at ch7_oled_1.vhd(42): object "oLED_I2CS" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at ch7_oled_1.vhd(139): signal "rstP99" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ch7_oled_1.vhd(260): signal "OLEDset_P_RESET" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ch7_oled_1.vhd(287): signal "OLED_COM_POINTERs" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ch7_oled_1.vhd(281): inferring latch(es) for signal or variable "oLED_RUNT", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at ch7_oled_1.vhd(335): signal "rstP99" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (10041): Inferred latch for "oLED_RUNT[38][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[38][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[38][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[38][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[38][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[38][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[38][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[38][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[37][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[37][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[37][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[37][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[37][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[37][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[37][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[37][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[36][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[36][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[36][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[36][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[36][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[36][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[36][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[36][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[35][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[35][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[35][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[35][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[35][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[35][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[35][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[35][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[34][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[34][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[34][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[34][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[34][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[34][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[34][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[34][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[33][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[33][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[33][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[33][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[33][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[33][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[33][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[33][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[32][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[32][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[32][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[32][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[32][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[32][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[32][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[32][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[31][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[31][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[31][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[31][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[31][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[31][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[31][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[31][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[30][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[30][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[30][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[30][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[30][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[30][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[30][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[30][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[29][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[29][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[29][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[29][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[29][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[29][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[29][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[29][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[28][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[28][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[28][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[28][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[28][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[28][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[28][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[28][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[27][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[27][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[27][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[27][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[27][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[27][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[27][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[27][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[26][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[26][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[26][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[26][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[26][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[26][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[26][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[26][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[25][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[25][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[25][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[25][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[25][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[25][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[25][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[25][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[24][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[24][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[24][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[24][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[24][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[24][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[24][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[24][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[23][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[23][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[23][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[23][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[23][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[23][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[23][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[23][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[22][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[22][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[22][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[22][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[22][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[22][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[22][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[22][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[21][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[21][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[21][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[21][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[21][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[21][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[21][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[21][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[20][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[20][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[20][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[20][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[20][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[20][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[20][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[20][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[19][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[19][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[19][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[19][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[19][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[19][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[19][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[19][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[18][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[18][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[18][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[18][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[18][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[18][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[18][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[18][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[17][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[17][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[17][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[17][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[17][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[17][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[17][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[17][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[16][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[16][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[16][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[16][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[16][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[16][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[16][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[16][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[15][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[15][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[15][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[15][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[15][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[15][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[15][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[15][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[14][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[14][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[14][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[14][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[14][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[14][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[14][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[14][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[13][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[13][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[13][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[13][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[13][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[13][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[13][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[13][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[12][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[12][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[12][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[12][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[12][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[12][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[12][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[12][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[11][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[11][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[11][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[11][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[11][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[11][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[11][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[11][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[10][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[10][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[10][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[10][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[10][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[10][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[10][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[10][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[9][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[9][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[9][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[9][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[9][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[9][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[9][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[9][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[8][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[8][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[8][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[8][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[8][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[8][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[8][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[8][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[7][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[7][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[7][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[7][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[7][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[7][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[7][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[7][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[6][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[6][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[6][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[6][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[6][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[6][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[6][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[6][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[5][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[5][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[5][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[5][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[5][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[5][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[5][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[5][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[4][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[4][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[4][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[4][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[4][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[4][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[4][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[4][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[3][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[3][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[3][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[3][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[3][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[3][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[3][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[3][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[2][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[2][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[2][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[2][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[2][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[2][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[2][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[2][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[1][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[1][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[1][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[1][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[1][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[1][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[1][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[1][7]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[0][0]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[0][1]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[0][2]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[0][3]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[0][4]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[0][5]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[0][6]" at ch7_oled_1.vhd(281)
+Info (10041): Inferred latch for "oLED_RUNT[0][7]" at ch7_oled_1.vhd(281)
+Info: Elaborating entity "SSD1306_Driver" for hierarchy "SSD1306_Driver:U1"
+Warning (10492): VHDL Process Statement warning at ssd1306_Driver.vhd(51): signal "Buffer_Clr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ssd1306_Driver.vhd(65): signal "SA0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ssd1306_Driver.vhd(65): signal "CoDc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ssd1306_Driver.vhd(65): signal "Data_byte" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ssd1306_Driver.vhd(70): signal "CoDc" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ssd1306_Driver.vhd(80): signal "RWN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ssd1306_Driver.vhd(61): inferring latch(es) for signal or variable "Wdata", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Wdata[0]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[1]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[2]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[11]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[12]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[13]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[14]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[15]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[16]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[17]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[20]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[21]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[22]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[23]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[24]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[25]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[26]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[27]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[28]" at ssd1306_Driver.vhd(61)
+Info (10041): Inferred latch for "Wdata[29]" at ssd1306_Driver.vhd(61)
+Info: Registers with preset signals will power-up high
+Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning: Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "SSD1306_Driver:U1|Co" is converted into an equivalent circuit using register "SSD1306_Driver:U1|Co~_emulated" and latch "SSD1306_Driver:U1|Co~latch"
+    Warning (13310): Register "OLED_COM_POINTER[5]" is converted into an equivalent circuit using register "OLED_COM_POINTER[5]~_emulated" and latch "OLED_COM_POINTER[5]~latch"
+    Warning (13310): Register "OLED_COM_POINTER[2]" is converted into an equivalent circuit using register "OLED_COM_POINTER[2]~_emulated" and latch "OLED_COM_POINTER[5]~latch"
+    Warning (13310): Register "OLED_COM_POINTER[1]" is converted into an equivalent circuit using register "OLED_COM_POINTER[1]~_emulated" and latch "OLED_COM_POINTER[5]~latch"
+    Warning (13310): Register "OLED_COM_POINTER[0]" is converted into an equivalent circuit using register "OLED_COM_POINTER[0]~_emulated" and latch "OLED_COM_POINTER[0]~latch"
+    Warning (13310): Register "SSD1306_Driver:U1|Wdata[3]" is converted into an equivalent circuit using register "SSD1306_Driver:U1|Wdata[3]~_emulated" and latch "SSD1306_Driver:U1|Wdata[3]~latch"
+    Warning (13310): Register "SSD1306_Driver:U1|Wdata[19]" is converted into an equivalent circuit using register "SSD1306_Driver:U1|Wdata[19]~_emulated" and latch "SSD1306_Driver:U1|Co~latch"
+    Warning (13310): Register "SSD1306_Driver:U1|Wdata[8]" is converted into an equivalent circuit using register "SSD1306_Driver:U1|Wdata[8]~_emulated" and latch "SSD1306_Driver:U1|Wdata[8]~latch"
+    Warning (13310): Register "SSD1306_Driver:U1|Wdata[9]" is converted into an equivalent circuit using register "SSD1306_Driver:U1|Wdata[9]~_emulated" and latch "SSD1306_Driver:U1|Wdata[9]~latch"
+    Warning (13310): Register "SSD1306_Driver:U1|Wdata[10]" is converted into an equivalent circuit using register "SSD1306_Driver:U1|Wdata[10]~_emulated" and latch "SSD1306_Driver:U1|Wdata[10]~latch"
+    Warning (13310): Register "SSD1306_Driver:U1|Wdata[6]" is converted into an equivalent circuit using register "SSD1306_Driver:U1|Wdata[6]~_emulated" and latch "SSD1306_Driver:U1|Wdata[6]~latch"
+    Warning (13310): Register "SSD1306_Driver:U1|Wdata[5]" is converted into an equivalent circuit using register "SSD1306_Driver:U1|Wdata[5]~_emulated" and latch "SSD1306_Driver:U1|Wdata[5]~latch"
+    Warning (13310): Register "SSD1306_Driver:U1|Wdata[4]" is converted into an equivalent circuit using register "SSD1306_Driver:U1|Wdata[4]~_emulated" and latch "SSD1306_Driver:U1|Wdata[4]~latch"
+    Warning (13310): Register "SSD1306_Driver:U1|Wdata[7]" is converted into an equivalent circuit using register "SSD1306_Driver:U1|Wdata[7]~_emulated" and latch "SSD1306_Driver:U1|Wdata[7]~latch"
+Critical Warning: Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register SSD1306_Driver:U1|WN[0] will power up to High
+    Critical Warning (18010): Register SSD1306_Driver:U1|WN[3] will power up to High
+    Critical Warning (18010): Register SSD1306_Driver:U1|WN[4] will power up to High
+    Critical Warning (18010): Register SSD1306_Driver:U1|WN[2] will power up to High
+    Critical Warning (18010): Register SSD1306_Driver:U1|RWNS[1] will power up to High
+    Critical Warning (18010): Register SSD1306_Driver:U1|PN[4] will power up to High
+    Critical Warning (18010): Register SSD1306_Driver:U1|PN[3] will power up to High
+    Critical Warning (18010): Register SSD1306_Driver:U1|PN[2] will power up to High
+    Critical Warning (18010): Register SSD1306_Driver:U1|PN[0] will power up to High
+    Critical Warning (18010): Register SSD1306_Driver:U1|RWNS[0] will power up to High
+    Critical Warning (18010): Register OLED_COM_POINTERs[0] will power up to High
+    Critical Warning (18010): Register \OLED_P:SW will power up to High
+    Critical Warning (18010): Register times[7] will power up to High
+    Critical Warning (18010): Register times[6] will power up to High
+    Critical Warning (18010): Register times[3] will power up to High
+Info: Timing-Driven Synthesis is running
+Info: 7 registers lost all their fanouts during netlist optimizations. The first 7 are displayed below.
+    Info: Register "FD[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "FD[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "FD[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "FD[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "FD[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "FD[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "FD[24]" lost all its fanouts during netlist optimizations.
+Info: Implemented 458 device resources after synthesis - the final resource count might be different
+    Info: Implemented 2 input pins
+    Info: Implemented 1 output pins
+    Info: Implemented 1 bidirectional pins
+    Info: Implemented 454 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 45 warnings
+    Info: Peak virtual memory: 301 megabytes
+    Info: Processing ended: Sat Mar 10 11:20:50 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

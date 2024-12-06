@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="buzzer">
+		<CBX_INST_ENTRY INSTANCE_NAME="|buzzer|lpm_mult:Mult0" CBX_FILE_NAME="mult_s4t.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

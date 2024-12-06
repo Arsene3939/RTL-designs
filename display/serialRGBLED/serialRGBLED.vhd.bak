@@ -1,0 +1,24 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+USE IEEE.std_logic_signed.all;
+entity serialRGBLED is
+	port(
+		rst,clk:in std_logic;
+		Button1,Button2,Button3,Button4,Button5:in std_logic;
+		LED:buffer std_logic_vector(15 downto 0);
+	);
+end entity serialRGBLED;
+architecture test of serialRGBLED is
+	signal FD:std_logic_vector(50 downto 0);
+begin
+	fre:process(rst,clk)
+	begin
+		if rst='0' then
+			FD<=(others=>'0');
+		elsif rising_edge(clk)then
+			FD<=FD+1;
+		end if;
+	end process fre;
+end test;
+
+	
